@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SEESL's renewable energy services: solar, wind, hydro, and biomass solutions for a sustainable future.">
+    <meta name="keywords" content="renewable energy, SEESL, solar, wind, hydro, biomass, sustainable energy solutions, green energy, clean energy, energy efficiency, renewable energy solutions, sustainable development">
+    <meta name="author" content="SEESL">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="msnbot" content="index, follow">
+    <meta name="yahoo-slurp" content="index, follow">
+    <meta name="slurp" content="index, follow">
+    <meta name="teoma" content="index, follow">
+    <meta name="crawler" content="index, follow">
+    <meta name="spider" content="index, follow">
+    <meta name="robot" content="index, follow">
+    <title>Renewable Energy | SEESL</title>
+
+     <!-- Favicon -->
+  <link rel="icon" href="../images/SEES_new_logo.jpg">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <style>
+        /* ==========================================================================
+           Renewable Energy Page - Specific Styles
+           ==========================================================================
+           Table of Contents:
+           --------------------------------------------------------------------------
+           1. PAGE-SPECIFIC FONT STYLES (If different from global)
+              1.1. Font Imports (if needed and not global)
+              1.2. Body & Heading Font Application
+           2. HERO SECTION OVERRIDES (If any)
+           3. SECTION STYLING
+              3.1. Service Overview (List Styling)
+              3.2. Energy Solutions Grid & Cards
+              3.3. Renewable Showcase Grid & Items
+           4. DARK MODE OVERRIDES (Page-Specific for Themed Elements)
+           --------------------------------------------------------------------------
+        */
+        
+        /* -----------------------------------------------------------------------------
+           1. PAGE-SPECIFIC FONT STYLES
+           -------------------------------------------------------------------------- */
+        /* If this page uses Orbitron/Titillium Web like other service pages,
+           and those fonts are NOT globally defined in styles.css, import them here.
+           Otherwise, this section can be removed if global fonts are sufficient. */
+        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&family=Orbitron:wght@500&display=swap');
+        
+        body {
+            font-family: 'Titillium Web', sans-serif;
+        }
+        
+        h1, h2, h3, h4 { 
+            font-family: 'Orbitron', sans-serif;
+            /* color: var(--primary); */ /* Base color from global styles.css */
+        }
+        
+        /* Adjust section title colors if needed for this page's aesthetic */
+        .service-overview h2,
+        .energy-solutions h2,
+        .renewable-showcase h2,
+        .cta-section h2 {
+            /* color: var(--primary-hover); */ /* Example: using a slightly different shade */
+        }
+        
+        
+        /* -----------------------------------------------------------------------------
+           2. HERO SECTION OVERRIDES (If any)
+           -------------------------------------------------------------------------- */
+        .service-hero h1 { /* Hero title for service pages */
+            /* font-size: 2.8rem; */ /* Example if larger */
+        }
+        .service-hero p { /* Hero subtitle */
+            /* font-size: var(--font-size-lg); */
+            /* color: rgba(255,255,255,0.9); */
+        }
+        
+        
+        /* -----------------------------------------------------------------------------
+           3. SECTION STYLING
+           -------------------------------------------------------------------------- */
+        
+        /* 3.1. Service Overview (List Styling) */
+        .service-overview .service-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+        
+        .service-overview .service-list li {
+            background-color: var(--background-alt);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius-sm);
+            border-left: 4px solid var(--secondary); /* Using secondary for a vibrant, energetic feel */
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-left-color 0.25s ease;
+            box-shadow: var(--shadow-sm);
+            color: var(--text);
+        }
+        
+        .service-overview .service-list li:hover {
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: var(--shadow-md);
+            border-left-color: var(--primary); /* Switch to primary on hover */
+        }
+        
+        .service-overview .service-list li i.fa-check-circle { /* Specific icon styling */
+            color: var(--secondary); /* Matches initial border */
+            font-size: 1.1em;
+            transition: color 0.25s ease;
+        }
+        .service-overview .service-list li:hover i.fa-check-circle {
+            color: var(--primary); /* Matches hover border */
+        }
+        .service-overview .service-image img {
+            border-radius: var(--border-radius-md); /* Rounded corners for main service image */
+            box-shadow: var(--shadow-md);
+        }
+        
+        
+        /* 3.2. Energy Solutions Grid & Cards */
+        .energy-solutions {
+            /* Uses global section styles for padding/background */
+        }
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+        }
+        .solution-card { /* Extends .card potentially */
+            background-color: var(--background);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid transparent; /* For hover effect */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .solution-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-top-color: var(--primary); /* Accent on hover */
+        }
+        .solution-icon {
+            font-size: 2.8rem;
+            color: var(--secondary); /* Energetic color for icons */
+            margin-bottom: var(--spacing-sm);
+            width: 70px;
+            height: 70px;
+            line-height: 70px; /* Vertically center icon if it's a font icon */
+            border-radius: 50%;
+            background-color: rgba(var(--secondary-rgb), 0.1); /* Subtle background for icon */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+        .solution-card:hover .solution-icon {
+            background-color: rgba(var(--primary-rgb), 0.15);
+            color: var(--primary);
+            transform: scale(1.1) rotate(-5deg);
+        }
+        .solution-card h3 {
+            /* font-family: 'Orbitron', sans-serif; */ /* Inherited */
+            color: var(--text);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-xs);
+        }
+        .solution-card p {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            line-height: 1.6;
+            flex-grow: 1; /* If content height varies */
+        }
+        
+        
+        /* 3.3. Renewable Showcase Grid & Items */
+        .renewable-showcase {
+            /* Uses global section styles */
+        }
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+        }
+        .showcase-item { /* Card-like structure for each project */
+            background-color: var(--background);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-md);
+            overflow: hidden; /* To clip image and contain effects */
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            position: relative; /* For overlay text */
+        }
+        .showcase-item:hover {
+            box-shadow: var(--shadow-lg);
+            transform: scale(1.03); /* Slight zoom on card hover */
+        }
+        .showcase-item img {
+            width: 100%;
+            height: 220px; /* Fixed height for showcase images */
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease-out, filter 0.3s ease;
+        }
+        .showcase-item:hover img {
+            transform: scale(1.1); /* Zoom image more on card hover */
+            filter: brightness(0.7); /* Dim image to make text pop */
+        }
+        .showcase-info {
+            padding: var(--spacing-md);
+            position: absolute; /* Overlay text on image (optional) */
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            color: white;
+            opacity: 0; /* Hidden by default, shown on hover */
+            transform: translateY(20px); /* Start slightly down */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            box-sizing: border-box;
+        }
+        .showcase-item:hover .showcase-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .showcase-info h3 {
+            /* font-family: 'Orbitron', sans-serif; */ /* Inherited */
+            color: white; /* Text on overlay */
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-xs);
+        }
+        .showcase-info p {
+            font-size: var(--font-size-sm);
+            color: rgba(255,255,255,0.85); /* Lighter text on overlay */
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+        
+        
+        /* -----------------------------------------------------------------------------
+           4. DARK MODE OVERRIDES (Page-Specific for Themed Elements)
+           -------------------------------------------------------------------------- */
+        [data-theme="dark"] .service-overview .service-list li {
+            background-color: var(--background-alt);
+            border-left-color: var(--primary); /* Using primary for dark theme accent */
+            color: var(--text);
+        }
+        [data-theme="dark"] .service-overview .service-list li:hover {
+            border-left-color: var(--secondary);
+            background-color: #2c3e50; /* Slightly different dark hover */
+        }
+        [data-theme="dark"] .service-overview .service-list li i.fa-check-circle {
+            color: var(--primary);
+        }
+        [data-theme="dark"] .service-overview .service-list li:hover i.fa-check-circle {
+            color: var(--secondary);
+        }
+        
+        [data-theme="dark"] .solution-card {
+            background-color: var(--background-alt);
+            border-top-color: transparent;
+        }
+        [data-theme="dark"] .solution-card:hover {
+            border-top-color: var(--secondary); /* Dark theme hover accent */
+        }
+        [data-theme="dark"] .solution-icon {
+            color: var(--primary);
+            background-color: rgba(var(--primary-rgb), 0.1);
+        }
+        [data-theme="dark"] .solution-card:hover .solution-icon {
+            color: var(--secondary);
+            background-color: rgba(var(--secondary-rgb), 0.15);
+        }
+        [data-theme="dark"] .solution-card h3 {
+            color: var(--text);
+        }
+        [data-theme="dark"] .solution-card p {
+            color: var(--text-light);
+        }
+        
+        [data-theme="dark"] .showcase-item {
+            background-color: var(--background-alt);
+        }
+        [data-theme="dark"] .showcase-info {
+            /* Gradient might need adjustment for dark mode if black isn't ideal */
+            background: linear-gradient(to top, rgba(var(--secondary-rgb),0.7) 0%, transparent 100%);
+        }
+        [data-theme="dark"] .showcase-info h3 {
+            color: var(--text); /* Or white for high contrast */
+        }
+        [data-theme="dark"] .showcase-info p {
+            color: var(--text-light);
+        }
+        
+        </style>
+</head>
+<body>
+    <!-- Header -->
+     <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+          <img src="../images/SEES_new_logo.jpg" alt="SEESL Logo">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html" >About</a></li>
+            <li class="dropdown">
+              <button class="dropdown-button" aria-haspopup="true" aria-expanded="false" id="services-dropdown">
+                Services <i class="fas fa-chevron-down" class="active" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-content" role="menu" aria-labelledby="services-dropdown">
+                <a href="../services/asset-management.html" role="menuitem" tabindex="-1">Asset Management</a>
+                <a href="../services/procurement.html" role="menuitem" tabindex="-1">Procurement</a>
+                <a href="../services/engineering.html" role="menuitem" tabindex="-1">Engineering</a>
+                <a href="../services/gas-conversion.html" role="menuitem" tabindex="-1">Gas Conversion</a>
+                <a href="../services/renewable-energy.html" class="active" role="menuitem" tabindex="-1">Renewable Energy</a>
+                <a href="../services/civil-construction.html" role="menuitem" tabindex="-1">Civil Construction</a>
+                <a href="../services/tank-cleaning.html" role="menuitem" tabindex="-1">Tank Cleaning</a>
+                <a href="../services/iso-certification/" role="menuitem" tabindex="-1">ISO Certification</a>
+              </div>
+            </li>
+            <li><a href="../process.html">Process</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Social Icons & Theme Toggle - Desktop -->
+        <div class="header-actions">
+          <div class="contact-info">
+            <ul>
+              <li><a href="tel:+2349153123973">+234 (915) 312-3973</a></li>
+              
+              <li><a href="tel:+234XXXXXXXXXX">+234 (XXX) XXX-XXXX</a></li> <!-- REPLACE WITH ACTUAL NEW NUMBER -->
+            </ul>
+          </div>
+          <div class="social-icons">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li>
+          <button id="services-dropdown-mobile" class="services-dropdown">
+            Services <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="mobile-services" class="mobile-services">
+            <a href="../services/asset-management.html">Asset Management</a>
+            <a href="../services/procurement.html">Procurement</a>
+            <a href="../services/engineering.html">Engineering</a>
+            <a href="../services/gas-conversion.html">Gas Conversion</a>
+            <a href="../services/renewable-energy.html">Renewable Energy</a>
+            <a href="../services/civil-construction.html">Civil Construction</a>
+            <a href="../services/tank-cleaning.html">Tank Cleaning</a>
+            <a href="../services/iso-certification/">ISO Certification</a>
+          </div>
+        </li>
+        <li><a href="../process.html">Process</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        
+        <!-- Social Media Icons - Mobile -->
+        <li class="mobile-social">
+          <div class="social-icons-mobile">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+    
+    <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay" style="background-image: url('../images/home-hero-image.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Renewable Energy Services</h1>
+            <p>Modular Power and Renewable Energy Solutions</p>
+        <div class="hero-buttons">
+            <a href="#services" class="btn btn-secondary">Explore Services</a>
+            <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>    
+
+    <!-- Main Content -->
+    <main>
+        <section class="service-overview">
+            <div class="container">
+                <div class="service-content">
+                    <h2>Sustainable Energy Solutions</h2>
+                    <p>SEES is helping clients across the global energy industry to shift to low carbon and renewable sources while meeting increasing global demand. Whether it's investment or transaction advice, energy system integration, or the detailed design of energy infrastructure, we help clients to chart a sustainable path forward.</p>
+                    
+                    <h3>Our Renewable Energy Services Include:</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Energy Audits</li>
+                        <li><i class="fas fa-check-circle"></i> Mini-grid Design and Development</li>
+                        <li><i class="fas fa-check-circle"></i> O&M Services</li>
+                        <li><i class="fas fa-check-circle"></i> Procurement and Installation of Solar Street Lightings</li>
+                        <li><i class="fas fa-check-circle"></i> Homes and Estates Solar Installations</li>
+                        <li><i class="fas fa-check-circle"></i> Green Hydrogen Production and Storage</li>
+                        <li><i class="fas fa-check-circle"></i> Green Ammonia Production and Storage</li>
+                        <li><i class="fas fa-check-circle"></i> Solar powered irrigation projects</li>
+                        <li><i class="fas fa-check-circle"></i> Inspection, Maintenance & Drone Cleaning of Solar Panels & Equipment</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="../images/service-renewable-energy.jpg" alt="Renewable Energy Services">
+                </div>
+            </div>
+        </section>
+
+        <section class="energy-solutions">
+            <div class="container">
+                <h2>Our Renewable Energy Solutions</h2>
+                
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <h3>Solar Power Systems</h3>
+                        <p>Complete design and installation of solar power systems for residential, commercial, and industrial applications.</p>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Solar Street Lighting</h3>
+                        <p>Energy-efficient solar street lighting solutions for urban and rural areas, improving safety and reducing electricity costs.</p>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>Solar Irrigation</h3>
+                        <p>Solar-powered irrigation systems that enable sustainable agricultural practices and reduce dependency on fossil fuels.</p>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>Green Hydrogen</h3>
+                        <p>Production, storage, and utilization solutions for green hydrogen as a clean energy carrier and industrial feedstock.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="renewable-showcase">
+            <div class="container">
+                <h2>Featured Renewable Energy Projects</h2>
+                <div class="showcase-grid">
+                    <div class="showcase-item">
+                        <img src="../images/Renewable Energy page/Residential Solar Installation.jpg" alt="Solar Installation Project">
+                        <div class="showcase-info">
+                            <h3>Residential Solar Installation</h3>
+                            <p>Complete off-grid solar solution for residential estate with battery storage system.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="../images/Renewable Energy page/Solar Street Lighting.webp" alt="Solar Street Lighting">
+                        <div class="showcase-info">
+                            <h3>Solar Street Lighting</h3>
+                            <p>Installation of solar-powered street lights in community areas, enhancing safety and security.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="../images/Renewable Energy page/solar-powered-irrigation-system-providing-water-crops-green.avif" alt="Solar Irrigation System">
+                        <div class="showcase-info">
+                            <h3>Solar Irrigation System</h3>
+                            <p>Implementation of solar-powered irrigation system for agricultural projects, increasing productivity.</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="../images/Renewable Energy page/Mini-grid Development.jpg" alt="Mini-grid Development">
+                        <div class="showcase-info">
+                            <h3>Mini-grid Development</h3>
+                            <p>Design and installation of mini-grid system providing reliable power to rural communities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to transition to renewable energy?</h2>
+                <p>Contact us today to discuss how our renewable energy solutions can help you achieve a more sustainable future.</p>
+                <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+ <!-- Footer -->
+ <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>About SEESL</h4>
+          <p>Solution Energy and Engineering Services Ltd provides world-class engineering, procurement, installation, asset management, and ISO certification services to businesses across Africa and beyond.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-services">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services/engineering.html">Engineering</a></li>
+            <li><a href="services/procurement.html">Procurement</a></li>
+            <li><a href="services/asset-management.html">Asset Management</a></li>
+            <li><a href="services/renewable-energy.html">Renewable Energy</a></li>
+            <li><a href="services/iso-certification/">ISO Certification</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@solutionenergylimited.com</li>
+            <li><i class="fas fa-phone"></i> +234 915 312 3973</li>
+            <li><i class="fas fa-map-marker-alt"></i> No 6 Salem Avenue <br> off Aker Road Rumolumeni <br> Port Harcourt, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons-footer">
+          <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Solution Energy Limited. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Back to Top Button HTML -->
+<button id="backToTopBtn" aria-label="Scroll to top" title="Go to top">
+    ↑ <!-- Unicode upward arrow -->
+  </button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

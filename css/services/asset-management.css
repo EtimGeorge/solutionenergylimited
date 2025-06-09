@@ -1,0 +1,306 @@
+/* css/services/asset-management.css */
+.service-overview {
+    position: relative; 
+    margin: 20px 0; 
+    overflow: hidden;
+}
+.service-overview .service-content {
+    text-align: center; 
+    margin-bottom: 20px; 
+    position: relative; 
+    z-index: 2;
+}
+.service-overview .service-list-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px; 
+    position: relative; 
+    z-index: 2;
+}
+.service-overview ul.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px; 
+    padding: 15px; 
+    border-radius: var(--border-radius-md); 
+    background: linear-gradient(to right, rgba(255,204,0,0.53), rgba(255,153,0,0.44)); 
+    box-shadow: var(--shadow-sm); 
+    width: 100%; 
+    max-width: 1200px; /* Adjust as needed */
+    list-style: none;
+}
+.service-overview ul.service-list li {
+    background-color: #ffffcc; /* Lighter yellow */
+    border: 2px solid var(--primary); 
+    border-radius: var(--border-radius-sm); 
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    transition: transform 0.3s ease; 
+    box-shadow: var(--shadow-sm); 
+    color: var(--text);
+}
+.service-overview ul.service-list li i {
+    color: var(--primary);
+}
+.service-overview ul.service-list li:hover {
+    transform: scale(1.05); 
+}
+.service-overview .background-image { /* This class was in the HTML's inline style */
+    position: absolute; 
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(0,255,255,0.53), rgba(37,90,140,0.44)); 
+    background-size: cover; 
+    background-position: center; 
+    z-index: 1;
+}
+.visual-highlights {
+    /* Uses global section styles, no specific overrides for wrapper yet */
+}
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+.highlight-card { /* Also has .float-3d */
+    background-color: var(--background);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--border);
+    text-align: left; /* override card's text-align:center if needed */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.highlight-card:hover {
+    border-color: var(--primary); /* Example hover */
+}
+.highlight-card .thumbnail-container {
+    width: 100%;
+    height: 230px; /* Fixed height */
+    position: relative;
+    overflow: hidden;
+    background-color: var(--background-alt); /* Placeholder bg */
+}
+.highlight-card .thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0; /* No radius if container has it */
+    margin-bottom: 0;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+.highlight-card:hover .thumbnail {
+    transform: scale(1.1);
+    filter: brightness(0.85);
+}
+.highlight-card .thumbnail-container::before { /* Optional overlay effect */
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(var(--primary-rgb), 0); /* Transparent initially */
+    opacity: 0;
+    transition: background-color 0.4s ease, opacity 0.4s ease;
+    z-index: 1;
+}
+.highlight-card:hover .thumbnail-container::before {
+    background-color: rgba(var(--primary-rgb), 0.4); /* Semi-transparent primary on hover */
+    opacity: 1;
+}
+.highlight-card-content {
+    padding: var(--spacing-md);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.highlight-card h4 {
+    font-family: 'Orbitron', sans-serif; /* Ensures font */
+    color: var(--primary);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+}
+.highlight-card p {
+    font-family: 'Titillium Web', sans-serif; /* Ensures font */
+    color: var(--text-light);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+}
+
+.facility-maintenance {
+    /* Uses global section styles */
+}
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.facility-image img {
+    width: 100%;
+    border-radius: var(--border-radius-sm);
+    object-fit: cover; /* Ensure images cover their area well */
+}
+.facility-maintenance h3 { /* "Our Services Cover:" */
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+ul.service-list.two-column {
+    display: grid;
+    /* grid-template-columns: 1fr; Overridden by global for larger screens */
+    gap: 10px;
+}
+@media (min-width: 768px) {
+    ul.service-list.two-column {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens and up */
+    }
+}
+
+/* Client Success Gallery Section (Auto-Scroll) */
+.success-gallery { /* Uses global section styling */ }
+
+.gallery-carousel-auto-scroll {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 1.5rem;
+    position: relative;
+    /* Optional: Fade edges for smoother loop illusion */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+.gallery-track-auto-scroll {
+    display: flex;
+    /* (card_width + margin_right) * (num_original_cards + num_duplicate_cards) */
+    /* Assuming 3 cards, duplicates make it 6. card width = 280px, margin = var(--spacing-md) = 1rem = 16px */
+    /* (280px + 16px) * 6 = 296px * 6 = 1776px */
+    width: calc((280px + var(--spacing-md)) * 6);
+    animation: successGalleryScroll 25s linear infinite;
+}
+.success-gallery .gallery-card { /* Also has .float-3d */
+    background-color: var(--background);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.35s ease, border-color 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 0 0 280px; /* Fixed width for each card */
+    margin-right: var(--spacing-md); /* Gap between cards */
+}
+.success-gallery .gallery-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary);
+}
+.gallery-carousel-auto-scroll:hover .gallery-track-auto-scroll {
+    animation-play-state: paused; /* Pause animation on hover */
+}
+.success-gallery .gallery-card .thumbnail-container {
+    width: 100%;
+    height: 200px; /* Fixed height for thumbnails */
+    position: relative;
+    overflow: hidden;
+    background-color: var(--background-alt); /* Placeholder bg */
+}
+.success-gallery .gallery-card .thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0; margin-bottom: 0;
+    transition: transform 0.4s ease;
+}
+.success-gallery .gallery-card:hover .thumbnail {
+    transform: scale(1.08);
+}
+.success-gallery .gallery-card .thumbnail-container::after { /* Optional subtle overlay */
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+.success-gallery .gallery-card:hover .thumbnail-container::after {
+    opacity: 1;
+}
+.success-gallery .gallery-card-content {
+    padding: var(--spacing-md);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text if it's short */
+}
+.success-gallery .gallery-card p {
+    font-family: 'Titillium Web', sans-serif; /* Ensures font */
+    color: var(--text);
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 0;
+}
+@keyframes successGalleryScroll {
+  0% { transform: translateX(0); }
+  100% {
+    /* Scroll by the width of the original set of cards (3 cards) */
+    /* (280px card width + 16px margin) * 3 = 296px * 3 = -888px */
+    transform: translateX(calc(-1 * (280px + var(--spacing-md)) * 3));
+  }
+}
+
+.cta-section { /* From original inline style */
+    /* Using global section styles, if specific background/padding is needed, add here */
+}
+.cta-section .container {
+    text-align: center; /* From original inline style */
+}
+
+/* Dark Theme adjustments for asset management page */
+[data-theme="dark"] .service-overview ul.service-list {
+    background: linear-gradient(to right, rgba(var(--primary-rgb), 0.2), rgba(var(--secondary-rgb), 0.15));
+}
+[data-theme="dark"] .service-overview ul.service-list li {
+    background-color: rgba(var(--background-rgb), 0.1); /* Slightly transparent dark background */
+    border-color: var(--secondary);
+    color: var(--text);
+}
+[data-theme="dark"] .service-overview ul.service-list li i {
+    color: var(--secondary);
+}
+[data-theme="dark"] .service-overview .background-image {
+    background: linear-gradient(to right, rgba(var(--primary-rgb), 0.25), rgba(var(--secondary-rgb), 0.3));
+}
+[data-theme="dark"] .highlight-card {
+    background-color: var(--background-alt);
+    border-color: var(--border);
+}
+[data-theme="dark"] .highlight-card:hover {
+    border-color: var(--secondary);
+}
+[data-theme="dark"] .highlight-card .thumbnail-container::before {
+    background-color: rgba(var(--secondary-rgb), 0.5);
+}
+[data-theme="dark"] .highlight-card h4 {
+    color: var(--secondary);
+}
+[data-theme="dark"] .highlight-card p {
+    color: var(--text);
+}
+[data-theme="dark"] .facility-maintenance h3 {
+    color: var(--secondary);
+}
+[data-theme="dark"] .success-gallery .gallery-card {
+    background-color: var(--background-alt);
+    border-color: var(--border);
+}
+[data-theme="dark"] .success-gallery .gallery-card:hover {
+    border-color: var(--primary);
+}
+[data-theme="dark"] .success-gallery .gallery-card p {
+    color: var(--text);
+}

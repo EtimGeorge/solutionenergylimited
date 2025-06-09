@@ -1,0 +1,24 @@
+@"
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Build output
+dist/
+build/
+"@

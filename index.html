@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solution Energy and Engineering Services Ltd. | SEESL</title>
+  
+  <!-- Meta Tags -->
+  <meta name="description" content="SEESL provides engineering, procurement, installation, asset management, gas conversion technology, renewable energy, civil construction, ISO certification, and more services across Africa and internationally.">
+  <meta name="keywords" content="SEESL, Solution Energy, engineering services, procurement, asset management, gas conversion, renewable energy, ISO certification, Nigeria">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Solution Energy and Engineering Services Ltd">
+  <meta property="og:description" content="Leading provider of engineering and energy services in Nigeria and across Africa.">
+  <meta property="og:image" content="./images/SEES_new_logo.jpg"> 
+  <meta property="og:url" content="https://www.solutionenergylimited.com">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="./images/SEES_new_logo.jpg">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <a href="./index.html" class="logo">
+          <img src="./images/SEES_new_logo.jpg" alt="SEESL Logo">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li class="dropdown">
+              <button class="dropdown-button" aria-haspopup="true" aria-expanded="false" id="services-dropdown">
+                Services <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-content" role="menu" aria-labelledby="services-dropdown">
+                <a href="./services/asset-management.html" role="menuitem" tabindex="-1">Asset Management</a>
+                <a href="./services/procurement.html" role="menuitem" tabindex="-1">Procurement</a>
+                <a href="./services/engineering.html" role="menuitem" tabindex="-1">Engineering</a>
+                <a href="./services/gas-conversion.html" role="menuitem" tabindex="-1">Gas Conversion</a>
+                <a href="./services/renewable-energy.html" role="menuitem" tabindex="-1">Renewable Energy</a>
+                <a href="./services/civil-construction.html" role="menuitem" tabindex="-1">Civil Construction</a>
+                <a href="./services/tank-cleaning.html" role="menuitem" tabindex="-1">Tank Cleaning</a>
+                <a href="./services/iso-certification/" role="menuitem" tabindex="-1">ISO Certification</a>
+              </div>
+            </li>
+            <li><a href="./process.html">Process</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Social Icons & Theme Toggle - Desktop -->
+        <div class="header-actions">
+          <div class="contact-info">
+            <ul>
+              <li><a href="tel:+2349153123973">+234 (915) 312-3973</a></li>
+              
+              <li><a href="tel:+234XXXXXXXXXX">+234 (XXX) XXX-XXXX</a></li> <!-- REPLACE WITH ACTUAL NEW NUMBER -->
+            </ul>
+          </div>
+          <div class="social-icons">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li>
+          <button id="services-dropdown-mobile" class="services-dropdown">
+            Services <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="mobile-services" class="mobile-services">
+            <a href="./services/asset-management.html">Asset Management</a>
+            <a href="./services/procurement.html">Procurement</a>
+            <a href="./services/engineering.html">Engineering</a>
+            <a href="./services/gas-conversion.html">Gas Conversion</a>
+            <a href="./services/renewable-energy.html">Renewable Energy</a>
+            <a href="./services/civil-construction.html">Civil Construction</a>
+            <a href="./services/tank-cleaning.html">Tank Cleaning</a>
+            <a href="./services/iso-certification/">ISO Certification</a>
+          </div>
+        </li>
+        <li><a href="./process.html">Process</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        
+        <!-- Social Media Icons - Mobile -->
+        <li class="mobile-social">
+          <div class="social-icons-mobile">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay" style="background-image: url('./images/home-hero-image.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Solution Energy and Engineering Services Ltd</h1>
+          <p>ENGINEERING | PROCUREMENT | INSTALLATION | ASSET MANAGEMENT | GAS TECH | POWER & RENEWABLE ENERGY | AUDIT AND CERTIFICATION</p>
+          
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-secondary">Explore Services</a>
+            <a href="./contact.html" class="btn btn-primary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>We provide a variety of world-class engineering and technical services to meet the needs of our clients</p>
+        </div>
+        
+        <div class="services-grid">
+          <!-- Service Card 1 -->
+          <div class="service-card card">
+            <div class="card-icon">
+                
+                <div style="background-color: #0056b3; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 130px; height: 130px;">
+                    <img src="./images/SEES-home-hero-image_files/3079217-b6c4d0a8.png" alt="" style="max-width: 75%; max-height: 100%; margin: auto;">
+                  </div>
+            </div>
+            <div class="card-content">
+              <h3>Engineering</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> FEED, Fabrication & Construction</li>
+                <li><i class="fas fa-check"></i> Installation & Commissioning</li>
+                <li><i class="fas fa-check"></i> Process Engineering Solutions</li>
+              </ul>
+            </div>
+            <a href="./services/engineering.html" class="btn btn-primary">Learn More</a>
+          </div>
+          
+          <!-- Service Card 2 -->
+          <div class="service-card card">
+            <div class="card-icon">
+                <div style="background-color: #0056b3; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 130px; height: 130px;">
+                    <img src="./images/SEES-home-hero-image_files/4862293.png" alt="" style="max-width: 75%; max-height: 100%; margin: auto;">
+                  </div>
+            </div>
+            <div class="card-content">
+              <h3>Procurement</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Oil and Gas Equipment</li>
+                <li><i class="fas fa-check"></i> Pumps, Valves, Flanges</li>
+                <li><i class="fas fa-check"></i> Mechanical Seals</li>
+              </ul>
+            </div>
+            <a href="./services/procurement.html" class="btn btn-primary">Learn More</a>
+          </div>
+          
+          <!-- Service Card 3 -->
+          <div class="service-card card">
+            <div class="card-icon">
+                <div style="background-color: #0056b3; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 130px; height: 130px;">
+                    <img src="./images/SEES-home-hero-image_files/8176521.png" alt="" style="max-width: 70%; max-height: 100%; margin: auto;">
+                  </div>
+            </div>
+            <div class="card-content">
+              <h3>Asset Management</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Assets Integrity Management</li>
+                <li><i class="fas fa-check"></i> Automated Process Maintenance</li>
+                <li><i class="fas fa-check"></i> Facility Management</li>
+              </ul>
+            </div>
+            <a href="./services/asset-management.html" class="btn btn-primary">Learn More</a>
+          </div>
+          
+          <!-- Service Card 4 -->
+          <div class="service-card card">
+            <div class="card-icon">
+                <div style="background-color: #0056b3; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 130px; height: 130px;">
+                    <img src="./images/SEES-home-hero-image_files/2593258-e83d5c34.png" alt="" style="max-width: 70%; max-height: 100%; margin: auto;">
+                  </div>
+            </div>
+            <div class="card-content">
+              <h3>Civil Construction</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Civil Works</li>
+                <li><i class="fas fa-check"></i> Road Construction</li>
+                <li><i class="fas fa-check"></i> Infrastructure Development</li>
+              </ul>
+            </div>
+            <a href="./services/civil-construction.html" class="btn btn-primary">Learn More</a>
+          </div>
+          
+          <!-- Service Card 5 -->
+          <div class="service-card card">
+            <div class="card-icon">
+                <div style="background-color: #0056b3; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 130px; height: 130px;">
+                    <img src="./images/SEES-home-hero-image_files/3165532.png" alt="" style="max-width: 70%; max-height: 100%; margin: auto;">
+                  </div>
+            </div>
+            <div class="card-content">
+              <h3>Renewable Energy</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Solar Installations</li>
+                <li><i class="fas fa-check"></i> Green Hydrogen Production</li>
+                <li><i class="fas fa-check"></i> Solar Powered Irrigation</li>
+              </ul>
+            </div>
+            <a href="./services/renewable-energy.html" class="btn btn-primary">Learn More</a>
+          </div>
+          
+          <!-- Service Card 6 -->
+          <div class="service-card card">
+            <div class="card-icon">
+                <div style="background-color: #0056b3; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 130px; height: 130px;">
+                    <img src="./images/SEES-home-hero-image_files/3712183.png" alt="" style="max-width: 70%; max-height: 100%; margin: auto;">
+                  </div>
+            </div>
+            <div class="card-content">
+              <h3>ISO Audit and Certification</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> ISO 9001, 14001, 45001</li>
+                <li><i class="fas fa-check"></i> Certification & Training</li>
+                <li><i class="fas fa-check"></i> Audit Services</li>
+              </ul>
+            </div>
+            <a href="./services/iso-certification/" class="btn btn-primary">Learn More</a>
+          </div>
+          
+          <!-- Service Card 7 -->
+          <div class="service-card card">
+            <div class="card-icon">
+                <div style="background-color: #0056b3; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 130px; height: 130px;">
+                    <img src="./images/SEES-home-hero-image_files/5679110.png" alt="" style="max-width: 70%; max-height: 100%; margin: auto;">
+                  </div>
+            </div>
+            <div class="card-content">
+              <h3>Gas Conversion</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Auto-CNG Solutions</li>
+                <li><i class="fas fa-check"></i> CNG Modules for Power Generation</li>
+                <li><i class="fas fa-check"></i> LNG Industrial Solutions</li>
+              </ul>
+            </div>
+            <a href="./services/gas-conversion.html" class="btn btn-primary">Learn More</a>
+          </div>
+          
+          <!-- Service Card 8 -->
+          <div class="service-card card">
+            <div class="card-icon">
+                <div style="background-color: #0056b3; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 130px; height: 130px;">
+                    <img src="./images/SEES-home-hero-image_files/2823496.png" alt="" style="max-width: 70%; max-height: 100%; margin: auto;">
+                  </div>
+            </div>
+            <div class="card-content">
+              <h3>Tank & Vessel Cleaning</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Automated Tank Cleaning</li>
+                <li><i class="fas fa-check"></i> Pressure Vessel Cleaning</li>
+                <li><i class="fas fa-check"></i> Water Storage Tanks</li>
+              </ul>
+            </div>
+            <a href="./services/tank-cleaning.html" class="btn btn-primary">Learn More</a>
+          </div>
+          
+          <!-- Service Card 9 -->
+          <div class="service-card card">
+            <div class="card-icon">
+                <div style="background-color: #0056b3; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 130px; height: 130px;">
+                    <img src="./images/SEES-home-hero-image_files/drone-technology.png" alt="" style="max-width: 70%; max-height: 100%; margin: auto;">
+                  </div>
+            </div>
+            <div class="card-content">
+              <h3>Advanced Tech Solutions</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Drone Services: Work, Inspection, Cleaning (Panels/Buildings), Agricultural (Pest Control), Monitoring</li>
+                <li><i class="fas fa-check"></i> Robotic Cleaning Systems</li>
+                <li><i class="fas fa-check"></i> Automated Painting & Cleaning of High-Rise Buildings</li> <!-- Changed from next point -->
+              </ul>
+            </div>
+            <a href="#" class="btn btn-primary">Coming Soon</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR ESTEEMED CLIENTS SECTION -->
+<section class="clients-showcase section-light"> <!-- Or section-dark depending on page flow -->
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Esteemed Clients</h2>
+      <p>Trusted by leading organizations across various industries</p>
+    </div>
+    <div class="clients-grid">
+      <!-- Client Item 1 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/NNPC-LOGO-1.png" alt="NIGERIAN NATIONAL PETROLUM COMPANY LIMITED Logo">
+        </div>
+        <h4 class="client-name">NIGERIAN NATIONAL PETROLUM COMPANY LIMITED</h4>
+      </div>
+      <!-- Client Item 2 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/UNITED-NATIONS-LOGO.png" alt="UNITED NATIONS Logo">
+        </div>
+        <h4 class="client-name">UNITED NATIONS</h4>
+      </div>
+      <!-- Client Item 3 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/SAHARA-GROUP.jpg" alt="SAHARA GROUP Logo">
+        </div>
+        <h4 class="client-name">SAHARA GROUP</h4>
+      </div>
+      <!-- Client Item 4 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/first_independent_power_limited_logo.jpg" alt="FIPL Logo">
+        </div>
+        <h4 class="client-name">FIRST INDEPENDENT POWER LIMITED</h4>
+      </div>
+      <!-- Client Item 5 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/EGBIM-POWER PLC.png" alt="EBGIM POWER PLC. Logo">
+        </div>
+        <h4 class="client-name">EBGIM POWER PLC.</h4>
+      </div>
+      <!-- Client Item 6 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/ardova-PLC-LOGO.png" alt="Client Six Logo">
+        </div>
+        <h4 class="client-name">ADOVA PLC.</h4>
+      </div>
+      <!-- Client Item 7 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/OKOMU-OILPALM-COMPANY.jpg" alt="OKOMU OILPALM COMPANY Logo">
+        </div>
+        <h4 class="client-name">OKOMU OILPALM COMPANY</h4>
+      </div>
+      <!-- Client Item 8 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/Seplat Logo.png" alt="SEPLAT ENERGY LIMITED Logo">
+        </div>
+        <h4 class="client-name">SEPLAT ENERGY LIMITED.</h4>
+      </div>
+      <!-- Client Item 9 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/FORTE-OIL-PLC.png" alt="FORTE Oil PLC">
+        </div>
+        <h4 class="client-name">FORTE Oil PLC.</h4>
+      </div>
+      <!-- Add more client items as needed -->
+    </div>
+  </div>
+</section>
+
+    <!-- Redesigned Mission, Vision & History Section -->
+<section class="mission-vision section-dark">
+  <div class="container">
+    <div class="section-title">
+      <h2>Mission, Vision & History</h2>
+    </div>
+    <div class="mv-gallery">
+      <div class="mv-card float-3d">
+        <h3 class="section-subtitle">Mission</h3>
+        <div class="image-thumbnails">
+          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSzAAJl_h8ow87w3LbOc_aLhIfpy0Fn2tJGOHAx0u7oSih71mbWPPp7iwSRhnmw" alt="Mission 1" class="thumbnail">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRcZJag6G0zEHvdrVqFP_QKmYTKWr2D60AZilPRX-GXWLp_ijigQoIVvoAVJDwOw6SseE&usqp=CAU" alt="Mission 2" class="thumbnail">
+        </div>
+        <i class="fas fa-bullseye"></i>
+        <p class="section-description">To provide a variety of World-class engineering and technical services to our esteemed clients. Our services are carefully tailored to meet the needs of our clients: To meet the needs of our Clients using highly professional, competent and motivated Personnel with the right skill set supported with advanced technology and guided by the highest standards of professional ethics.</p>
+      </div>
+
+      <div class="mv-card float-3d">
+        <h3 class="section-subtitle">Vission</h3>
+        <div class="image-thumbnails">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLy4NjywrEbDhyaBTEb_7TqVQMUh44chvNqw&s" alt="vission 1" class="thumbnail">
+          <img src="https://c8.alamy.com/comp/EXC3WE/business-vision-EXC3WE.jpg" alt="vission 2" class="thumbnail">
+        </div>
+        <i class="fas fa-eye"></i>
+        <p class="section-description">To consistently exceed expectations of our clients by providing timely, excellent, cost effective and uncompromised quality of services with respect to health, safety and environment requirements.</p>
+      </div>
+
+      <div class="mv-card float-3d">
+        <h3 class="section-subtitle">Our Team</h3>
+        <div class="image-thumbnails">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS83gY-YA7PTMg-xi7UymrqknM0TpoaI1LoSw&s" alt="Mission 1" class="thumbnail">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/016/063/048/small/mission-vision-values-concept-vector.jpg" alt="Mission 2" class="thumbnail">
+        </div>
+        <i class="fas fa-users"></i>
+        <p class="section-description">At SEES, we have first-hand knowledge of the significant pressures of a plant operations environment. With decades of experience both operating our own plants and optimizing client facilities, we understand what a successful turnaround entails. That's why we start client projects with clearly defined goals and deliverables — and tailor our approach, design and output to meet client objectives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Projects Showcase -->
+<section class="projects section-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Projects</h2>
+      <p class="section-description">See our work in action across various sectors and industries</p>
+    </div>
+      <div class="proj-track">
+        <div class="project-card float-3d">
+          <h3 class="section-subtitle">Plant Maintenance</h3>
+          <div class="image-thumbnails">
+            <img src="./images/SEES-home-hero-image_files/DSC00521A.JPG" alt="Plant Main 1" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/DSC00512.JPG" alt="Plant Main 2" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/DSC00619.JPG" alt="Plant Main 3" class="thumbnail">
+          </div>
+          <p class="section-description">Ongoing Plant Maintenance at a client's facility</p>
+        </div>
+
+        <div class="project-card float-3d">
+          <h3 class="section-subtitle">Tank Cleaning</h3>
+          <div class="image-thumbnails">
+            <img src="./images/SEES-home-hero-image_files/DISCHARGINGOFWATERAFTERHYDROTESTAT032.JPG" alt="Tank Cleaning 1" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/IMG_0015.JPG" alt="Tank Cleaning 2" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/IMG_20221226_154449.jpg" alt="Tank Cleaning 3" class="thumbnail">
+          </div>
+          <p class="section-description">Automated Tank Cleaning Services</p>
+        </div>
+
+        <div class="project-card float-3d">
+          <h3 class="section-subtitle">Engineering Services</h3>
+          <div class="image-thumbnails">
+            <img src="./images/SEES-home-hero-image_files/WhatsAppImage2024-06-24at13.40.34.jpeg" alt="Engineering Services 1" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/WhatsAppImage2024-06-24at13.39.42.jpeg" alt="Engineering Services 2" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/artikel-3-5-1659016502.jpg" alt="Engineering Services 3" class="thumbnail">
+          </div>
+          <p class="section-description">Engineering and installation services for industrial clients</p>
+        </div>
+
+        <div class="project-card float-3d">
+          <h3 class="section-subtitle">ISO Service</h3>
+          <div class="image-thumbnails">
+            <img src="./images/SEES-home-hero-image_files/IMG-20240927-WA0025.jpg" alt="ISO Main 1" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/IMG-20240926-WA0002.jpg" alt="ISO Main 2" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/IMG-20240828-WA0000.jpg" alt="ISO Main 3" class="thumbnail">
+          </div>
+          <p class="section-description">Our ISO Service team conducts comprehensive training and audits.</p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="featured-tech section-dark">
+  <div class="container">
+    <div class="section-title">
+      <h2>Featured Technologies</h2>
+      <h3 class="section-subtitle">SEESL Feature Services in Auto CNG, Auto Tank Cleaning and Drone Technology!</h3>
+    </div>
+    <p class="text-center mb-3 section-description">Our specialty focuses on development, Robotic cleaning of High-Rise buildings, Automated Painting of high-rise buildings, Automated Cleaning and Waste Management of Petroleum Products Storage Tanks (Onshore/Offshore), Automated Cleaning Pressure Vessels, Automated Cleaning of Water Storage Tanks, Automated Cleaning of other Liquid product Storage Containers (Pharmaceuticals/FMCGs/Breweries), PMS and Auto-CNG for light duty vehicles including Tricycles, AGO and Auto-CNG for heavy duty vehicles, Installation of CNG Module for Modular power generators, Installation of LNG Module for Industrial Power generators, and many more...</p>
+    <div class="tech-carousel carousel-autoplay">
+      <div class="tech-track">
+        <div class="tech-card float-3d">
+          <div class="image-thumbnails">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzx8GOZed29M4v9VhqXMgft3L12M8HW_a7iCUYaQmjyoxuqnzosxbX4ZyeZGU0" alt="Drone Overview" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/building-painting-drone.jpg" alt="Drone In Action" class="thumbnail">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSg4Cg_QnnppLAPgqgPtwvVYM0YZldLnK4fzQpSvFveh0cuDNmzxIxcoODC0WL8" alt="Drone Close-up" class="thumbnail">
+          </div>
+          <h4 class="section-subtitle">Drone Technology</h4>
+            <p class="section-description">Advanced drone solutions for inspections and monitoring</p>
+          </div>
+
+        <div class="tech-card float-3d">
+          <div class="image-thumbnails">
+            <img src="./images/SEES-home-hero-image_files/Robotic painting solutions for high-rise buildings.jpg" alt="Robotic painting solutions for high-rise buildings" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/Robotic painting solutions for high-rise buildings-1.jpg" alt="Robotic painting solutions for high-rise buildings" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/Robotic painting solutions for high-rise buildings-2.jpg" alt="Robotic painting solutions for high-rise buildings" class="thumbnail">
+          </div>
+          <h4>Automated Painting</h4>
+          <p>Robotic painting solutions for high-rise buildings</p>
+          </div>
+
+        <div class="tech-card float-3d">
+          <div class="image-thumbnails">
+            <img src="./images/SEES-home-hero-image_files/Auto CNG Solutions.jpg" alt="Auto CNG Solutions" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/Auto CNG Solutions-1.jpg" alt="Auto CNG Solutions" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/Auto CNG Solutions-2.jpg" alt="Auto CNG Solutions" class="thumbnail">
+          </div>
+          <h4>Auto CNG Solutions</h4>
+          <p>Clean energy solutions for vehicles and equipment</p>
+        </div>
+
+        <div class="tech-card float-3d">
+          <div class="image-thumbnails">
+            <img src="./images/SEES-home-hero-image_files/Automated Tank Cleaning-2.jpg" alt="Automated Tank Cleaning" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/Automated Tank Cleaning-1.jpg" alt="Automated Tank Cleaning" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/Automated Tank Cleaning-3.jpg" alt="Automated Tank Cleaning" class="thumbnail">
+          </div>
+          <h4>Automated Tank Cleaning</h4>
+          <p>Advanced systems for safe and efficient tank cleaning</p>
+          </div>
+
+        <div class="tech-card float-3d">
+          <div class="image-thumbnails">
+            <img src="./images/SEES-home-hero-image_files/CNG Module for Modular power generators-1.jpg" alt="CNG Module for Modular power generators" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/CNG Module for Modular power generators-2.avif" alt="CNG Module for Modular power generators" class="thumbnail">
+            <img src="./images/SEES-home-hero-image_files/CNG Module for Modular power generators-3.jpg" alt="CNG Module for Modular power generators" class="thumbnail">
+          </div>
+          <h4>CNG Module for Modular power generation</h4>
+          <p>Efficient and reliable CNG module solutions for modular power generation, ensuring a stable energy supply</p>
+          </div>
+
+        <div class="tech-card float-3d">
+          <div class="image-thumbnails">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_X05MnfYJ-noQJLR82ww_fRPSqlchC9fz8Q&s" alt="Drone Overview" class="thumbnail">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcThViAOGA4lzo8S2o7f-jxRF55RLHOdb134E5vMjc44j6uQDp5JywtmKaAGf3Rd" alt="Drone In Action" class="thumbnail">
+            <img src="https://image.made-in-china.com/365f3j00rvYWjGtRIMpD/CNG-Generator-Power-Station-200kw-500kw.webp" alt="Drone Close-up" class="thumbnail">
+          </div>
+          <h4>LNG Module for Industrial Power generation</h4>
+          <p>Efficient and reliable LNG module solutions for industrial power generation, ensuring a stable energy supply</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- Partners Section - UPDATED FOR AUTO-SCROLL -->
+<section class="partners section-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Partners & OEMs</h2>
+      <p>We collaborate with distinguished & known OEMs to offer our clients, durable spares and equipment suitable for their operations</p>
+    </div>
+    
+    <div class="partners-auto-scroll-container"> 
+      <div class="partners-track-auto-scroll"> 
+        <!-- Original Partner Items -->
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/csm_CS_Instruments_3bb093dd29.jpg" alt="CS Instruments Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/de.jpg" alt="Partner DE Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/hikkeko.jpg" alt="Hikkeko Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/kkl.png" alt="KKL Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/lifes.png" alt="Lifes Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/R.jpg" alt="Partner R Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/pmc.jpg" alt="PMC Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/logo-ias.png" alt="IAS Logo">
+        </div>
+
+        <!-- Duplicated Partner Items for Seamless Loop -->
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/csm_CS_Instruments_3bb093dd29.jpg" alt="CS Instruments Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/de.jpg" alt="Partner DE Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/hikkeko.jpg" alt="Hikkeko Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/kkl.png" alt="KKL Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/lifes.png" alt="Lifes Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/R.jpg" alt="Partner R Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/pmc.jpg" alt="PMC Logo">
+        </div>
+        <div class="partner-item">
+          <img src="./images/SEES-home-hero-image_files/logo-ias.png" alt="IAS Logo">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="cta section-dark">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Work With Us?</h2>
+          <p>Contact us today to discuss how we can help with your engineering, energy, and certification needs.</p>
+          <a href="./contact.html" class="btn btn-secondary">Contact Us Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>About SEESL</h4>
+          <p>Solution Energy and Engineering Services Ltd provides world-class engineering, procurement, installation, asset management, and ISO certification services to businesses across Africa and beyond.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="./process.html">Process</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-services">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="./services/engineering.html">Engineering</a></li>
+            <li><a href="./services/procurement.html">Procurement</a></li>
+            <li><a href="./services/asset-management.html">Asset Management</a></li>
+            <li><a href="./services/renewable-energy.html">Renewable Energy</a></li>
+            <li><a href="./services/iso-certification/">ISO Certification</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@solutionenergylimited.com</li>
+            <li><i class="fas fa-phone"></i> +234 915 312 3973</li>
+            <li><i class="fas fa-map-marker-alt"></i> No 6 Salem Avenue <br> off Aker Road Rumolumeni <br> Port Harcourt, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons-footer">
+          <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Solution Energy Limited. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox HTML Structure -->
+<div id="lightbox" class="lightbox hidden">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" src="" alt="Expanded view">
+</div>
+
+
+  <!-- Back to Top Button HTML -->
+  <button id="backToTopBtn" aria-label="Scroll to top" title="Go to top">
+    ↑ <!-- Unicode upward arrow -->
+  </button>
+  
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

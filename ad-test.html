@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEESL Website - Ad Parameter Test Links</title>
+  <link rel="icon" href="./images/SEES_new_logo.jpg">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/styles.css"> 
+  <!-- Use a simple style for this page, or link to a minimal version of main styles -->
+  <style>
+    body {
+      font-family: var(--font-family, sans-serif);
+      line-height: 1.6;
+      color: var(--text, #333);
+      background-color: var(--background, #fff);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: var(--primary, #0056b3);
+      border-bottom: 2px solid var(--primary, #0056b3);
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: var(--secondary, #e63946);
+      margin-top: 30px;
+    }
+    .card {
+      background: var(--background-alt, #f8f9fa);
+      border-radius: var(--border-radius-md, 8px);
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm, 0 2px 5px rgba(0,0,0,0.1));
+      border: 1px solid var(--border, #ddd);
+    }
+    .link-container {
+      margin: 15px 0;
+    }
+    .link {
+      display: block;
+      background: #e9ecef; /* Neutral color, could be themed */
+      padding: 10px;
+      border-radius: 4px;
+      margin: 5px 0;
+      word-break: break-all;
+    }
+    .link a {
+      color: var(--primary, #0056b3);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .link a:hover {
+      text-decoration: underline;
+    }
+    .test-btn {
+      display: inline-block;
+      background: var(--primary, #0056b3);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 5px;
+      transition: background-color 0.3s;
+    }
+    .test-btn:hover {
+        background-color: var(--primary-hover, #004494);
+    }
+    .description {
+      margin: 10px 0;
+      font-size: 0.9em;
+    }
+    .note {
+      background: #fffacd; /* Light yellow */
+      padding: 10px;
+      border-radius: 4px;
+      border-left: 4px solid #ffd700; /* Gold */
+      margin: 15px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid var(--border, #ddd);
+    }
+    th {
+      background-color: var(--background-alt, #f2f2f2);
+    }
+    footer {
+        margin-top: 50px; text-align: center; font-size: 0.8em; color: var(--text-light, #6c757d);
+    }
+  </style>
+</head>
+<body>
+  <h1>SEESL Website - Ad Parameter Test Links</h1>
+  
+  <p>This page contains sample links that simulate ad URLs with various parameters for testing the SEESL website's parameter handling and lead tracking capabilities. These can be adapted for social media, email campaigns, or other marketing efforts.</p>
+  
+  <div class="note">
+    <strong>Note:</strong> In real-world campaigns, replace "index.html", "about.html", etc., with your full domain and page path (e.g., "https://www.solutionenergylimited.com/about.html"). The parameters help track lead sources and can pre-fill forms or customize user experience.
+  </div>
+
+  <h2>Main Site Pages</h2>
+  <div class="card">
+    <h3>Homepage - General Campaign</h3>
+    <div class="description">
+      Simulates a general campaign link pointing to the homepage.
+    </div>
+    <div class="link-container">
+      <div class="link">
+        <a href="./index.html?utm_source=linkedin&utm_medium=social_paid&utm_campaign=brand_awareness_q3">
+          ./index.html?utm_source=linkedin&utm_medium=social_paid&utm_campaign=brand_awareness_q3
+        </a>
+      </div>
+      <a href="./index.html?utm_source=linkedin&utm_medium=social_paid&utm_campaign=brand_awareness_q3" class="test-btn" target="_blank">Test Homepage Ad</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>About Us Page - Partner Promotion</h3>
+    <div class="description">
+      Simulates a link from a partner website or promotion.
+    </div>
+    <div class="link-container">
+      <div class="link">
+        <a href="./about.html?ref=partner_site_X&campaign=cross_promo_2024">
+          ./about.html?ref=partner_site_X&campaign=cross_promo_2024
+        </a>
+      </div>
+      <a href="./about.html?ref=partner_site_X&campaign=cross_promo_2024" class="test-btn" target="_blank">Test About Us Ad</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Engineering Services Page - Specific Service Promotion</h3>
+    <div class="description">
+      Simulates an ad promoting Engineering services, potentially pre-selecting "Engineering" in contact forms.
+    </div>
+    <div class="link-container">
+      <div class="link">
+        <a href="./services/engineering.html?utm_source=google&utm_medium=cpc&utm_campaign=engineering_services_promo&service_interest=engineering">
+          ./services/engineering.html?utm_source=google&utm_medium=cpc&utm_campaign=engineering_services_promo&service_interest=engineering
+        </a>
+      </div>
+      <a href="./services/engineering.html?utm_source=google&utm_medium=cpc&utm_campaign=engineering_services_promo&service_interest=engineering" class="test-btn" target="_blank">Test Engineering Ad</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Contact Page - Direct Lead Generation</h3>
+    <div class="description">
+      Simulates a "Contact Us Now" ad that directs straight to the contact page, possibly with a specific offer code.
+    </div>
+    <div class="link-container">
+      <div class="link">
+        <a href="./contact.html?utm_source=facebook_ad&utm_campaign=direct_contact_offer&offer_code=SEESL20OFF">
+          ./contact.html?utm_source=facebook_ad&utm_campaign=direct_contact_offer&offer_code=SEESL20OFF
+        </a>
+      </div>
+      <a href="./contact.html?utm_source=facebook_ad&utm_campaign=direct_contact_offer&offer_code=SEESL20OFF" class="test-btn" target="_blank">Test Contact Ad</a>
+    </div>
+  </div>
+
+
+  <h2>ISO Certification Service Ads</h2>
+  
+  <div class="card">
+    <h3>Facebook Ad for ISO 9001 Certification (Nigeria)</h3>
+    <div class="description">
+      This link simulates a Facebook ad for ISO 9001 certification targeting Nigerian businesses.
+    </div>
+    <div class="link-container">
+      <div class="link">
+        <a href="./services/iso-certification/index.html?source=facebook&campaign=iso9001_nigeria&service=certification&form=nigeria">
+          ./services/iso-certification/index.html?source=facebook&campaign=iso9001_nigeria&service=certification&form=nigeria
+        </a>
+      </div>
+      <a href="./services/iso-certification/index.html?source=facebook&campaign=iso9001_nigeria&service=certification&form=nigeria" class="test-btn" target="_blank">Test ISO (Nigeria) Ad</a>
+    </div>
+  </div>
+  
+  <div class="card">
+    <h3>LinkedIn Ad for ISO 14001 Certification (International)</h3>
+    <div class="description">
+      This link simulates a LinkedIn ad for ISO 14001 certification targeting international businesses.
+    </div>
+    <div class="link-container">
+      <div class="link">
+        <a href="./services/iso-certification/index.html?source=linkedin&campaign=iso14001_global&service=certification&form=international">
+          ./services/iso-certification/index.html?source=linkedin&campaign=iso14001_global&service=certification&form=international
+        </a>
+      </div>
+      <a href="./services/iso-certification/index.html?source=linkedin&campaign=iso14001_global&service=certification&form=international" class="test-btn" target="_blank">Test ISO (International) Ad</a>
+    </div>
+  </div>
+
+  <h2>ISO Training Service Ads</h2>
+  
+  <div class="card">
+    <h3>Instagram Lead Generation for Training Courses</h3>
+    <div class="description">
+      This link simulates an Instagram ad for ISO training courses using UTM parameters.
+    </div>
+    <div class="link-container">
+      <div class="link">
+        <a href="./services/iso-certification/training.html?utm_source=instagram&utm_medium=social&utm_campaign=training_lead_gen&service=training">
+          ./services/iso-certification/training.html?utm_source=instagram&utm_medium=social&utm_campaign=training_lead_gen&service=training
+        </a>
+      </div>
+      <a href="./services/iso-certification/training.html?utm_source=instagram&utm_medium=social&utm_campaign=training_lead_gen&service=training" class="test-btn" target="_blank">Test ISO Training Ad</a>
+    </div>
+  </div>
+  
+  <h2>ISO Audit Service Ads</h2>
+  
+  <div class="card">
+    <h3>Google Ad for Internal Audit Services</h3>
+    <div class="description">
+      This link simulates a Google ad for ISO internal audit services.
+    </div>
+    <div class="link-container">
+      <div class="link">
+        <a href="./services/iso-certification/audit.html?source=google&campaign=internal_audit_services&service=audit">
+          ./services/iso-certification/audit.html?source=google&campaign=internal_audit_services&service=audit
+        </a>
+      </div>
+      <a href="./services/iso-certification/audit.html?source=google&campaign=internal_audit_services&service=audit" class="test-btn" target="_blank">Test ISO Audit Ad</a>
+    </div>
+  </div>
+
+  <h2>Parameter Reference</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Description</th>
+        <th>Example Values</th>
+        <th>Scope</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>source / utm_source</td>
+        <td>The platform or origin of the traffic</td>
+        <td>facebook, linkedin, google, newsletter, partner_site_X</td>
+        <td>All Pages</td>
+      </tr>
+      <tr>
+        <td>campaign / utm_campaign</td>
+        <td>Marketing campaign identifier</td>
+        <td>brand_awareness_q3, engineering_services_promo, iso9001_nigeria</td>
+        <td>All Pages</td>
+      </tr>
+      <tr>
+        <td>utm_medium</td>
+        <td>Marketing medium (UTM format)</td>
+        <td>cpc, social_paid, email, referral</td>
+        <td>All Pages</td>
+      </tr>
+      <tr>
+        <td>service_interest / service</td>
+        <td>The specific service the user is interested in (can pre-fill forms)</td>
+        <td>engineering, procurement, asset_management, iso_certification, iso_training, iso_audit</td>
+        <td>Contact Page, Service Pages</td>
+      </tr>
+      <tr>
+        <td>form</td>
+        <td>Pre-select form type (e.g., for ISO contact forms)</td>
+        <td>nigeria, international</td>
+        <td>ISO Contact Forms</td>
+      </tr>
+      <tr>
+        <td>ad_id / offer_code</td>
+        <td>Unique ad or offer identifier for specific tracking</td>
+        <td>vt2025, SEESL20OFF, fb_ad_eng_001</td>
+        <td>All Pages</td>
+      </tr>
+      <tr>
+        <td>ref</td>
+        <td>Referral source identifier</td>
+        <td>partner_site_X, affiliate_Y</td>
+        <td>All Pages</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <strong>How to use in real campaigns:</strong><br>
+    When setting up actual ads, ensure the base URL (e.g., "https://www.solutionenergylimited.com/") is correct, followed by the page path and then the parameters (starting with "?"). For subsequent parameters, use "&".
+  </div>
+
+  <footer>
+    <p>Solution Energy and Engineering Services Ltd. &copy; <script>document.write(new Date().getFullYear())</script></p>
+  </footer>
+  <script src="./js/main.js"></script> <!-- If theme toggle or other JS is desired on this page -->
+</body>
+</html>

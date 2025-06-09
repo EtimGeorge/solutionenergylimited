@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Solution Energy and Engineering Services Ltd. | SEESL</title>
+  
+  <!-- Meta Tags -->
+  <meta name="description" content="Learn about Solution Energy and Engineering Services Ltd (SEESL), our mission, vision, history, and team of professionals providing world-class engineering and technical services.">
+  <meta name="keywords" content="SEESL, Solution Energy, about us, engineering company, Nigeria, mission, vision, team">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="About Solution Energy and Engineering Services Ltd">
+  <meta property="og:description" content="Learn about our mission, vision, and team of professionals providing world-class engineering services.">
+  <meta property="og:image" content="./images/SEES_new_logo.jpg">
+  <meta property="og:url" content="https://www.solutionenergylimited.com/about.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="./images/SEES_new_logo.jpg">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <a href="./index.html" class="logo">
+          <img src="./images/SEES_new_logo.jpg" alt="SEESL Logo">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html" class="active">About</a></li>
+            <li class="dropdown">
+              <button class="dropdown-button" aria-haspopup="true" aria-expanded="false" id="services-dropdown">
+                Services <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-content" role="menu" aria-labelledby="services-dropdown">
+                <a href="./services/asset-management.html" role="menuitem" tabindex="-1">Asset Management</a>
+                <a href="./services/procurement.html" role="menuitem" tabindex="-1">Procurement</a>
+                <a href="./services/engineering.html" role="menuitem" tabindex="-1">Engineering</a>
+                <a href="./services/gas-conversion.html" role="menuitem" tabindex="-1">Gas Conversion</a>
+                <a href="./services/renewable-energy.html" role="menuitem" tabindex="-1">Renewable Energy</a>
+                <a href="./services/civil-construction.html" role="menuitem" tabindex="-1">Civil Construction</a>
+                <a href="./services/tank-cleaning.html" role="menuitem" tabindex="-1">Tank Cleaning</a>
+                <a href="./services/iso-certification/" role="menuitem" tabindex="-1">ISO Certification</a>
+              </div>
+            </li>
+            <li><a href="./process.html">Process</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Social Icons & Theme Toggle - Desktop -->
+        <div class="header-actions">
+          <div class="contact-info">
+            <ul>
+              <li><a href="tel:+2349153123973">+234 (915) 312-3973</a></li>
+              
+              <li><a href="tel:+234XXXXXXXXXX">+234 (XXX) XXX-XXXX</a></li> <!-- REPLACE WITH ACTUAL NEW NUMBER -->
+            </ul>
+          </div>
+          <div class="social-icons">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html" class="active">About</a></li>
+        <li>
+          <button id="services-dropdown-mobile" class="services-dropdown">
+            Services <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="mobile-services" class="mobile-services">
+            <a href="./services/asset-management.html">Asset Management</a>
+            <a href="./services/procurement.html">Procurement</a>
+            <a href="./services/engineering.html">Engineering</a>
+            <a href="./services/gas-conversion.html">Gas Conversion</a>
+            <a href="./services/renewable-energy.html">Renewable Energy</a>
+            <a href="./services/civil-construction.html">Civil Construction</a>
+            <a href="./services/tank-cleaning.html">Tank Cleaning</a>
+            <a href="./services/iso-certification/">ISO Certification</a>
+          </div>
+        </li>
+        <li><a href="./process.html">Process</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        
+        <!-- Social Media Icons - Mobile -->
+        <li class="mobile-social">
+          <div class="social-icons-mobile">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay" style="background-image: url('./images/iStock-1304550042.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>About SEESL</h1>
+          <p>Learn about our company, mission, vision, and the team behind our success</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-intro section-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Welcome to Solution Energy and Engineering Services Ltd</h2>
+          <p>A leading provider of engineering and technical services in Nigeria and across Africa</p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <p>Solution Energy and Engineering Services Ltd (SEESL) is a premier engineering company providing a comprehensive range of services to various industries. With years of experience and a team of highly skilled professionals, we have established ourselves as a trusted partner for businesses seeking reliable engineering solutions.</p>
+            
+            <p>At SEESL, we pride ourselves on our commitment to excellence, innovation, and client satisfaction. Our approach combines technical expertise with industry insights to deliver solutions that address the unique challenges faced by our clients.</p>
+            
+            <p>We work across multiple sectors including oil and gas, manufacturing, power generation, and more, offering services ranging from engineering and procurement to asset management and specialized solutions like gas conversion technology and renewable energy systems.</p>
+          </div>
+          
+          <div class="about-image">
+            <img src="./images/SEESL-office-image.png" alt="SEESL Office">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision section-dark">
+      <div class="container">
+        <div class="mission-grid">
+          <div class="mission-card card">
+            <div class="card-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3>Mission</h3>
+            <p>To provide a variety of World-class engineering and technical services to our esteemed clients. Our services are carefully tailored to meet the needs of our clients: To meet the needs of our Clients using highly professional, competent and motivated Personnel with the right skill set supported with advanced technology and guided by the highest standards of professional ethics.</p>
+          </div>
+          
+          <div class="mission-card card">
+            <div class="card-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3>Vision</h3>
+            <p>To consistently exceed expectations of our clients by providing timely, excellent, cost effective and uncompromised quality of services with respect to health, safety and environment requirements.</p>
+          </div>
+          
+          <div class="mission-card card">
+            <div class="card-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Policy</h3>
+            <p>Solution Energy and Engineering Services (SEES) responsibilities are bounded by applicable laws and the constitutional arrangements of the states where it conducts its activities. Solution Energy and Engineering Services does not control other actors who may act without its knowledge or clear consent and in ways that Solution Energy and Engineering Services does not intend.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team section-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Team</h2>
+          <p>Meet the professionals behind SEESL</p>
+        </div>
+        
+        <div class="team-intro">
+          <p>At SEES, we have first-hand knowledge of the significant pressures of a plant operations environment. With decades of experience both operating our own plants and optimizing client facilities, we understand what a successful turnaround entails. That's why we start client projects with clearly defined goals and deliverables — and tailor our approach, design and output to meet client objectives. To ensure project success, we make sure our focus is aligned with our customer's focus — from concept to completion.</p>
+        </div>
+        
+        <div class="team-grid">
+          <div class="team-card card">
+            <div class="image-container">
+              <img src="./images/team1.jpg" alt="Team Member 1">
+            </div>
+            <h3>Kingsley Etim</h3>
+            <p class="position">Managing Director</p>
+            <p>Over 15 years of experience in engineering and project management across various industries.</p>
+          </div>
+
+          <div class="team-card card">
+            <div class="image-container">
+              <img src="./images/team2.jpg" alt="Team Member 2">
+            </div>
+            <h3>Favour Etim</h3>
+            <p class="position">HR Manager</p>
+            <p>Experienced in talent acquisition, employee relations, and benefits administration.</p>
+          </div>
+          
+          <div class="team-card card">
+            <div class="image-container">
+              <img src="./images/team2.jpg" alt="Team Member 2"> <!-- Consider unique image -->
+            </div>
+            <h3>Samuel George</h3>
+            <p class="position">Operations Director</p>
+            <p>Extensive background in operational management and process optimization.</p>
+          </div>
+          
+          <div class="team-card card">
+            <div class="image-container">
+              <img src="./images/team3.jpg" alt="Team Member 3">
+            </div>
+            <h3>Michael Johnson</h3>
+            <p class="position">Technical Director</p>
+            <p>Specialist in engineering design and technical implementation of complex projects.</p>
+          </div>
+          
+          <div class="team-card card">
+            <div class="image-container">
+              <img src="./images/team4.jpg" alt="Team Member 4">
+            </div>
+            <h3>Sarah Williams</h3>
+            <p class="position">Business Development Manager</p>
+            <p>Focused on client relationships and expanding SEESL's reach across Africa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients & Partners Section -->
+    <section class="clients-partners section-dark">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Clients & Partners</h2>
+          <p>We work with leading companies and organizations across various industries</p>
+        </div>
+        
+        <div class="partners-grid">
+          <div class="partner-logo">
+            <img src="./images/SEES-home-hero-image_files/csm_CS_Instruments_3bb093dd29.jpg" alt="Partner 1">
+          </div>
+          <div class="partner-logo">
+            <img src="./images/SEES-home-hero-image_files/de.jpg" alt="Partner 2">
+          </div>
+          <div class="partner-logo">
+            <img src="./images/SEES-home-hero-image_files/hikkeko.jpg" alt="Partner 3">
+          </div>
+          <div class="partner-logo">
+            <img src="./images/SEES-home-hero-image_files/kkl.png" alt="Partner 4">
+          </div>
+          <div class="partner-logo">
+            <img src="./images/SEES-home-hero-image_files/lifes.png" alt="Partner 5">
+          </div>
+          <div class="partner-logo">
+            <img src="./images/SEES-home-hero-image_files/logo-ias.png" alt="Partner 6">
+          </div>
+          <div class="partner-logo">
+            <img src="./images/SEES-home-hero-image_files/R.jpg" alt="Partner 7">
+          </div>
+          <div class="partner-logo">
+            <img src="./images/SEES-home-hero-image_files/pmc.jpg" alt="Partner 8">
+          </div>
+        </div>
+
+         <!-- OUR ESTEEMED CLIENTS SECTION -->
+<section class="clients-showcase section-light"> 
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Esteemed Clients</h2>
+      <p>Trusted by leading organizations across various industries</p>
+    </div>
+    <div class="clients-grid">
+      <!-- Client Item 1 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/NNPC-LOGO-1.png" alt="NIGERIAN NATIONAL PETROLUM COMPANY LIMITED Logo">
+        </div>
+        <h4 class="client-name">NIGERIAN NATIONAL PETROLUM COMPANY LIMITED</h4>
+      </div>
+      <!-- Client Item 2 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/UNITED-NATIONS-LOGO.png" alt="UNITED NATIONS Logo">
+        </div>
+        <h4 class="client-name">UNITED NATIONS</h4>
+      </div>
+      <!-- Client Item 3 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/SAHARA-GROUP.jpg" alt="SAHARA GROUP Logo">
+        </div>
+        <h4 class="client-name">SAHARA GROUP</h4>
+      </div>
+      <!-- Client Item 4 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/first_independent_power_limited_logo.jpg" alt="FIPL Logo">
+        </div>
+        <h4 class="client-name">FIRST INDEPENDENT POWER LIMITED</h4>
+      </div>
+      <!-- Client Item 5 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/EGBIM-POWER PLC.png" alt="EBGIM POWER PLC. Logo">
+        </div>
+        <h4 class="client-name">EBGIM POWER PLC.</h4>
+      </div>
+      <!-- Client Item 6 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/ardova-PLC-LOGO.png" alt="ADOVA PLC Logo">
+        </div>
+        <h4 class="client-name">ADOVA PLC.</h4>
+      </div>
+      <!-- Client Item 7 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/OKOMU-OILPALM-COMPANY.jpg" alt="OKOMU OILPALM COMPANY Logo">
+        </div>
+        <h4 class="client-name">OKOMU OILPALM COMPANY</h4>
+      </div>
+      <!-- Client Item 8 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/Seplat Logo.png" alt="SEPLAT ENERGY LIMITED Logo">
+        </div>
+        <h4 class="client-name">SEPLAT ENERGY LIMITED.</h4>
+      </div>
+      <!-- Client Item 9 -->
+      <div class="client-item">
+        <div class="client-logo-container">
+          <img src="./images/Our Esteemed Clients/FORTE-OIL-PLC.png" alt="FORTE Oil PLC">
+        </div>
+        <h4 class="client-name">FORTE Oil PLC.</h4>
+      </div>
+      <!-- Add more client items as needed -->
+    </div>
+  </div>
+</section>
+        
+        <div class="client-testimonials">
+          <div class="section-title">
+            <h3>What Our Clients Say</h3>
+          </div>
+          
+          <div class="testimonial-card card">
+            <div class="testimonial-quote">
+              <i class="fas fa-quote-left"></i>
+              <p>Working with SEESL has been a transformative experience for our operations. Their technical expertise and commitment to quality is unmatched in the industry.</p>
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <div class="testimonial-author">
+              <img src="./images/client1.jpg" alt="Client 1">
+              <div>
+                <h4>Robert Johnson</h4>
+                <p>Operations Manager, ABC Industries</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card card">
+            <div class="testimonial-quote">
+              <i class="fas fa-quote-left"></i>
+              <p>SEESL delivered our project on time and within budget, while maintaining the highest standards of quality and safety. We wouldn't hesitate to work with them again.</p>
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <div class="testimonial-author">
+              <img src="./images/client2.jpg" alt="Client 2">
+              <div>
+                <h4>Mary Thompson</h4>
+                <p>Project Director, XYZ Corporation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section-light">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Work With Us?</h2>
+          <p>Contact us today to discuss how we can help with your engineering, energy, and certification needs.</p>
+          <a href="./contact.html" class="btn btn-secondary">Contact Us Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>About SEESL</h4>
+          <p>Solution Energy and Engineering Services Ltd provides world-class engineering, procurement, installation, asset management, and ISO certification services to businesses across Africa and beyond.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./index.html#services">Services</a></li>
+            <li><a href="./process.html">Process</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-services">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="./services/engineering.html">Engineering</a></li>
+            <li><a href="./services/procurement.html">Procurement</a></li>
+            <li><a href="./services/asset-management.html">Asset Management</a></li>
+            <li><a href="./services/renewable-energy.html">Renewable Energy</a></li>
+            <li><a href="./services/iso-certification/">ISO Certification</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@solutionenergylimited.com</li>
+            <li><i class="fas fa-phone"></i> +234 915 312 3973</li>
+            <li><i class="fas fa-map-marker-alt"></i> No 6 Salem Avenue <br> off Aker Road Rumolumeni <br> Port Harcourt, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons-footer">
+          <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Solution Energy Limited. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button HTML -->
+<button id="backToTopBtn" aria-label="Scroll to top" title="Go to top">
+  ↑ <!-- Unicode upward arrow -->
+</button>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

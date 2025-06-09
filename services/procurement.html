@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SEESL's procurement services: sourcing materials globally, offering PSVs, PRVs, pumps, compressors, casing, tubes, instrumentation, chemicals, and OEM spares.">
+    <meta name="keywords" content="procurement, SEESL, PSV, PRV, pumps, compressors, OCTG, casing, tubing, instrumentation, electrical materials, sealants, OEM spares, supply chain">
+    <meta name="author" content="SEESL">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="msnbot" content="index, follow">
+    <meta name="yahoo-slurp" content="index, follow">
+    <meta name="slurp" content="index, follow">
+    <meta name="teoma" content="index, follow">
+    <meta name="crawler" content="index, follow">
+    <meta name="spider" content="index, follow">
+    <meta name="robot" content="index, follow">
+    <title>Procurement Services | SEESL</title>
+
+     <!-- Favicon -->
+  <link rel="icon" href="../images/SEES_new_logo.jpg">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           Procurement Services Page - Inline Stylesheet
+           ==========================================================================
+           Table of Contents:
+           --------------------------------------------------------------------------
+           1. PAGE DEFAULTS & TYPOGRAPHY
+              1.1. Body & Heading Base Styles (Page-Specific Fonts)
+              1.2. Section Heading Colors
+              1.3. Intro Text Paragraph
+           2. CARD & THUMBNAIL STYLES (Page-Specific Enhancements/Overrides)
+              2.1. Floating 3D Cards (.float-3d)
+              2.2. Thumbnails (.thumbnail, .placeholder-img)
+           3. SECTION-SPECIFIC STYLES
+              3.1. Generic Service Image Container (.service-image)
+              3.2. Procurement Portfolio / Highlight Grid (.highlight-grid, .procurement-items-grid)
+              3.3. Supply Capabilities Section
+              3.4. Gallery Track (for carousels or grids)
+           4. DARK MODE STYLES (Using [data-theme="dark"])
+           5. RESPONSIVE ADJUSTMENTS
+           --------------------------------------------------------------------------
+        */
+        
+        /* -----------------------------------------------------------------------------
+           1. PAGE DEFAULTS & TYPOGRAPHY
+           -------------------------------------------------------------------------- */
+        
+        /* 1.1. Body & Heading Base Styles (Page-Specific Fonts) */
+        body {
+            font-family: 'Titillium Web', sans-serif;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--primary); /* Default color for headings from variables.css */
+        }
+        
+        /* 1.2. Section Heading Colors */
+        /* Ensure section titles use the primary color from variables.css directly */
+        .service-content h2,       /* Assuming .service-content is a general wrapper */
+        .procurement-portfolio h2,
+        .procurement-advantage h2,
+        .supply-capabilities h2,
+        .success-gallery h2,
+        .cta-section h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem; /* Consistent margin */
+        }
+        
+        /* 1.3. Intro Text Paragraph */
+        .intro-text p { /* Used in .procurement-advantage section */
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center; 
+            margin-bottom: 3rem;
+        }
+        
+        /* -----------------------------------------------------------------------------
+           2. CARD & THUMBNAIL STYLES (Page-Specific Enhancements/Overrides)
+           -------------------------------------------------------------------------- */
+        
+        /* 2.1. Floating 3D Cards (.float-3d) */
+        .float-3d {
+            background-color: var(--background); 
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 1.5rem; 
+            text-align: center;
+            height: 100%; 
+            display: flex;
+            flex-direction: column;
+        }
+        .float-3d .card-content-inner { /* For content inside card to allow footer button */
+            flex-grow: 1;
+        }
+        .float-3d:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+        
+        /* 2.2. Thumbnails (.thumbnail, .placeholder-img) */
+        .thumbnail {
+            width: 100%;
+            height: 200px; 
+            object-fit: contain; 
+            border-radius: 8px;
+            margin-bottom: 1rem; 
+            background-color: #f8f9fa; 
+        }
+        .thumbnail.placeholder-img { /* For the blank placeholders */
+            border: 1px dashed var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        .thumbnail:hover { /* Maintained from original, no transform */
+            box-shadow: 0 0 20px rgba(0, 153, 255, 0.75);
+        }
+        
+        
+        /* -----------------------------------------------------------------------------
+           3. SECTION-SPECIFIC STYLES
+           -------------------------------------------------------------------------- */
+        
+        /* 3.1. Generic Service Image Container (.service-image) */
+        .service-image {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .service-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        /* 3.2. Procurement Portfolio / Highlight Grid (.highlight-grid, .procurement-items-grid) */
+        .highlight-grid, 
+        .procurement-items-grid { /* Grouped as they had identical styles */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 2rem; 
+        }
+
+        
+        
+        /* 3.3. Supply Capabilities Section */
+        .supply-capabilities ul {
+            list-style: none;
+            padding-left: 0;
+            columns: 2; 
+            column-gap: 2rem;
+        }
+        .supply-capabilities li {
+            background-color: var(--background-alt);
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border-radius: var(--border-radius-sm);
+            border-left: 4px solid var(--primary);
+            transition: background-color 0.3s, transform 0.3s;
+            display: flex; 
+            align-items: flex-start; 
+            gap: 0.75rem; 
+        }
+        .supply-capabilities li i {
+            color: var(--secondary); 
+            margin-top: 0.15em; 
+        }
+        .supply-capabilities li:hover {
+            background-color: var(--primary-hover);
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        /* 3.4. Gallery Track (for carousels or grids, e.g., Success Gallery) */
+        .gallery-track {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        
+        /* -----------------------------------------------------------------------------
+           4. DARK MODE STYLES (Using [data-theme="dark"])
+           -------------------------------------------------------------------------- */
+        body[data-theme="dark"] {
+            background-color: var(--background); 
+            color: var(--text); 
+        }
+        
+        body[data-theme="dark"] h1,
+        body[data-theme="dark"] h2,
+        body[data-theme="dark"] h3,
+        body[data-theme="dark"] h4 {
+            color: var(--text); 
+        }
+        
+        body[data-theme="dark"] .float-3d {
+            background-color: var(--background-alt); 
+            box-shadow: 0 4px 20px rgba(255,255,255,0.05);
+        }
+        body[data-theme="dark"] .float-3d:hover {
+            box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+        }
+        
+        body[data-theme="dark"] .thumbnail {
+            background-color: #2c303a; 
+        }
+        body[data-theme="dark"] .thumbnail.placeholder-img {
+            border-color: var(--border);
+            color: var(--text-light);
+        }
+        
+        body[data-theme="dark"] .supply-capabilities li {
+            background-color: var(--background-alt);
+            border-left-color: var(--secondary);
+            color: var(--text);
+        }
+        body[data-theme="dark"] .supply-capabilities li:hover {
+            background-color: var(--secondary-hover);
+            color: var(--text); 
+        }
+        body[data-theme="dark"] .supply-capabilities li i {
+            color: var(--primary); 
+        }
+        
+        /* -----------------------------------------------------------------------------
+           5. RESPONSIVE ADJUSTMENTS
+           -------------------------------------------------------------------------- */
+        @media (max-width: 768px) {
+            .supply-capabilities ul {
+                columns: 1; /* Single column on smaller screens */
+            }
+        }
+        
+        </style>
+
+</head>
+<body data-theme="light"> <!-- Set default theme, JS will handle toggle -->
+    <!-- Header (Same as before, no changes needed here) -->
+    <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="logo">
+          <img src="../images/SEES_new_logo.jpg" alt="SEESL Logo">
+        </a>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li class="dropdown">
+              <button class="dropdown-button" aria-haspopup="true" aria-expanded="false" id="services-dropdown">
+                Services <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-content" role="menu" aria-labelledby="services-dropdown">
+                <a href="../services/asset-management.html" role="menuitem" tabindex="-1">Asset Management</a>
+                <a href="../services/procurement.html" role="menuitem" tabindex="-1" class="active">Procurement</a>
+                <a href="../services/engineering.html" role="menuitem" tabindex="-1">Engineering</a>
+                <a href="../services/gas-conversion.html" role="menuitem" tabindex="-1">Gas Conversion</a>
+                <a href="../services/renewable-energy.html" role="menuitem" tabindex="-1">Renewable Energy</a>
+                <a href="../services/civil-construction.html" role="menuitem" tabindex="-1">Civil Construction</a>
+                <a href="../services/tank-cleaning.html" role="menuitem" tabindex="-1">Tank Cleaning</a>
+                <a href="../services/iso-certification/" role="menuitem" tabindex="-1">ISO Certification</a>
+              </div>
+            </li>
+            <li><a href="../process.html">Process</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="contact-info">
+            <ul>
+                <li><a href="tel:+2349153123973">+234 (915) 312-3973</a></li>
+                
+                <li><a href="tel:+234XXXXXXXXXX">+234 (XXX) XXX-XXXX</a></li> <!-- REPLACE WITH ACTUAL NEW NUMBER -->
+              </ul>
+          </div>
+          <div class="social-icons">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li>
+          <button id="services-dropdown-mobile" class="services-dropdown">
+            Services <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="mobile-services" class="mobile-services">
+            <a href="../services/asset-management.html">Asset Management</a>
+            <a href="../services/procurement.html" class="active">Procurement</a>
+            <a href="../services/engineering.html">Engineering</a>
+            <a href="../services/gas-conversion.html">Gas Conversion</a>
+            <a href="../services/renewable-energy.html">Renewable Energy</a>
+            <a href="../services/civil-construction.html">Civil Construction</a>
+            <a href="../services/tank-cleaning.html">Tank Cleaning</a>
+            <a href="../services/iso-certification/">ISO Certification</a>
+          </div>
+        </li>
+        <li><a href="../process.html">Process</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li class="mobile-social">
+          <div class="social-icons-mobile">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay" style="background-image: url('../images/PROCUREMENT-SERVICES/global-procurement-hero.webp'); background-size: cover; background-position: center;"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>SEESL Procurement Services</h1>
+        <p>We have the reach and means to procure materials from around the globe through a wide supplier/stockist network world-wide. We offer after-sales and post-installation service with provision for in-country stock holding/inventory for prompt or just-in-time delivery of critical service spares, especially for our OEM materials.</p>
+        <div class="hero-buttons">
+            <a href="#procurement-portfolio" class="btn btn-secondary">Our Portfolio</a>
+            <a href="../contact.html" class="btn btn-primary">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>    
+
+<!-- Main Content -->
+<main>
+    <!-- Procurement Portfolio Section -->
+    <section id="procurement-portfolio" class="procurement-portfolio section-light">
+        <div class="container">
+            <h2 class="text-center">Our Procurement Portfolio</h2>
+            <div class="procurement-items-grid">
+                <div class="highlight-card float-3d">
+                    <img src="../images/PROCUREMENT-SERVICES/parker-rl4-series-relief-valve-lrg__43116.1665573874.jpg" alt="PSVs and PRVs" class="thumbnail">
+                    <div class="card-content-inner">
+                        <h4>PSVs And PRVs</h4>
+                        <p>SEESL offers Valves of different Sizes including Pressure Safety Valves (PSVs) and Pressure Relief Valves (PRVs).</p>
+                    </div>
+                </div>
+                <div class="highlight-card float-3d">
+                    <img src="../images/PROCUREMENT-SERVICES/vilter-vss-single-screw-compressor-1-CROP.jpg" alt="Pumps and Compressors" class="thumbnail">
+                    <div class="card-content-inner">
+                        <h4>Pumps And Compressors</h4>
+                        <p>SEESL offers durable high-performance Pumps, Compressors, and heavy-duty equipment for various industrial applications.</p>
+                    </div>
+                </div>
+                <div class="highlight-card float-3d">
+                    <img src="../images/PROCUREMENT-SERVICES/casing-pipes-stock.jpg" alt="Casing and Tubes" class="thumbnail">
+                     <div class="card-content-inner">
+                        <h4>Casing And Tubes</h4>
+                        <p>We supply welded & seamless OCTG – casing & tubing of all sizes, drill pipes, seamless pipes, and SAW welded pipes.</p>
+                    </div>
+                </div>
+                <div class="highlight-card float-3d">
+                    <img src="../images/PROCUREMENT-SERVICES/electricals-and-instrumentation.jpg" alt="Instrumentation And Electrical Materials"
+                    class="thumbnail">
+                    <div class="card-content-inner">
+                        <h4>Instrumentation And Electrical Materials</h4>
+                        <p>SEESL offers a comprehensive range of Instrumentation and electrical materials and parts for diverse project needs.</p>
+                    </div>
+                </div>
+                <div class="highlight-card float-3d">
+                    <img src="../images/PROCUREMENT-SERVICES/sealants-and-coatings.jpg" alt="Instrumentation And Electrical Materia"
+                    class="thumbnail">
+                    <div class="card-content-inner">
+                        <h4>Sealants, Binders, Solvents</h4>
+                        <p>We procure Specialty Chemicals including high-quality sealants, binders, and solvents for all industrial purposes.</p>
+                    </div>
+                </div>
+                <div class="highlight-card float-3d">
+                     <!-- Placeholder for actual image -->
+                    <img src="../images/PROCUREMENT-SERVICES/OEM-spare-parts.jpg" alt="OEM Spares" class="thumbnail">
+                    <div class="card-content-inner">
+                        <h4>OEM Spares</h4>
+                        <p>SEESL equally offers genuine OEM Spares, Consumables, and Utility materials to ensure optimal equipment performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Procurement Advantage Section -->
+    <section class="procurement-advantage section-dark">
+        <div class="container">
+            <h2 class="text-center">Our Strategic Approach</h2>
+            <div class="intro-text">
+                 <p>SEESL achieves procurement excellence through a global network of reputable buying houses and Original Equipment Manufacturers (OEMs), with whom we have strategic alliances incorporating our well-developed supply chain process.</p>
+            </div>
+            <div class="highlight-grid">
+                <div class="highlight-card float-3d">
+                    <img src="../images/PROCUREMENT-SERVICES/OEM.jpg" alt="Global Sourcing Network" class="thumbnail">
+                    <div class="card-content-inner">
+                        <h4>Global Network & OEM Alliances</h4>
+                        <p>Leveraging strong relationships with international suppliers and OEMs to source high-quality, authentic materials at competitive prices.</p>
+                    </div>
+                </div>
+                <div class="highlight-card float-3d">
+                    <img src="../images/PROCUREMENT-SERVICES/supply-chain-process.webp" alt="Efficient Supply Chain" class="thumbnail">
+                     <div class="card-content-inner">
+                        <h4>Developed Supply Chain Process</h4>
+                        <p>Our refined supply chain ensures timely delivery, inventory management, and logistical efficiency, minimizing project delays.</p>
+                    </div>
+                </div>
+                <div class="highlight-card float-3d">
+                    <img src="../images/PROCUREMENT-SERVICES/quality-assurance.png" alt="Quality Assurance" class="thumbnail">
+                    <div class="card-content-inner">
+                        <h4>Rigorous Quality Assurance</h4>
+                        <p>Our quality assurance program, supported by advanced labs and equipment, ensures inspection and testing of materials, welding, dimensions, and coatings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supply Capabilities Section -->
+    <section class="supply-capabilities section-light">
+        <div class="container">
+            <h2 class="text-center">SEESL Supplies:</h2>
+            <p class="text-center mb-3">Our comprehensive procurement capabilities cover a wide array of essential industrial products:</p>
+            <ul>
+                <li><i class="fas fa-oil-can"></i> Welded & seamless OCTG – casing & tubing of all sizes, drill pipes of all sizes, seamless pipes and SAW welded pipes of different sized.</li>
+                <li><i class="fas fa-valve-open"></i> Valves of different Sizes including PSVs and PRVs.</li>
+                <li><i class="fas fa-plug"></i> Instrumentation and electrical materials and parts.</li>
+                <li><i class="fas fa-cogs"></i> Pumps, Compressors and heavy-duty equipment.</li>
+                <li><i class="fas fa-tablet-alt"></i> Portable handheld field electronic equipment.</li>
+                <li><i class="fas fa-flask"></i> Drilling and production Chemicals including Stationaries.</li>
+                <li><i class="fas fa-paint-roller"></i> Specialty Chemicals including sealants, binders, solvents etc.</li>
+                <li><i class="fas fa-tools"></i> OEM Spares, Consumables and Utility materials.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Client Success Gallery (Keeping generic placeholders as per previous version, no specific stories in image) -->
+    <section class="success-gallery section-dark">
+        <div class="container">
+            <h2 class="text-center">Procurement Success Highlights</h2>
+            <div class="gallery-carousel">
+                <button class="carousel-nav prev-gallery" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+                <div class="gallery-track">
+                    <div class="gallery-card float-3d">
+                        <img src="../images/PROCUREMENT-SERVICES/Critical-Spare-Part.jpg" alt="Project Alpha Procurement" class="thumbnail">
+                        <div class="card-content-inner">
+                            <h4>Project Alpha: Critical Spares</h4>
+                            <p>Sourced and delivered critical spare parts for a major refinery, significantly reducing operational downtime.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card float-3d">
+                        <img src="../images/PROCUREMENT-SERVICES/Pipeline Construction Materials.jpg" alt="Pipeline Construction Materials" class="thumbnail">
+                        <div class="card-content-inner">
+                            <h4>Pipeline Project: Material Supply</h4>
+                            <p>Managed end-to-end procurement of materials for a large-scale pipeline, ensuring on-time project completion.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card float-3d">
+                        <img src="../images/PROCUREMENT-SERVICES/cost-saving-ideas.webp" alt="Cost Savings Initiative" class="thumbnail">
+                        <div class="card-content-inner">
+                            <h4>Client Omega: Cost Optimization</h4>
+                            <p>Achieved substantial cost savings on annual procurement spend through strategic sourcing for a key client.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-nav next-gallery" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+                <div class="pagination-dots gallery-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2>Streamline Your Supply Chain with SEESL</h2>
+            <p>Partner with us for reliable and efficient procurement services. Let's discuss how we can support your project's success.</p>
+            <a href="../contact.html" class="btn btn-primary">Request a Consultation</a>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer (Same as before) -->
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>About SEESL</h4>
+          <p>Solution Energy and Engineering Services Ltd provides world-class engineering, procurement, installation, asset management, and ISO certification services to businesses across Africa and beyond.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="#procurement-portfolio">Services</a></li>
+            <li><a href="../process.html">Process</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="../services/engineering.html">Engineering</a></li>
+            <li><a href="../services/procurement.html">Procurement</a></li>
+            <li><a href="../services/asset-management.html">Asset Management</a></li>
+            <li><a href="../services/renewable-energy.html">Renewable Energy</a></li>
+            <li><a href="../services/iso-certification/">ISO Certification</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@solutionenergylimited.com</li>
+            <li><i class="fas fa-phone"></i> +234 915 312 3973</li>
+            <li><i class="fas fa-map-marker-alt"></i> No 6 Salem Avenue <br> off Aker Road Rumolumeni <br> Port Harcourt, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons-footer">
+          <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="current-year"></span> Solution Energy Limited. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="../privacy-policy.html">Privacy Policy</a>
+          <a href="../terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button HTML -->
+<button id="backToTopBtn" aria-label="Scroll to top" title="Go to top">
+    ↑ <!-- Unicode upward arrow -->
+  </button>
+
+    <script src="../js/main.js"></script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+            document.body.setAttribute('data-theme', currentTheme);
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    let theme = document.body.getAttribute('data-theme');
+                    if (theme === 'dark') {
+                        document.body.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                    } else {
+                        document.body.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    }
+                });
+            }
+
+            const currentYearSpan = document.getElementById('current-year');
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const servicesDropdownMobile = document.getElementById('services-dropdown-mobile');
+            const mobileServices = document.getElementById('mobile-services');
+
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    const isExpanded = mobileMenu.classList.toggle('open');
+                    mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+                    mobileMenuToggle.innerHTML = isExpanded ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                    if (!isExpanded && mobileServices && mobileServices.classList.contains('open')) {
+                        mobileServices.classList.remove('open');
+                        servicesDropdownMobile.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            if (servicesDropdownMobile && mobileServices) {
+                servicesDropdownMobile.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isExpanded = mobileServices.classList.toggle('open');
+                    servicesDropdownMobile.setAttribute('aria-expanded', isExpanded);
+                });
+            }
+
+            // Simplified Carousel Logic Placeholder (from previous version)
+            const carousels = document.querySelectorAll('.gallery-carousel');
+            carousels.forEach(carousel => {
+                const track = carousel.querySelector('.gallery-track');
+                const nextButton = carousel.querySelector('.next-gallery');
+                const prevButton = carousel.querySelector('.prev-gallery');
+                
+                if (!track || !nextButton || !prevButton) return;
+
+                nextButton.addEventListener('click', () => {
+                    track.scrollBy({ left: track.clientWidth * 0.8, behavior: 'smooth' }); 
+                });
+
+                prevButton.addEventListener('click', () => {
+                     track.scrollBy({ left: -track.clientWidth * 0.8, behavior: 'smooth' });
+                });
+            });
+        });
+    </script> -->
+</body>
+</html>

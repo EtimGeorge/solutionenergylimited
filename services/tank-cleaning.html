@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="SEESL's tank cleaning services ensure efficient and safe cleaning of storage tanks for various industries.">
+    <meta name="description" content="SEESL's tank cleaning services ensure efficient and safe cleaning of storage tanks for various industries.">
+    <meta name="keywords" content="tank cleaning, SEESL, storage tank cleaning, industrial cleaning, oil and gas, petrochemical, environmental services">
+    <meta name="author" content="SEESL">
+    <meta name="keywords" content="tank cleaning, SEESL, storage tank cleaning, industrial cleaning, oil and gas, petrochemical, environmental services">
+    <meta name="author" content="SEESL">
+
+    <title>Tank Cleaning | SEESL</title>
+
+     <!-- Favicon -->
+  <link rel="icon" href="../images/SEES_new_logo.jpg">
+
+    <link rel="stylesheet" href="../css/variables.css">
+
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==========================================================================
+           Tank Cleaning Page - Specific Styles
+           ==========================================================================
+           Table of Contents:
+           --------------------------------------------------------------------------
+           1. PAGE-SPECIFIC FONT STYLES (If different from global)
+              1.1. Font Imports (if needed and not global)
+              1.2. Body & Heading Font Application
+           2. HERO SECTION OVERRIDES (If any)
+           3. SECTION STYLING
+              3.1. Service Overview (List Styling)
+              3.2. Cleaning Technology Grid & Items
+              3.3. Benefits Section Grid & Cards
+              3.4. Case Studies Grid & Items
+           4. DARK MODE OVERRIDES (Page-Specific for Themed Elements)
+           --------------------------------------------------------------------------
+        */
+        
+        /* -----------------------------------------------------------------------------
+           1. PAGE-SPECIFIC FONT STYLES
+           -------------------------------------------------------------------------- */
+        /* If this page uses Orbitron/Titillium Web like other service pages,
+           and those fonts are NOT globally defined in styles.css, import them here. */
+        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&family=Orbitron:wght@500&display=swap');
+        
+        body {
+            font-family: 'Titillium Web', sans-serif;
+        }
+        
+        h1, h2, h3, h4 { 
+            font-family: 'Orbitron', sans-serif;
+            /* color: var(--primary); */ /* Base color from global styles.css */
+        }
+        
+        /* Adjust section title colors if needed for this page's aesthetic */
+        .service-overview h2,
+        .cleaning-technology h2,
+        .benefits-section h2,
+        .case-studies h2,
+        .cta-section h2 {
+            /* color: var(--primary-hover); */ 
+        }
+        
+        
+        /* -----------------------------------------------------------------------------
+           2. HERO SECTION OVERRIDES (If any)
+           -------------------------------------------------------------------------- */
+        .service-hero h1 { /* Hero title for service pages */
+            /* Example: font-size: 2.9rem; */
+        }
+        .service-hero p { /* Hero subtitle */
+            /* Example: color: rgba(var(--secondary-rgb), 0.9); */
+        }
+        
+        
+        /* -----------------------------------------------------------------------------
+           3. SECTION STYLING
+           -------------------------------------------------------------------------- */
+
+           /* Add or modify these styles within the <style> tag of each service page */
+
+/* --- Enhanced .service-image styling --- */
+.service-overview .service-image {
+    width: 100%;
+    max-width: 550px; /* Control the maximum size of the image area */
+    margin: 2.5rem auto 0; /* Center it and provide some top margin */
+    position: relative; /* Crucial for positioning the decorative ::before element */
+    padding: 10px; /* Creates a small gap for the ::before element to peek through if desired */
+}
+
+.service-overview .service-image::before { /* Decorative backdrop/frame */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Slightly offset to create a layered look. Adjust these values as you like. */
+    /* Example: top: -8px; left: -8px; right: -8px; bottom: -8px; */
+    /* For an inset border effect if .service-image has padding: */
+    /* top: 5px; left: 5px; right: 5px; bottom: 5px; */
+    border-radius: calc(var(--border-radius-md) + 4px); /* Slightly larger radius than the image */
+    background: linear-gradient(145deg, rgba(var(--primary-rgb), 0.15), rgba(var(--secondary-rgb), 0.1));
+    z-index: 1; /* Behind the image */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
+    opacity: 0.7; /* Start slightly transparent */
+}
+
+.service-overview .service-image img {
+    display: block; /* Removes any bottom space if img is inline */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: var(--border-radius-md); /* Consistent rounded corners */
+    box-shadow: var(--shadow-lg); /* More prominent shadow */
+    position: relative; /* To sit on top of the ::before pseudo-element */
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hover effects */
+.service-overview .service-image:hover img {
+    transform: scale(1.03) translateY(-6px) rotate(-1deg); /* Subtle lift, scale, and tilt */
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.25); /* More pronounced shadow on hover */
+}
+
+.service-overview .service-image:hover::before {
+    transform: scale(1.05) translate(3px, 3px) rotate(1deg); /* Background element moves slightly differently */
+    opacity: 1; /* Becomes fully opaque */
+}
+
+/* Dark Mode adjustments */
+[data-theme="dark"] .service-overview .service-image::before {
+    background: linear-gradient(145deg, rgba(var(--primary-rgb), 0.25), rgba(var(--secondary-rgb), 0.2));
+}
+
+[data-theme="dark"] .service-overview .service-image img {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* Dark mode shadow */
+}
+
+[data-theme="dark"] .service-overview .service-image:hover img {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6); /* Enhanced dark mode hover shadow */
+}
+        
+        /* 3.1. Service Overview (List Styling) */
+        .service-overview .service-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+        
+        .service-overview .service-list li {
+            background-color: var(--background); /* Cleaner base for list items */
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius-sm);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--secondary); /* Accent with secondary color */
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-left-color 0.25s ease;
+            box-shadow: var(--shadow-sm);
+            color: var(--text);
+        }
+        
+        .service-overview .service-list li:hover {
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: var(--shadow-md);
+            border-left-color: var(--primary); 
+        }
+        
+        .service-overview .service-list li i.fa-check-circle { 
+            color: var(--secondary); 
+            font-size: 1.1em;
+            transition: color 0.25s ease;
+        }
+        .service-overview .service-list li:hover i.fa-check-circle {
+            color: var(--primary); 
+        }
+        .service-overview .service-image img {
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-lg); /* More prominent shadow for main image */
+        }
+        
+        
+        /* 3.2. Cleaning Technology Grid & Items */
+        .cleaning-technology {
+            background-color: var(--background-alt); /* Slightly different background for this section */
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Responsive */
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+        }
+        .tech-item { /* Card for each technology */
+            background-color: var(--background);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 4px solid transparent; /* For hover effect */
+        }
+        .tech-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-bottom-color: var(--primary); /* Accent on hover */
+        }
+        .tech-icon {
+            font-size: 2.5rem;
+            color: var(--primary); /* Primary color for tech icons */
+            margin-bottom: var(--spacing-sm);
+            line-height: 1;
+            padding: 15px;
+            border-radius: 50%;
+            background-color: rgba(var(--primary-rgb), 0.08);
+            display: inline-block; /* So background fits icon */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+        .tech-item:hover .tech-icon {
+            background-color: var(--primary);
+            color: white; /* White icon on primary background */
+            transform: scale(1.1) rotate(5deg);
+        }
+        .tech-item h3 {
+            color: var(--text);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-xs);
+        }
+        .tech-item p {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        
+        /* 3.3. Benefits Section Grid & Cards */
+        .benefits-section { /* Wrapper for benefits */
+            /* Uses global section styles */
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+        }
+        .benefit-card { /* Card for each benefit */
+            background-color: var(--background-alt);
+            border-radius: var(--border-radius-sm);
+            padding: var(--spacing-md);
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .benefit-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--secondary); /* Accent border on hover */
+        }
+        .benefit-icon {
+            font-size: 2.2rem;
+            color: var(--secondary); /* Secondary color for benefit icons */
+            margin-bottom: var(--spacing-sm);
+            padding: 10px;
+            display: inline-block;
+        }
+        .benefit-card h3 {
+            color: var(--text);
+            font-size: var(--font-size-base); /* Slightly smaller for these cards */
+            margin-bottom: var(--spacing-xs);
+            text-transform: uppercase; /* Uppercase for benefit titles */
+            letter-spacing: 0.5px;
+        }
+        .benefit-card p {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+        
+        
+        /* 3.4. Case Studies Grid & Items */
+        .case-studies {
+            background-color: var(--background-alt); /* Differentiate from previous section */
+        }
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+        }
+        .case-study { /* Card for each case study */
+            background-color: var(--background);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .case-study:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+        .case-study img {
+            width: 100%;
+            height: 200px; /* Fixed height for case study images */
+            object-fit: cover;
+            display: block;
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+        .case-study:hover img {
+            filter: saturate(1.2) brightness(1.05);
+            transform: scale(1.05);
+        }
+        .case-study-info {
+            padding: var(--spacing-md);
+            flex-grow: 1;
+        }
+        .case-study-info h3 {
+            color: var(--primary);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-xs);
+        }
+        .case-study-info p {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        
+        
+        /* -----------------------------------------------------------------------------
+           4. DARK MODE OVERRIDES (Page-Specific for Themed Elements)
+           -------------------------------------------------------------------------- */
+        [data-theme="dark"] .service-overview .service-list li {
+            background-color: var(--background-alt);
+            border-left-color: var(--primary); 
+            color: var(--text);
+        }
+        [data-theme="dark"] .service-overview .service-list li:hover {
+            border-left-color: var(--secondary);
+        }
+        [data-theme="dark"] .service-overview .service-list li i.fa-check-circle {
+            color: var(--primary);
+        }
+        [data-theme="dark"] .service-overview .service-list li:hover i.fa-check-circle {
+            color: var(--secondary);
+        }
+        
+        [data-theme="dark"] .cleaning-technology {
+            background-color: #1a1a1a; /* Even darker for this section background */
+        }
+        [data-theme="dark"] .tech-item {
+            background-color: var(--background-alt);
+            border-bottom-color: transparent;
+        }
+        [data-theme="dark"] .tech-item:hover {
+            border-bottom-color: var(--secondary);
+        }
+        [data-theme="dark"] .tech-icon {
+            color: var(--secondary);
+            background-color: rgba(var(--secondary-rgb), 0.1);
+        }
+        [data-theme="dark"] .tech-item:hover .tech-icon {
+            background-color: var(--secondary);
+            color: var(--background); /* Contrasting icon color */
+        }
+        [data-theme="dark"] .tech-item h3,
+        [data-theme="dark"] .benefit-card h3 {
+            color: var(--text);
+        }
+        [data-theme="dark"] .tech-item p,
+        [data-theme="dark"] .benefit-card p {
+            color: var(--text-light);
+        }
+        
+        [data-theme="dark"] .benefit-card {
+            background-color: var(--background); /* Card background */
+            border-color: var(--border);
+        }
+        [data-theme="dark"] .benefit-card:hover {
+            border-color: var(--primary);
+        }
+        [data-theme="dark"] .benefit-icon {
+            color: var(--primary);
+        }
+        
+        [data-theme="dark"] .case-studies {
+            background-color: var(--background);
+        }
+        [data-theme="dark"] .case-study {
+            background-color: var(--background-alt);
+        }
+        [data-theme="dark"] .case-study-info h3 {
+            color: var(--secondary);
+        }
+        [data-theme="dark"] .case-study-info p {
+            color: var(--text-light);
+        }
+        
+        </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <a href="../index.html" class="logo">
+              <img src="../images/SEES_new_logo.jpg" alt="SEESL Logo">
+            </a>
+            <nav class="desktop-nav">
+              <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li class="dropdown">
+                  <button class="dropdown-button" aria-haspopup="true" aria-expanded="false" id="services-dropdown">
+                    Services <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div class="dropdown-content" role="menu" aria-labelledby="services-dropdown">
+                    <a href="../services/asset-management.html" role="menuitem" tabindex="-1">Asset Management</a>
+                    <a href="../services/procurement.html" role="menuitem" tabindex="-1" class="active">Procurement</a>
+                    <a href="../services/engineering.html" role="menuitem" tabindex="-1">Engineering</a>
+                    <a href="../services/gas-conversion.html" role="menuitem" tabindex="-1">Gas Conversion</a>
+                    <a href="../services/renewable-energy.html" role="menuitem" tabindex="-1">Renewable Energy</a>
+                    <a href="../services/civil-construction.html" role="menuitem" tabindex="-1">Civil Construction</a>
+                    <a href="../services/tank-cleaning.html" role="menuitem" tabindex="-1">Tank Cleaning</a>
+                    <a href="../services/iso-certification/" role="menuitem" tabindex="-1">ISO Certification</a>
+                  </div>
+                </li>
+                <li><a href="../process.html">Process</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="header-actions">
+              <div class="contact-info">
+                <ul>
+                    <li><a href="tel:+2349153123973">+234 (915) 312-3973</a></li>
+                    
+                    <li><a href="tel:+234XXXXXXXXXX">+234 (XXX) XXX-XXXX</a></li> <!-- REPLACE WITH ACTUAL NEW NUMBER -->
+                  </ul>
+              </div>
+              <div class="social-icons">
+                <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+              </button>
+              <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li>
+              <button id="services-dropdown-mobile" class="services-dropdown">
+                Services <i class="fas fa-chevron-down"></i>
+              </button>
+              <div id="mobile-services" class="mobile-services">
+                <a href="../services/asset-management.html">Asset Management</a>
+                <a href="../services/procurement.html" class="active">Procurement</a>
+                <a href="../services/engineering.html">Engineering</a>
+                <a href="../services/gas-conversion.html">Gas Conversion</a>
+                <a href="../services/renewable-energy.html">Renewable Energy</a>
+                <a href="../services/civil-construction.html">Civil Construction</a>
+                <a href="../services/tank-cleaning.html">Tank Cleaning</a>
+                <a href="../services/iso-certification/">ISO Certification</a>
+              </div>
+            </li>
+            <li><a href="../process.html">Process</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li class="mobile-social">
+              <div class="social-icons-mobile">
+                <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+    <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay" style="background-image: url('../images/home-hero-image.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Tank and Vessel Cleaning</h1>
+            <p>Advanced Automated Cleaning Technologies</p>
+        <div class="hero-buttons">
+            <a href="#services" class="btn btn-secondary">Explore Services</a>
+            <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>    
+
+    <!-- Main Content -->
+    <main>
+        <section class="service-overview">
+            <div class="container">
+                <div class="service-content">
+                    <h2>Innovative Tank Cleaning Solutions</h2>
+                    <p>In safety conscious work-places today, the best option is the no-man entry into a confined space. In accordance with this, SEES has developed and adopted a range of technologies and methods using automated tank cleaning heads, vacuum transfer systems and other pumping solutions to clean tanks and vessels either remotely or with minimum man entry.</p>
+                    
+                    <p>We trust that with our broad and exceptional range of engineering expertise, we would be able to meet our customers' needs and demands. We would be proud to earn your business and become partners in the industry. Allow us the opportunity to serve you. You will experience first class service along with best-in-class products.</p>
+                    
+                    <h3>Our Tank Cleaning Services Include:</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check-circle"></i> Automated Cleaning of Petroleum Products Storage Tanks (Onshore/Offshore)</li>
+                        <li><i class="fas fa-check-circle"></i> Automated Cleaning of Pressure Vessels</li>
+                        <li><i class="fas fa-check-circle"></i> Automated Cleaning of Water Storage Tanks</li>
+                        <li><i class="fas fa-check-circle"></i> Automated Cleaning of Liquid Product Storage Containers (Pharmaceuticals/FMCGs/Breweries)</li>
+                        <li><i class="fas fa-check-circle"></i> Waste Management and Disposal</li>
+                        <li><i class="fas fa-check-circle"></i> Sludge Treatment and Recovery</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="../images/Tank and Vessel Cleaning/Tank Cleaning Services.webp" alt="Tank Cleaning Services">
+                </div>
+            </div>
+        </section>
+
+        <section class="cleaning-technology">
+            <div class="container">
+                <h2>Our Advanced Cleaning Technologies</h2>
+                
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Automated Cleaning Systems</h3>
+                        <p>Remote-controlled cleaning equipment that minimizes human entry into confined spaces, enhancing safety while delivering thorough cleaning results.</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-vacuum-cleaner"></i>
+                        </div>
+                        <h3>Vacuum Transfer Systems</h3>
+                        <p>Powerful vacuum systems that efficiently remove sludge, sediment, and residues from tanks and vessels without manual intervention.</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>High-Pressure Water Jetting</h3>
+                        <p>Specialized high-pressure water systems that effectively clean tank walls and remove stubborn deposits without chemical use.</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h3>Waste Recovery Systems</h3>
+                        <p>Advanced filtration and separation technologies that recover valuable products from waste and minimize environmental impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="container">
+                <h2>Benefits of Our Tank Cleaning Services</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Enhanced Safety</h3>
+                        <p>Minimizes or eliminates the need for human entry into confined spaces, significantly reducing safety risks.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Environmental Compliance</h3>
+                        <p>Our methods ensure proper handling and disposal of waste materials in compliance with environmental regulations.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3>Reduced Downtime</h3>
+                        <p>Automated systems work faster than traditional methods, minimizing operational disruptions.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3>Cost Efficiency</h3>
+                        <p>Recovery of valuable product from sludge and waste can offset cleaning costs and provide additional revenue streams.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-studies">
+            <div class="container">
+                <h2>Our Tank Cleaning Projects</h2>
+                <div class="case-studies-grid">
+                    <div class="case-study">
+                        <img src="../images/Tank and Vessel Cleaning/Petroleum Storage Tank Cleaning.jpg" alt="Petroleum Storage Tank Cleaning">
+                        <div class="case-study-info">
+                            <h3>Petroleum Storage Tank Cleaning</h3>
+                            <p>Successfully completed automated cleaning of a 10,000-barrel crude oil storage tank with minimal downtime and zero safety incidents.</p>
+                        </div>
+                    </div>
+                    <div class="case-study">
+                        <img src="../images/Tank and Vessel Cleaning/Water Storage Tank Cleaning-1.jpg" alt="Water Storage Tank Cleaning">
+                        <div class="case-study-info">
+                            <h3>Water Storage Tank Cleaning</h3>
+                            <p>Performed no-entry cleaning of municipal water storage tanks, maintaining water quality standards throughout the process.</p>
+                        </div>
+                    </div>
+                    <div class="case-study">
+                        <img src="../images/Tank and Vessel Cleaning/Pressure Vessel Cleaning.jpg" alt="Pressure Vessel Cleaning">
+                        <div class="case-study-info">
+                            <h3>Pressure Vessel Cleaning</h3>
+                            <p>Utilized specialized equipment to clean industrial pressure vessels, restoring optimal operational efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to modernize your tank cleaning approach?</h2>
+                <p>Contact us today to discuss how our automated tank cleaning solutions can enhance safety and efficiency for your operations.</p>
+                <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+     <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>About SEESL</h4>
+          <p>Solution Energy and Engineering Services Ltd provides world-class engineering, procurement, installation, asset management, and ISO certification services to businesses across Africa and beyond.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-services">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services/engineering.html">Engineering</a></li>
+            <li><a href="services/procurement.html">Procurement</a></li>
+            <li><a href="services/asset-management.html">Asset Management</a></li>
+            <li><a href="services/renewable-energy.html">Renewable Energy</a></li>
+            <li><a href="services/iso-certification/">ISO Certification</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@solutionenergylimited.com</li>
+            <li><i class="fas fa-phone"></i> +234 915 312 3973</li>
+            <li><i class="fas fa-map-marker-alt"></i> No 6 Salem Avenue <br> off Aker Road Rumolumeni <br> Port Harcourt, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons-footer">
+          <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Solution Energy Limited. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Back to Top Button HTML -->
+<button id="backToTopBtn" aria-label="Scroll to top" title="Go to top">
+    ↑ <!-- Unicode upward arrow -->
+  </button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

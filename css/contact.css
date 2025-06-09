@@ -1,0 +1,185 @@
+/* css/contact.css */
+.contact-section .contact-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .contact-section .contact-grid {
+        grid-template-columns: 1fr 1fr; /* Form on one side, info on other */
+    }
+    .contact-form-container {
+        margin-bottom: 0; /* Remove bottom margin if side-by-side */
+    }
+}
+
+.contact-form-container {
+  padding: var(--spacing-lg);
+  background-color: var(--background-alt); /* Themed background */
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form-container .form-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+  text-align: center;
+}
+
+.contact-form-container p small.response-time {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+/* Form elements will use global styles from styles.css */
+
+.contact-info-container {
+  padding: var(--spacing-lg);
+  background-color: var(--background-alt); /* Themed background */
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-info-card {
+    padding: 0; /* Remove padding if elements inside have it */
+}
+.contact-info-card h3 {
+    font-size: var(--font-size-xl);
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+}
+.contact-detail:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    font-size: 1.5rem; /* Larger icons */
+    color: var(--primary);
+    margin-right: var(--spacing-md); /* More space */
+    width: 40px; /* Ensure alignment */
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.contact-text h4 {
+    font-size: var(--font-size-base);
+    color: var(--text);
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+.contact-text p {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+    margin-bottom: 0.1rem;
+    line-height: 1.5;
+}
+.contact-text p a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+.contact-text p a:hover {
+    text-decoration: underline;
+    color: var(--secondary);
+}
+
+.contact-social {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+.contact-social h4 {
+    font-size: var(--font-size-base);
+    color: var(--text);
+    margin-bottom: var(--spacing-sm);
+}
+.social-icons-contact {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+.social-icons-contact a {
+  font-size: 1.75em; /* Larger social icons */
+  color: var(--primary);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons-contact a:hover {
+  color: var(--secondary);
+  transform: scale(1.15); /* More noticeable hover */
+}
+
+.map-section {
+    /* Uses global section styles */
+}
+.map-container {
+  overflow: hidden;
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--spacing-md); /* Space above map */
+}
+.map-placeholder {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%; /* Aspect ratio for map, adjust as needed */
+}
+.map-placeholder iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.map-overlay {
+    position: absolute;
+    bottom: 15px; /* Position button nicely */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.map-overlay .btn {
+    box-shadow: var(--shadow-sm);
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .contact-form-container,
+[data-theme="dark"] .contact-info-container {
+    background-color: var(--background); /* Slightly lighter than main dark bg */
+}
+[data-theme="dark"] .contact-form-container .form-title,
+[data-theme="dark"] .contact-info-card h3,
+[data-theme="dark"] .contact-icon,
+[data-theme="dark"] .contact-text p a {
+    color: var(--secondary); /* Brighter for dark mode */
+}
+[data-theme="dark"] .contact-form-container .form-group label {
+    color: var(--text);
+}
+[data-theme="dark"] .contact-form-container p small.response-time,
+[data-theme="dark"] .contact-text p {
+    color: var(--text-light);
+}
+[data-theme="dark"] .social-icons-contact a {
+    color: var(--secondary);
+}
+[data-theme="dark"] .social-icons-contact a:hover {
+    color: var(--primary);
+}
+[data-theme="dark"] .contact-text p a:hover {
+    color: var(--primary);
+}

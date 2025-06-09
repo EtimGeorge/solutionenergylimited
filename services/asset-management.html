@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SEESL's asset management services ensure optimal performance, efficiency, and safety of your assets. Learn more about our asset management solutions.">
+    <meta name="keywords" content="asset management, SEESL, Solution Energy and Engineering Services Limited, asset optimization, efficiency, safety">
+    <meta name="author" content="SEESL">
+    <title>Asset Management | SEESL</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/services/asset-management.css"> <!-- Linked external CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../images/SEES_new_logo.jpg" type="image/png">
+
+</head>
+<body>
+    <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+          <img src="../images/SEES_new_logo.jpg" alt="SEESL Logo">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li class="dropdown">
+              <button class="dropdown-button" aria-haspopup="true" aria-expanded="false" id="services-dropdown">
+                Services <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-content" role="menu" aria-labelledby="services-dropdown">
+                <a href="asset-management.html" role="menuitem" tabindex="-1" class="active">Asset Management</a>
+                <a href="procurement.html" role="menuitem" tabindex="-1">Procurement</a>
+                <a href="engineering.html" role="menuitem" tabindex="-1">Engineering</a>
+                <a href="gas-conversion.html" role="menuitem" tabindex="-1">Gas Conversion</a>
+                <a href="renewable-energy.html" role="menuitem" tabindex="-1">Renewable Energy</a>
+                <a href="civil-construction.html" role="menuitem" tabindex="-1">Civil Construction</a>
+                <a href="tank-cleaning.html" role="menuitem" tabindex="-1">Tank Cleaning</a>
+                <a href="iso-certification/" role="menuitem" tabindex="-1">ISO Certification</a>
+              </div>
+            </li>
+            <li><a href="../process.html">Process</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Social Icons & Theme Toggle - Desktop -->
+        <div class="header-actions">
+          <div class="contact-info">
+            <ul>
+                <li><a href="tel:+2349153123973">+234 (915) 312-3973</a></li>
+                <li><a href="tel:+234XXXXXXXXXX">+234 (XXX) XXX-XXXX</a></li> 
+              </ul>
+          </div>
+          <div class="social-icons">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li>
+          <button id="services-dropdown-mobile" class="services-dropdown">
+            Services <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="mobile-services" class="mobile-services">
+            <a href="asset-management.html" class="active">Asset Management</a>
+            <a href="procurement.html">Procurement</a>
+            <a href="engineering.html">Engineering</a>
+            <a href="gas-conversion.html">Gas Conversion</a>
+            <a href="renewable-energy.html">Renewable Energy</a>
+            <a href="civil-construction.html">Civil Construction</a>
+            <a href="tank-cleaning.html">Tank Cleaning</a>
+            <a href="iso-certification/">ISO Certification</a>
+          </div>
+        </li>
+        <li><a href="../process.html">Process</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        
+        <li class="mobile-social">
+          <div class="social-icons-mobile">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+   <!-- ===== Asset Management Page (Modernized) ===== -->
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay" style="background-image: url('../images/home-hero-image.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Asset Management</h1>
+        <p>We proffer our clients high-end Asset Management solutions</p>
+        <div class="hero-buttons">
+            <a href="#services-overview" class="btn btn-secondary">Explore Services</a>
+            <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>    
+
+<!-- Main Content -->
+<main>
+    <!-- Overview Section -->
+    <section id="services-overview" class="service-overview section-light">
+        <div class="background-image"></div> 
+        <div class="service-content">
+            <h2>Asset Integrity & Management Services</h2>
+            <p>Our services focus on ensuring that assets perform their intended function over their life cycle—balancing design, maintenance, and cost-effectiveness.</p>
+        </div>
+
+        <div class="service-list-container">
+            <ul class="service-list">
+                <li><i class="fas fa-shield-alt"></i> <span>Corrosion Monitoring & Prevention</span></li>
+                <li><i class="fas fa-map-marked-alt"></i> <span>Automated Corrosion Mapping</span></li>
+                <li><i class="fas fa-plug"></i> <span>Cathodic Protection</span></li>
+                <li><i class="fas fa-search"></i> <span>Inspection Services</span></li>
+                <li><i class="fas fa-tools"></i> <span>Non-Destructive Testing</span></li>
+                <li><i class="fas fa-hourglass-half"></i> <span>Remaining-Life Assessment</span></li>
+                <li><i class="fas fa-vial"></i> <span>Material Testing</span></li>
+                <li><i class="fas fa-chart-line"></i> <span>Regular Monitoring</span></li>
+                <li><i class="fas fa-calculator"></i> <span>Calibration Services</span></li>
+            </ul>
+            <div class="service-image">
+                <img src="../images/asset-management/asset-management-5.jpg" alt="Asset Management Services" style="width: 90%; max-width: 500px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Features Section -->
+    <section class="visual-highlights section-dark">
+      <div class="container">
+          <h2 class="text-center">What We Bring to the Table</h2>
+          <div class="highlight-grid">
+              <div class="highlight-card float-3d">
+                  <div class="thumbnail-container">
+                      <img src="../images/asset-management/digital-monitoring-system-2.jpg" alt="High-Tech Monitoring" class="thumbnail">
+                  </div>
+                  <div class="highlight-card-content">
+                      <h4>Digital Monitoring Systems</h4>
+                      <p>24/7 remote asset surveillance and predictive analytics for proactive maintenance.</p>
+                  </div>
+              </div>
+              <div class="highlight-card float-3d">
+                  <div class="thumbnail-container">
+                      <img src="../images/asset-management/Preventive-Maintenance-Tools.avif" alt="Preventive Maintenance" class="thumbnail">
+                  </div>
+                  <div class="highlight-card-content">
+                      <h4>Preventive Maintenance Tools</h4>
+                      <p>Advanced tools and techniques to extend asset lifespan and optimize performance.</p>
+                  </div>
+              </div>
+              <div class="highlight-card float-3d">
+                  <div class="thumbnail-container">
+                      <img src="../images/asset-management/Smart Analytics Dashboard-1.png" alt="Analytics Dashboard" class="thumbnail">
+                  </div>
+                  <div class="highlight-card-content">
+                      <h4>Smart Analytics Dashboard</h4>
+                      <p>Real-time performance insights and data visualization for smarter decision-making.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- Facility Maintenance Section -->
+    <section class="facility-maintenance section-light">
+        <div class="container">
+            <h2>Facility Maintenance Services</h2>
+            <p>We uphold safety and precision using modern automated systems for high-risk environments in the energy sector.</p>
+
+            <div class="facility-grid">
+                <div class="facility-image">
+                    <img src="../images/facility-maintenance-1.jpg" alt="Facility Maintenance">
+                </div>
+                <div class="facility-image">
+                    <img src="../images/facility-maintenance-2.jpg" alt="Facility Maintenance">
+                </div>
+            </div>
+
+            <h3>Our Services Cover:</h3>
+            <ul class="service-list two-column">
+                <li><i class="fas fa-tools"></i> Overhaul, repair & recertification of mechanical and process modules</li>
+                <li><i class="fas fa-pipe"></i> Sectional or entire pipeline or piping replacement</li>
+                <li><i class="fas fa-bolt"></i> Electrical & instrumentation maintenance & installation</li>
+                <li><i class="fas fa-brush"></i> Coating/painting & surface protection services</li>
+                <li><i class="fas fa-oil-can"></i> Routine lubrication of all moving parts</li>
+                <li><i class="fas fa-valve"></i> Replacement of valves, pumps etc.</li>
+                <li><i class="fas fa-lightbulb"></i> Regular inspections of lighting systems</li>
+                <li><i class="fas fa-hard-hat"></i> Scaffolding and Rope Access Services</li>
+            </ul>
+        </div>
+    </section>
+
+<!-- Client Success Gallery -->
+<section class="success-gallery section-dark">
+    <div class="container">
+        <h2 class="text-center">Client Success Stories</h2>
+        <div class="gallery-carousel-auto-scroll"> 
+            <div class="gallery-track-auto-scroll"> 
+                <!-- Original Set of Cards -->
+                <div class="gallery-card float-3d">
+                    <div class="thumbnail-container">
+                        <img src="../images/client1.jpg" alt="Client Project 1" class="thumbnail">
+                    </div>
+                    <div class="gallery-card-content">
+                        <p>Recovered 80% of failing pipeline integrity at XYZ Facility.</p>
+                    </div>
+                </div>
+                <div class="gallery-card float-3d">
+                    <div class="thumbnail-container">
+                        <img src="../images/client2.jpg" alt="Client Project 2" class="thumbnail">
+                    </div>
+                    <div class="gallery-card-content">
+                        <p>Implemented AI-powered corrosion tracking for ABC Group.</p>
+                    </div>
+                </div>
+                <div class="gallery-card float-3d">
+                    <div class="thumbnail-container">
+                        <img src="../images/client3.jpg" alt="Client Project 3" class="thumbnail">
+                    </div>
+                    <div class="gallery-card-content">
+                        <p>Reduced facility downtime by 45% through predictive maintenance.</p>
+                    </div>
+                </div>
+
+                <!-- Duplicated Set of Cards for seamless scroll -->
+                <div class="gallery-card float-3d">
+                    <div class="thumbnail-container">
+                        <img src="../images/client1.jpg" alt="Client Project 1" class="thumbnail">
+                    </div>
+                    <div class="gallery-card-content">
+                        <p>Recovered 80% of failing pipeline integrity at XYZ Facility.</p>
+                    </div>
+                </div>
+                <div class="gallery-card float-3d">
+                    <div class="thumbnail-container">
+                        <img src="../images/client2.jpg" alt="Client Project 2" class="thumbnail">
+                    </div>
+                    <div class="gallery-card-content">
+                        <p>Implemented AI-powered corrosion tracking for ABC Group.</p>
+                    </div>
+                </div>
+                <div class="gallery-card float-3d">
+                    <div class="thumbnail-container">
+                        <img src="../images/client3.jpg" alt="Client Project 3" class="thumbnail">
+                    </div>
+                    <div class="gallery-card-content">
+                        <p>Reduced facility downtime by 45% through predictive maintenance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-light"> <!-- Added section-light for consistency -->
+        <div class="container text-center">
+            <h2>Ready to optimize your asset management?</h2>
+            <p>Contact us today to discuss how our solutions can improve your performance and safety.</p>
+            <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>About SEESL</h4>
+          <p>Solution Energy and Engineering Services Ltd provides world-class engineering, procurement, installation, asset management, and ISO certification services to businesses across Africa and beyond.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../process.html">Process</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-services">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="engineering.html">Engineering</a></li>
+            <li><a href="procurement.html">Procurement</a></li>
+            <li><a href="asset-management.html">Asset Management</a></li>
+            <li><a href="renewable-energy.html">Renewable Energy</a></li>
+            <li><a href="iso-certification/">ISO Certification</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@solutionenergylimited.com</li>
+            <li><i class="fas fa-phone"></i> +234 915 312 3973</li>
+            <li><i class="fas fa-map-marker-alt"></i> No 6 Salem Avenue <br> off Aker Road Rumolumeni <br> Port Harcourt, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons-footer">
+          <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Solution Energy Limited. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="../privacy-policy.html">Privacy Policy</a>
+          <a href="../terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button HTML -->
+<button id="backToTopBtn" aria-label="Scroll to top" title="Go to top">
+  ↑ <!-- Unicode upward arrow -->
+</button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

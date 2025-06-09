@@ -1,0 +1,1324 @@
+/* 
+  SEES Global ISO Certification - Main Stylesheet
+  
+  Table of Contents:
+  1. Reset & Base Styles
+  2. Color Variables
+  3. Typography
+  4. Layout & Container
+  5. Header & Navigation
+  6. Footer
+  7. Hero Section
+  8. Trust Badge Section
+  9. Services Section
+  10. Global Reach Section
+  11. Testimonials Section
+  12. Contact Section
+  13. Buttons & Forms
+  14. Modal
+  15. Utilities
+  16. Theme Toggle & Dark Mode
+  17. Media Queries
+*/
+
+/* 1. Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* 2. Color Variables */
+/* :root { */
+  /* Light theme */
+  /* --primary: #0056b3;
+  --primary-hover: #004494;
+  --secondary: #e63946;
+  --secondary-hover: #d32836;
+  --text: #333333;
+  --text-light: #666666;
+  --background: #ffffff;
+  --background-alt: #f8f9fa;
+  --border: #e5e7eb;
+  --success: #10b981;
+  --header: #0056b3;
+  --footer: #0056b3;
+} */
+
+/* Set dark theme colors via attribute */
+/* [data-theme="dark"] {
+  --primary: #1e88e5;
+  --primary-hover: #1976d2;
+  --secondary: #f44336;
+  --secondary-hover: #e53935;
+  --text: #f1f5f9;
+  --text-light: #cbd5e1;
+  --background: #0f172a;
+  --background-alt: #1e293b;
+  --border: #334155;
+  --success: #10b981;
+  --header: #1e293b;
+  --footer: #1e293b;
+} */
+
+/* 3. Typography */
+/* h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
+} */
+
+
+/* 0.1. CSS Variables (Light & Dark Themes) */
+:root {
+  /* Colors */
+  --primary: #005792;
+  --primary-hover: #004a7c;
+  --secondary: #00b0ff; 
+  --secondary-hover: #0090d4;
+  --header: #005792;
+  --footer: #0a2540;
+  --text: #333333;
+  --text-light: #777777;
+  --background: #ffffff;
+  --background-alt: #f5f8fa;
+  --border: #e5e7eb;
+  --error: #dc2626;
+  --erro-hover:rgb(178, 7, 7);
+  --accent:#ffff00;
+  --primary-rgb: 0, 87, 146; /* Added for rgba usage */
+  --secondary-rgb: 0, 176, 255;
+  
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  
+  /* Spacing */
+  --container-max-width: 1280px;
+  --container-padding: 1.5rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  
+  /* Border Radius */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease; /* Added from modal close button */
+  /* --transition-normal: 0.3s ease; */ /* You can add this if used commonly */
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --primary: #1e88e5; /* Lighter blue for dark theme */
+  --primary-hover: #4dabf5; /* Lighter blue for dark theme hover - NEW & IMPROVED */
+  --secondary: #03a9f4; /* Slightly adjusted secondary for dark, if needed */
+  --secondary-hover: #29b6f6;
+  --header: #1e293b; /* Darker header for dark mode */
+  --footer: #1e293b; /* Darker footer for dark mode */
+  --text: #f3f4f6; /* Light text for dark mode */
+  --text-light: #cbd5e1; /* Slightly dimmer light text */
+  --background: #121212; /* Dark background */
+  --background-alt: #1f2937; /* Slightly lighter dark background */
+  --border: #374151; /* Darker border */
+  --accent: #FFEB3B; /* Potentially a brighter or different yellow for dark mode */
+  /* Ensure primary-rgb and secondary-rgb are updated if base colors change significantly */
+  --primary-rgb: 30, 136, 229; /* Corresponds to #1e88e5 */
+  --secondary-rgb: 3, 169, 244; /* Corresponds to #03a9f4 */
+}
+
+/* 0.2. Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+/* 4. Layout & Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.section-light {
+  background-color: var(--background);
+}
+
+.section-dark {
+  background-color: var(--background-alt);
+}
+
+/* 5. Header & Navigation */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--header);
+  color: white;
+  padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: padding 0.3s;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+  height: 70px;
+  transition: height 0.3s;
+  border-radius: 5rem;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.desktop-nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.desktop-nav a {
+  position: relative;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+  color: var(--secondary);
+}
+
+.desktop-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0;
+  font-weight: 500;
+}
+
+.dropdown-button:hover {
+  color: var(--secondary);
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: var(--background-alt); /* Changed from white to use a theme variable */
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icons {
+  display: none;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--secondary);
+}
+
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: block; /* Show by default for mobile */
+}
+
+
+/* Mobile Menu */
+.mobile-menu {
+  background-color: var(--header);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.mobile-menu.open {
+  max-height: 500px;
+}
+
+.mobile-menu ul {
+  padding: 1rem;
+}
+
+.mobile-menu li {
+  margin-bottom: 0.5rem;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.5rem 0;
+  color: white;
+  font-weight: 500;
+}
+
+.mobile-menu a:hover {
+  color: var(--secondary);
+}
+
+.services-dropdown {
+  background: none;
+  border: none;
+  color: white;
+  font: inherit;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mobile-services {
+  display: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-left: 2px solid var(--secondary);
+}
+
+.mobile-services.open {
+  display: block;
+}
+
+.mobile-social {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-icons-mobile {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-icons-mobile a {
+  font-size: 1.25rem;
+}
+
+/* 6. Footer */
+.footer {
+  background-color: var(--footer);
+  color: white;
+  padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footer h4 {
+  color: white;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.footer h4::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
+/* this will overide the position of the red buttom border */
+/* .footer-social h4::after{
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 31.5rem;
+  width: 50px;
+  height: 2px;
+  background-color: var(--secondary);
+} */
+
+.footer ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer a {
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: var(--secondary);
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.footer-contact i {
+  color: var(--secondary);
+  margin-top: 0.25rem;
+}
+
+.footer-social {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.social-icons-footer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-icons-footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.25rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons-footer a:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.footer-bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-legal {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* 7. Hero Section */
+.hero {
+  position: relative;
+  padding: 8rem 0 6rem;
+  background: linear-gradient(to right, var(--primary), #003366);
+  color: white;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h1 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* 8. Trust Badge Section */
+.trust-badge {
+  background-color: var(--background-alt);
+  padding: 2rem 0;
+}
+
+.trust-badge-content {
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+.badges-carousel {
+  position: relative;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.badges-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.badges-wrapper img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.carousel-control {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-control:hover {
+  background-color: var(--primary-hover);
+}
+
+/* 9. Services Section */
+.services {
+  background-color: var(--background);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.service-card h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-card ul {
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.service-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-card li i {
+  color: var(--secondary);
+  margin-top: 0.25rem;
+}
+
+/* 10. Global Reach Section */
+.global-reach {
+  background-color: var(--background-alt);
+}
+
+.global-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.global-card {
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid var(--primary);
+  transition: transform 0.3s;
+}
+
+.global-card:hover {
+  transform: translateY(-8px);
+}
+
+.global-flag {
+  width: 80px;
+  height: 60px;
+  margin: 0 auto 1rem;
+}
+
+.global-card h4 {
+  margin-bottom: 0.5rem;
+}
+
+.global-card p {
+  color: var(--text-light);
+}
+
+/* 11. Testimonials Section */
+.testimonials {
+  background-color: var(--background);
+}
+
+.testimonial-carousel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-slides {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.testimonial-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.testimonial-content {
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+}
+
+.testimonial-quote {
+  position: relative;
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-quote i.fa-quote-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--secondary);
+  opacity: 0.5;
+}
+
+.testimonial-quote i.fa-quote-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: var(--secondary);
+  opacity: 0.5;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-author h4 {
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-author p {
+  color: var(--text-light);
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.testimonial-control {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.testimonial-control:hover {
+  background-color: var(--primary-hover);
+}
+
+.testimonial-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: var(--primary);
+}
+
+/* 12. Contact Section */
+.contact {
+  background-color: var(--background-alt);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-form-container {
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.contact-info {
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.regional-offices {
+  margin-top: 1.5rem;
+}
+
+.office {
+  margin-bottom: 1.5rem;
+}
+
+.office h4 {
+  margin-bottom: 0.5rem;
+}
+
+.office p {
+  color: var(--text-light);
+  margin-bottom: 0.25rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  font-size: 1.25rem;
+  color: var(--primary);
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--secondary);
+}
+
+/* 13. Buttons & Forms */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-blue {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-red {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: var(--secondary-hover);
+}
+
+.btn-service {
+  background-color: var(--primary);
+  color: white;
+  width: 100%;
+}
+
+.btn-service:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-submit {
+  background-color: var(--primary);
+  color: white;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: var(--primary-hover);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.nigeria-form .form-title {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* 14. Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.modal-icon {
+  font-size: 4rem;
+  color: var(--success);
+  margin-bottom: 1.5rem;
+}
+
+.modal-btn {
+  margin-top: 1.5rem;
+}
+
+/* 15. Utilities */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 16. Theme Toggle & Dark Mode */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.theme-toggle .fa-sun {
+  display: none;
+}
+
+.theme-toggle .fa-moon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .fa-sun {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .fa-moon {
+  display: none;
+}
+
+/* 17. Media Queries */
+@media (min-width: 768px) {
+  .mobile-menu-toggle {
+    display: none; /* Hide on desktop */
+  }
+  .desktop-nav {
+    display: block;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .global-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .contact-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-legal {
+    margin-top: 0;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .badges-wrapper img {
+    height: 64px;
+  }
+
+
+}
+
+
+/* start of iso certificates */
+
+/* Certificate Gallery Styles */
+.certificates-section {
+  padding: 40px 0;
+  background-color: var(--background-alt);
+}
+
+.certificates-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.certificates-heading {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-light);
+}
+
+.certificate-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-button:hover, .filter-button.active {
+  background-color: var(--primary);
+  color: white;
+  border-color: #007bff;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.certificate-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.certificate-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #1d0af7;
+}
+
+
+.certificate-info {
+  padding: 15px;
+}
+
+.certificate-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #2e2e2e;
+}
+
+.certificate-type {
+  color: #2e2e2e;
+  margin-bottom: 10px;
+}
+
+.certificate-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.certificate-link:hover {
+  background-color: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+  .certificates-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+ /* end of iso certificates  */
+
+
+
+
+
+
+
+
+ /* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .global-map {
+    height: 300px;
+  }
+  
+  .contact-form-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    padding: 0.5rem;
+  }
+  
+  .testimonial-card {
+    padding: 1rem;
+  }
+}
