@@ -556,18 +556,71 @@ section {
 .partner-logo img { max-width: 100%; height: auto; }
 
 /* 3.7. General Forms */
-.form-group { margin-bottom: 1.5rem; position: relative; color: var(--accent); }
-.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text); }
-input, select, textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--border-radius-sm); background-color: var(--background); color: var(--text); font-family: inherit; }
-input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); }
-.form-group.error input, .form-group.error select, .form-group.error textarea { border-color: var(--error); }
-.error-message { color: var(--error); font-size: var(--font-size-sm); margin-top: 0.25rem; display: block; }
+.form-group {
+   margin-bottom: 1.5rem; 
+   position: relative; 
+   color: var(--accent); 
+  }
+
+.form-group label {
+   display: block; 
+   margin-bottom: 0.5rem; 
+   font-weight: 500; 
+   color: var(--text); 
+  }
+
+input, select, textarea {
+   width: 100%; padding: 0.75rem; 
+   border: 1px solid var(--border); 
+   border-radius: var(--border-radius-sm); 
+   background-color: var(--background); 
+   color: var(--text); 
+   font-family: inherit; 
+  }
+
+input:focus, select:focus, textarea:focus {
+   outline: none; 
+   border-color: var(--primary); 
+  }
+
+.form-group.error input, .form-group.error select, .form-group.error textarea {
+   border-color: var(--error); 
+  }
+
+.error-message {
+   color: var(--error); 
+   font-size: var(--font-size-sm); 
+   margin-top: 0.25rem; display: block; 
+  }
 
 /* 3.8. Contact Page Specifics */
-.contact-section .contact-grid { display: grid; gap: var(--spacing-lg); }
-.contact-form-container { padding: 15px; margin: 20px; background-image: url('../images/SEESL-office-image.png'); background-size: cover; background-position: center; border-radius: var(--border-radius-md); box-shadow: var(--shadow-lg); max-width: 600px; }
-.contact-form-container p, .contact-form-container small { background: var(--footer); margin: 0.5rem; border-radius: var(--border-radius-sm); padding: 5px; text-align: center; color: yellow; }
-.contact-form-container p .response-time { background: var(--footer); color: wheat; }
+.contact-section .contact-grid {
+   display: grid; 
+   gap: var(--spacing-lg); 
+  }
+
+.contact-form-container {
+   padding: 15px; 
+   margin: 20px; 
+   background-image: url('../images/SEESL-office-image.png'); background-size: cover; 
+   background-position: center; 
+   border-radius: var(--border-radius-md); 
+   box-shadow: var(--shadow-lg); max-width: 600px; 
+  }
+
+.contact-form-container p, .contact-form-container small {
+   background: var(--footer); 
+   margin: 0.5rem; 
+   border-radius: var(--border-radius-sm); 
+   padding: 5px; text-align: center; 
+   color: yellow; 
+  }
+
+.contact-form-container p .response-time {
+   background: var(--footer); 
+   color: wheat; 
+  }
+  
 .contact-form input[type="text"], .contact-form input[type="email"], .contact-form input[type="tel"], .contact-form select, .contact-form textarea { height: 40px; box-sizing: border-box; }
 .contact-form textarea { height: 80px; }
 .contact-form-container .form-title { font-size: var(--font-size-lg); font-weight: 800; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary); color: var(--primary); }
