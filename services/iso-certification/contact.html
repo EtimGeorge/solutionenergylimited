@@ -26,7 +26,9 @@
   <meta name="description" content="Get in touch with SEES Global ISO Certification. Contact our team for inquiries about certification, training, and audit services.">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/contact.css">
+  <link rel="stylesheet" href="styles.css"> <!-- This might be specific to ISO pages, keep if necessary -->
   <style>
     .contact-hero {
       background-position: center;
@@ -36,15 +38,21 @@
     
     .contact-info-card {
       background-color: var(--background);
+      
       border-radius: 0.5rem;
       padding: 2rem;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       margin-bottom: 2rem;
     }
+
+    .section-intro{
+      max-width: 800px; 
+      margin: 0 auto;
+    }
     
     .contact-info-item {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       margin-bottom: 1.5rem;
     }
     
@@ -161,28 +169,30 @@
       
       .contact-tab {
         padding: 1rem;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 3px solid var(--border-color);
       }
       
       .contact-tab.active {
-        border-bottom: 1px solid var(--primary);
+        border-bottom: 2px solid var(--primary);
         border-left: 3px solid var(--primary);
       }
     }
     
-    /* Added styles for the forms */
+    /* Updated styles for the forms */
     .contact-tab-content .contact-form {
-      padding: var(--spacing-lg, 2rem); /* Use fallback if --spacing-lg is not defined here */
-      background-color: var(--background-alt, #f5f8fa); /* Use fallback if --background-alt is not defined here */
-      border-radius: var(--border-radius-md, 0.5rem); /* Use fallback */
-      box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1)); /* Use fallback */
+      padding: var(--spacing-lg, 2rem); /* From .contact-form-container */
+      background-color: var(--background-alt, #f5f8fa); /* From .contact-form-container */
+      border-radius: var(--border-radius-md, 0.5rem); /* From .contact-form-container */
+      box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1)); /* From .contact-form-container */
       margin-top: 1.5rem; /* Add some space above the form */
+      /* If .contact-form-container has a specific max-width or margin, add here */
+      /* e.g., max-width: 600px; margin-left: auto; margin-right: auto; */
     }
 
     [data-theme="dark"] .contact-tab-content .contact-form {
-        background-color: var(--background, #121212); /* Adjust for dark theme if needed, using fallback */
+        background-color: var(--background, #121212); /* Dark theme adjustment from .contact-form-container */
     }
-    /* End of added styles */
+    /* End of updated styles */
     
     @media (max-width: 768px) {
       .contact-tabs {

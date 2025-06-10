@@ -246,7 +246,7 @@ section {
   width: 100%;
   height: 70px;
   transition: height 0.3s;
-  border-radius: 5rem;
+  border-radius: 5px;
 }
 
 .desktop-nav {
@@ -889,6 +889,10 @@ section {
 
 .contact-form-container {
   background-color: var(--background);
+background-image: url('./assets/SEESL-office-image.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   padding: 2rem;
