@@ -33,12 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize testimonial carousel
   initTestimonialCarousel();
   
-  // Initialize contact form
-  initContactForm();
-  
-  // Initialize success modal
-  initModal();
-  
   // Handle URL parameters (for social media ads)
   handleUrlParameters();
 });
@@ -876,120 +870,7 @@ function initTestimonialCarousel() {
   });
 }
 
-/**
- * Contact Form Functionality
- */
-function initContactForm() {
-  const contactForm = document.getElementById('contact-form');
-  
-  if (!contactForm) {
-    return;
-  }
-  
-  contactForm.addEventListener('submit', function(e) {
-    // Do not prevent default as we want the form to submit to FormSubmit
-    // However, we still validate before submission
-    
-    // Basic form validation
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    
-    // Get service type depending on which page we're on
-    let serviceType = '';
-    const serviceElement = document.getElementById('service');
-    const trainingTypeElement = document.getElementById('training-type');
-    const auditTypeElement = document.getElementById('audit-type');
-    const certificationElement = document.getElementById('certification');
-    
-    if (serviceElement) {
-      serviceType = serviceElement.value;
-    } else if (trainingTypeElement) {
-      serviceType = trainingTypeElement.value;
-    } else if (auditTypeElement) {
-      serviceType = auditTypeElement.value;
-    } else if (certificationElement) {
-      serviceType = certificationElement.value;
-    }
-    
-    // Check if service type is required and provided
-    const isServiceRequired = 
-      (serviceElement && serviceElement.hasAttribute('required')) ||
-      (trainingTypeElement && trainingTypeElement.hasAttribute('required')) ||
-      (auditTypeElement && auditTypeElement.hasAttribute('required')) ||
-      (certificationElement && certificationElement.hasAttribute('required'));
-    
-    if (!name || !email || !message || (isServiceRequired && !serviceType)) {
-      e.preventDefault();
-      alert('Please fill out all required fields.');
-      return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      e.preventDefault();
-      alert('Please enter a valid email address.');
-      return;
-    }
-    
-    // Form is valid and will be submitted to FormSubmit
-    // We'll show the success modal after a small delay
-    setTimeout(function() {
-      const successModal = document.getElementById('success-modal');
-      if (successModal) {
-        successModal.classList.add('open');
-      }
-      
-      // Clear the form after submission
-      contactForm.reset();
-      
-      // Reset form title and remove any custom classes
-      const formTitle = document.getElementById('form-title');
-      if (formTitle) {
-        formTitle.textContent = 'General Inquiry';
-      }
-      contactForm.classList.remove('nigeria-form', 'international-form');
-    }, 1000);
-  });
-}
 
-/**
- * Modal Functionality
- */
-function initModal() {
-  const modal = document.getElementById('success-modal');
-  const closeButton = modal.querySelector('.modal-close');
-  const actionButton = modal.querySelector('.modal-btn');
-  
-  if (!modal || !closeButton || !actionButton) {
-    return;
-  }
-  
-  // Close modal when close button is clicked
-  closeButton.addEventListener('click', function() {
-    modal.classList.remove('open');
-  });
-  
-  // Close modal when action button is clicked
-  actionButton.addEventListener('click', function() {
-    modal.classList.remove('open');
-  });
-  
-  // Close modal when clicking outside of modal content
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      modal.classList.remove('open');
-    }
-  });
-  
-  // Close modal when ESC key is pressed
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.classList.contains('open')) {
-      modal.classList.remove('open');
-    }
-  });
-}
 
 
 //start of iso certification

@@ -143,7 +143,7 @@ app.post('/submit-form', async (req, res) => {
         });
 
         await resend.emails.send({
-            from: 'noreply@solutionenergylimited.com',
+            from: process.env.RESEND_FROM_EMAIL,
             to: process.env.RECIPIENT_EMAIL,
             subject: `New Inquiry from ${formOrigin}`,
             html: emailHtml

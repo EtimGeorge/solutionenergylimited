@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (hostname === '127.0.0.1' || hostname === 'localhost') {
             return 'http://localhost:3000'; // Local development
         } else {
-            // Replace with your final Vercel URL once deployed
-            return 'https://your-backend-url.vercel.app'; // Production
+            return window.FRONTEND_CONFIG.BACKEND_URL; // Production URL from config.js
         }
     }
     const BACKEND_URL = getBackendUrl();
@@ -15,8 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     grecaptcha.ready(function() {
         const contactForm = document.getElementById('contact-form');
         if (!contactForm) return;
-
-        const successModal = document.getElementById('success-modal');
 
         contactForm.addEventListener('submit', async function (event) {
             event.preventDefault();
@@ -27,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
             submitButton.disabled = true;
 
             try {
-                const token = await grecaptcha.execute('6Ld-fA8qAAAAAP_88n2yS2syO2gG1-wzY_Z-Y-Z-', { action: 'submit' });
+                const token = await grecaptcha.execute(window.FRONTEND_CONFIG.RECAPTCHA_SITE_KEY, { action: 'submit' });
                 
                 const formData = new FormData(contactForm);
                 const formProps = Object.fromEntries(formData);
@@ -44,11 +41,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 const result = await response.json();
 
                 if (response.ok && result.success) {
-                    if(successModal) {
-                        successModal.style.display = 'block';
-                        document.body.style.overflow = 'hidden';
-                    }
                     contactForm.reset();
+                    // Check if the advanced confetti modal function exists (from campaign-landing.html)
+                    if (typeof showSuccessModalWithConfetti === 'function') {
+                        showSuccessModalWithConfetti();
+                    } else {
+                        // Fallback to simple modal if confetti function is not available
+                        const successModal = document.getElementById('success-modal');
+                        if(successModal) {
+                            successModal.style.display = 'block';
+                            document.body.style.overflow = 'hidden';
+                        }
+                    }
                 } else {
                     alert(result.message || 'An error occurred during submission.');
                 }

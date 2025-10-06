@@ -93,8 +93,7 @@ async function handleFormSubmission(event) {
         if (hostname === '127.0.0.1' || hostname === 'localhost') {
             return 'http://localhost:3000'; // Local development
         } else {
-            // Replace with your final Vercel URL once deployed
-            return 'https://your-backend-url.vercel.app'; // Production
+            return window.FRONTEND_CONFIG.BACKEND_URL; // Production URL from config.js
         }
     }
     const BACKEND_URL = getBackendUrl();
@@ -106,7 +105,7 @@ async function handleFormSubmission(event) {
 
     try {
         // This assumes the global reCAPTCHA script is loaded on the page
-        const token = await grecaptcha.execute('6LeiyN8rAAAAALONJECmjQMVBrIvV4JVHvHfzt5g', { action: 'iso_form_submit' });
+        const token = await grecaptcha.execute(window.FRONTEND_CONFIG.RECAPTCHA_SITE_KEY, { action: 'iso_form_submit' });
 
         const formData = new FormData(form);
         const formProps = Object.fromEntries(formData);
@@ -114,7 +113,7 @@ async function handleFormSubmission(event) {
         // Include the dynamically set form origin
         formProps.formOrigin = form.dataset.formOrigin;
 
-        const response = await fetch(`${BACKEND_URL}/submit-form`, { // Use the dynamic URL
+        const response = await fetch(`${BACKEND_URL}/submit-form`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
