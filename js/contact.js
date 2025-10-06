@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // --- Dynamic Backend URL Logic ---
+    function getBackendUrl() {
+        const hostname = window.location.hostname;
+        if (hostname === '127.0.0.1' || hostname === 'localhost') {
+            return 'http://localhost:3000'; // Local development
+        } else {
+            // Replace with your final Vercel URL once deployed
+            return 'https://your-backend-url.vercel.app'; // Production
+        }
+    }
+    const BACKEND_URL = getBackendUrl();
+
     // Wait for reCAPTCHA to be ready before interacting with the form
     grecaptcha.ready(function() {
         const contactForm = document.getElementById('contact-form');
@@ -21,8 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const formProps = Object.fromEntries(formData);
                 formProps.recaptchaToken = token;
 
-                // Use the correct backend URL
-                const response = await fetch('http://localhost:3000/submit-form', {
+                const response = await fetch(`${BACKEND_URL}/submit-form`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

@@ -87,6 +87,18 @@ async function handleFormSubmission(event) {
     const submitButton = form.querySelector('button[type="submit"]');
     const originalButtonText = submitButton.innerHTML;
 
+    // --- Dynamic Backend URL Logic ---
+    function getBackendUrl() {
+        const hostname = window.location.hostname;
+        if (hostname === '127.0.0.1' || hostname === 'localhost') {
+            return 'http://localhost:3000'; // Local development
+        } else {
+            // Replace with your final Vercel URL once deployed
+            return 'https://your-backend-url.vercel.app'; // Production
+        }
+    }
+    const BACKEND_URL = getBackendUrl();
+
     // Basic client-side validation can go here if needed
 
     submitButton.innerHTML = 'Submitting...';
@@ -102,7 +114,7 @@ async function handleFormSubmission(event) {
         // Include the dynamically set form origin
         formProps.formOrigin = form.dataset.formOrigin;
 
-        const response = await fetch('http://localhost:3000/submit-form', { // This URL will be the single backend endpoint
+        const response = await fetch(`${BACKEND_URL}/submit-form`, { // Use the dynamic URL
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
