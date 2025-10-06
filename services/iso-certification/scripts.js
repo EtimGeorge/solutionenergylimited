@@ -35,6 +35,23 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Handle URL parameters (for social media ads)
   handleUrlParameters();
+
+  // Initialize certificate gallery conditionally
+  const certificatesGrid = document.getElementById('certificatesGrid');
+  if (certificatesGrid) {
+    renderCertificates(); // Render all certificates initially
+
+    // Set up filter buttons
+    const filterButtons = document.querySelectorAll('.filter-button');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        const filterValue = this.getAttribute('data-filter');
+        renderCertificates(filterValue);
+      });
+    });
+  }
 });
 
 /**
@@ -931,26 +948,6 @@ function renderCertificates(filter = 'all') {
   });
 }
 
-// Initialize certificate gallery
-document.addEventListener('DOMContentLoaded', function() {
-  // Render all certificates initially
-  renderCertificates();
-  
-  // Set up filter buttons
-  const filterButtons = document.querySelectorAll('.filter-button');
-  filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Remove active class from all buttons
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      
-      // Add active class to clicked button
-      this.classList.add('active');
-      
-      // Filter certificates
-      const filterValue = this.getAttribute('data-filter');
-      renderCertificates(filterValue);
-    });
-  });
-});
+
 
 //  end of iso certificates 
