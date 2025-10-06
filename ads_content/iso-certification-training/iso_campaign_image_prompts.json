@@ -1,0 +1,93 @@
+[
+  {
+    "concept": "Unlock Global Opportunities",
+    "description": "Visualizing global reach and business success through ISO certification.",
+    "prompts": [
+      {
+        "name": "Global Connection",
+        "prompt": "A diverse group of business professionals (Nigerian and international) in a modern, bright office setting, looking confidently at a holographic world map or network of interconnected lines. One person points to a glowing ISO certificate on a digital screen. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Style: professional, corporate, clean aesthetic. Colors: Incorporate subtle blue and green tones from the SEES logo (#0056b3, #10b981), with accents of #f59e0b. Lighting: Bright, optimistic. Focus: Collaboration, global reach, achievement.",
+        "platform_notes": "For FB/IG: Emphasize the human element and connection. Consider a slightly more dynamic angle or a short, looping video (cinemagraph) of the holographic map."
+      },
+      {
+        "name": "Success & Credibility",
+        "prompt": "A close-up of a handshake between two business people (one Nigerian, one international) with a blurred background showing a modern factory or office building. Overlay a subtle, glowing ISO certification badge. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Style: professional, trustworthy, aspirational. Colors: Emphasize blue and green from the SEES logo (#0056b3, #10b981) in the background or subtle lighting, with accents of #f59e0b. Lighting: Warm, inviting. Focus: Partnership, trust, success.",
+        "platform_notes": "For FB/IG: High-quality, crisp image. Could be a short video of the handshake, with the ISO badge appearing as an animation. Focus on genuine emotion."
+      }
+    ]
+  },
+  {
+    "concept": "Operational Excellence & Efficiency",
+    "description": "Illustrating streamlined processes, data-driven improvements, and productivity gains.",
+    "prompts": [
+      {
+        "name": "Streamlined Workflow",
+        "prompt": "A dynamic shot of a modern industrial control room or office, with data flowing across multiple screens. A diverse team (Nigerian) is efficiently collaborating, pointing at charts and diagrams showing upward trends. Subtle visual cues of reduced waste or optimized processes. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: clean, analytical, dynamic, high-tech. Colors: Use cool blues and greens (#0056b3, #10b981), with accents of #f59e0b and grey. Lighting: Well-lit, focused on screens and team interaction. Focus: Efficiency, data, progress.",
+        "platform_notes": "For FB/IG: Focus on the 'before and after' or a quick montage of efficient processes. Consider a short video showing data visualization or a team collaborating smoothly."
+      },
+      {
+        "name": "Productivity Boost",
+        "prompt": "A split image or composite. One side shows a cluttered, disorganized workspace with frustrated workers. The other side shows the same space transformed into an organized, efficient environment with happy, productive workers. A subtle overlay of an ISO 9001 or 14001 certificate on the 'after' side. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: contrast, problem-solution, clean. Colors: Muted, slightly chaotic on the 'before' side; bright, organized, with SEES blue/green accents (#0056b3, #10b981) and accents of #f59e0b on the 'after' side. Focus: Transformation, order, productivity.",
+        "platform_notes": "For FB/IG: This is excellent for a carousel ad (before/after slides) or a quick transition video. Ensure the contrast is visually striking and immediately understandable."
+      }
+    ]
+  },
+  {
+    "concept": "Your Trusted ISO Partner in Nigeria",
+    "description": "Highlighting local expertise, trustworthiness, and comprehensive support.",
+    "prompts": [
+      {
+        "name": "Local Expertise, Global Standards",
+        "prompt": "A diverse group of Nigerian business professionals (including a SEES consultant) in a collaborative meeting, with a subtle backdrop featuring iconic Nigerian landmarks or a map of Nigeria. One person holds an ISO certificate. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Style: authentic, professional, trustworthy. Colors: Warm, inviting tones with prominent use of SEES blue and green (#0056b3, #10b981), and accents of #f59e0b. Lighting: Natural, friendly. Focus: Local understanding, global quality, partnership.",
+        "platform_notes": "For FB/IG: Emphasize genuine smiles and interaction. Could be a short video clip of the meeting, with a voiceover highlighting local expertise and global standards."
+      },
+      {
+        "name": "Comprehensive Support Journey",
+        "prompt": "An infographic-style image depicting a journey from a complex, tangled path to a clear, straight path, with milestones representing Gap Analysis, Implementation, Audit, and Certification. Along the path, small icons or figures represent SEES consultants guiding the process. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Style: illustrative, clear, supportive. Colors: Predominantly SEES blue and green (#0056b3, #10b981), with accents of #f59e0b, and a clean white or light grey background. Focus: Simplicity, guidance, end-to-end service.",
+        "platform_notes": "For FB/IG: This is ideal for an animated video explaining the journey, or a multi-slide carousel. Ensure the visual metaphor is clear and engaging."
+      }
+    ]
+  },
+  {
+    "video_concepts": [
+      {
+        "name": "Quick ISO Benefits Reel",
+        "description": "A fast-paced video showcasing 3-5 key benefits of ISO certification (e.g., global access, efficiency, trust) with quick cuts and on-screen text.",
+        "prompt_elements": [
+          "Opening shot: Dynamic animation of SEES logo.",
+          "Scene 1: Diverse Nigerian business person shaking hands with international client (representing global access). All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Text overlay: 'Unlock Global Markets.'",
+          "Scene 2: Animated charts showing upward trends in efficiency/profit. Text overlay: 'Boost Efficiency & Savings.'",
+          "Scene 3: Close-up of an ISO certificate being proudly displayed. Text overlay: 'Build Unshakeable Trust.'",
+          "Scene 4: SEES consultant smiling, interacting with a client. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Text overlay: 'Your Trusted Partner.'",
+          "Closing: SEES logo, website URL, and a clear CTA. Music: Upbeat, professional. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout."
+        ],
+        "duration_target": "15-30 seconds"
+      },
+      {
+        "name": "ISO Journey Explainer (Animated)",
+        "description": "A simple animated video explaining the SEES ISO certification process step-by-step.",
+        "prompt_elements": [
+          "Opening: Question mark transforming into a tangled path.",
+          "Scene 1 (Gap Analysis): SEES consultant icon with a magnifying glass over a messy flowchart. The consultant icon should have the company's logo branded on its attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 2 (Implementation): Tools and gears turning, processes streamlining.",
+          "Scene 3 (Audit): A checklist being marked off, a friendly auditor icon. The auditor icon should have the company's logo branded on its attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 4 (Certification): A glowing ISO certificate appearing.",
+          "Scene 5 (Ongoing Support): A continuous loop or upward arrow.",
+          "Closing: SEES logo, website, CTA. Voiceover: Clear, concise explanation of each step. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout."
+        ],
+        "duration_target": "30-60 seconds"
+      },
+      {
+        "name": "Client Testimonial Snippet",
+        "description": "Short, impactful video clips of satisfied Nigerian clients speaking about their positive experience with SEES ISO services.",
+        "prompt_elements": [
+          "Authentic, well-lit video of a Nigerian business owner/manager.",
+          "They speak directly to the camera, sharing a specific benefit or success story from working with SEES (e.g., 'SEES helped us win a major contract after ISO certification.' or 'Our operations are so much smoother now.').",
+          "On-screen text: Client Name, Company, and a key quote.",
+          "Subtle SEES branding in the background or lower third. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Closing: SEES logo and CTA. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout."
+        ],
+        "duration_target": "10-20 seconds per testimonial"
+      }
+    ]
+  }
+]

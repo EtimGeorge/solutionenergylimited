@@ -9,6 +9,8 @@
   <meta name="description" content="Contact Solution Energy and Engineering Services Ltd (SEESL) for engineering, procurement, installation, asset management, ISO certification, and other services. Get in touch with our team today.">
   <meta name="keywords" content="contact SEESL, engineering services contact, Solution Energy contact, engineering company Nigeria, contact form">
   
+  <script src="https://www.google.com/recaptcha/api.js?render=6Ld-fA8qAAAAAP_88n2yS2syO2gG1-wzY_Z-Y-Z-"></script>
+  
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="Contact Solution Energy and Engineering Services Ltd">
   <meta property="og:description" content="Get in touch with our team for engineering, procurement, asset management, ISO certification, and other services.">
@@ -208,6 +210,7 @@
               </div>
             </li>
             <li><a href="process.html">Process</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
           </ul>
         </nav>
@@ -264,6 +267,7 @@
           </div>
         </li>
         <li><a href="process.html">Process</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
         
         <!-- Social Media Icons - Mobile -->
@@ -301,7 +305,7 @@
       <div class="container">
         <div class="contact-grid">
           <div class="contact-form-container">
-            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xrbkpbod" method="POST">
+            <form id="contact-form" class="contact-form" data-form-origin="Main Contact Page">
               <input type="text" name="_gotcha" style="display:none"> <!-- Formspree Honeypot -->
               <input type="hidden" name="form_type" value="main_contact_form"> <!-- Form Identifier -->
               
@@ -338,6 +342,19 @@
                   <option value="gas-conversion">Gas Conversion</option>
                   <option value="tank-cleaning">Tank & Vessel Cleaning</option>
                   <option value="other">Other Services</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="how_did_you_hear">How did you hear about us?</label>
+                <select id="how_did_you_hear" name="how_did_you_hear">
+                  <option value="">Please Select</option>
+                  <option value="search_engine">Google/Search Engine</option>
+                  <option value="linkedin">LinkedIn</option>
+                  <option value="social_media">Facebook/Instagram</option>
+                  <option value="referral">Referral</option>
+                  <option value="news_article">News/Article</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
               
@@ -523,5 +540,6 @@
 
   <!-- Scripts -->
   <script src="./js/main.js"></script>
+  <script src="./js/contact.js"></script>
 </body>
 </html>

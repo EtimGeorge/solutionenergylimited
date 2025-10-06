@@ -1,0 +1,99 @@
+[
+  {
+    "concept": "Maximize Uptime & Asset Lifespan",
+    "description": "Visuals emphasizing the benefits of predictive maintenance and extended asset life.",
+    "prompts": [
+      {
+        "name": "Digital Predictive Dashboard",
+        "prompt": "A high-tech control room or a skilled Nigerian technician (male or female) intently monitoring a large digital dashboard. The screen displays real-time asset performance data, predictive analytics, and clear green indicators for optimal health, with subtle alerts for potential issues. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. The overall impression is one of control, foresight, and efficiency. Style: modern, analytical, high-tech. Colors: Cool blues, greens, and whites, with data visualizations in vibrant, clear tones, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Focused, illuminating the screens and the technician's face. Focus: Data-driven decisions, proactive maintenance, control.",
+        "platform_notes": "For FB/IG: Ideal for a short video showing the dashboard updating in real-time, or a carousel ad with different data points highlighted."
+      },
+      {
+        "name": "Healthy vs. Worn Asset Part",
+        "prompt": "A split image or composite. One side shows a pristine, newly manufactured or perfectly maintained industrial machine part (e.g., a gear, a bearing, a valve component), gleaming and robust. The other side shows a visibly corroded, worn-out, or damaged version of the same part. The contrast should be stark, emphasizing the benefit of proactive maintenance. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: contrast, clear, impactful. Colors: Clean, metallic on the 'healthy' side; rusty, dull on the 'worn' side, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981) subtly. Focus: Longevity, quality, prevention of failure.",
+        "platform_notes": "For FB/IG: Excellent for a before-and-after visual. Could be a quick transition video or a carousel ad."
+      }
+    ]
+  },
+  {
+    "concept": "Comprehensive Asset Integrity",
+    "description": "Visuals showcasing the broad range of asset integrity services offered by SEES.",
+    "prompts": [
+      {
+        "name": "Asset Integrity Activities Montage",
+        "prompt": "A dynamic composite image or a series of quick cuts showing various asset integrity activities: a technician performing Non-Destructive Testing (NDT) on a pipeline, another inspecting the interior of a large storage tank (with appropriate safety gear), and a digital map or screen displaying corrosion monitoring points across an industrial facility. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times. Style: comprehensive, active, expert. Colors: Industrial tones with highlights from safety gear and digital displays, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Realistic, functional. Focus: Holistic protection, diverse services, expertise.",
+        "platform_notes": "For FB/IG: Ideal for a carousel ad or a quick video montage showcasing different services."
+      },
+      {
+        "name": "SEES Asset Integrity Team",
+        "prompt": "A diverse team of SEES asset integrity specialists (Nigerian, male and female) in branded PPE (Personal Protective Equipment), confidently overseeing a complex industrial facility (e.g., an oil refinery, a power plant). They are looking at blueprints or a tablet, conveying a sense of control, safety, and precision. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times. Style: professional, trustworthy, safety-focused. Colors: Corporate branding colors in PPE, with industrial background, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Bright, clear. Focus: Safety, expertise, reliability.",
+        "platform_notes": "For FB/IG: Emphasize the human element and their expertise. Could be a short video of the team in action, or a strong group photo."
+      }
+    ]
+  },
+  {
+    "concept": "Proactive Facility Maintenance",
+    "description": "Visuals highlighting integrated and advanced facility maintenance practices.",
+    "prompts": [
+      {
+        "name": "Clean & Maintained Facility",
+        "prompt": "A clean, well-organized, and efficiently operating industrial facility. SEES technicians (Nigerian) are seen performing various maintenance tasks: one lubricating machinery, another inspecting electrical panels, and a third on scaffolding performing a repair or inspection. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times. The scene conveys order, safety, and continuous operation. Style: clean, efficient, proactive. Colors: Bright, functional industrial colors, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Well-lit, emphasizing cleanliness. Focus: Operational excellence, preventive care, safety.",
+        "platform_notes": "For FB/IG: Ideal for a carousel ad showing different maintenance activities, or a short video montage of the facility in action."
+      },
+      {
+        "name": "Drone Inspection for Maintenance",
+        "prompt": "A high-angle shot of a sleek, professional-grade drone flying near a large industrial complex (e.g., a tall storage tank, a high-rise building, or a vast pipeline network), performing an inspection. The drone is clearly visible, symbolizing advanced and safe maintenance techniques. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: modern, innovative, safe. Colors: Industrial background with the drone standing out, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Clear, possibly sunny. Focus: Advanced technology, safety, efficiency.",
+        "platform_notes": "For FB/IG: Excellent for a short video clip of the drone in action, or a visually striking still that highlights the technology."
+      }
+    ]
+  },
+  {
+    "video_concepts": [
+      {
+        "name": "SEES Asset Management: The Future of Uptime (Overview)",
+        "description": "A dynamic video showcasing SEES's comprehensive asset management services and their impact on operational uptime.",
+        "prompt_elements": [
+          "Opening shot: Dynamic animation of SEES logo with gears and data streams. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Scene 1: Quick cuts of various industrial assets (turbines, pumps, pipelines, factory lines) operating smoothly. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 2: Visuals of SEES technicians using advanced tools: thermal cameras, vibration analysis devices, digital dashboards with predictive alerts. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 3: Before-and-after shots: a corroded pipe transforming into a new, protected one; a red alert turning green on a dashboard. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Voiceover: 'Unplanned downtime is a choice. SEES transforms your asset management from reactive to predictive, ensuring maximum uptime and extended asset life.'",
+          "On-screen text: 'Predictive Maintenance', 'Asset Integrity', 'Facility Maintenance', 'Digital Monitoring'.",
+          "Closing: SEES logo, website URL, and a clear CTA: 'Optimize Your Assets: [Website URL]'.",
+          "Music: Professional, dynamic, forward-looking."
+        ],
+        "duration_target": "45-60 seconds"
+      },
+      {
+        "name": "From Corrosion to Continuity: An Asset Integrity Story (Problem/Solution)",
+        "description": "A compelling video illustrating the risks of asset degradation and how SEES provides solutions for continuity.",
+        "prompt_elements": [
+          "Opening: Dramatic visuals of aging or corroded industrial infrastructure (e.g., rusty pipes, cracked concrete), conveying risk and potential failure. Sound of creaking or dripping. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Scene 1: A worried plant manager looking at a red alert on a screen. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Transition: SEES logo appears, then cuts to SEES asset integrity specialists in action: performing corrosion monitoring, NDT, applying protective coatings, and conducting detailed inspections. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Scene 2: The asset restored to optimal condition, operating reliably. Green indicators on a dashboard. A confident plant manager smiling. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Voiceover: 'Aging assets don't have to mean aging performance. SEES provides comprehensive asset integrity solutions to safeguard your investments and ensure operational continuity.'",
+          "On-screen text: 'Prevent Failure', 'Extend Lifespan', 'Ensure Safety'.",
+          "Closing: SEES logo, website URL, and a CTA: 'Protect Your Assets: [Website URL]'.",
+          "Music: Starts tense, transitions to relief and confidence."
+        ],
+        "duration_target": "60-90 seconds"
+      },
+      {
+        "name": "Behind the Scenes: SEES Facility Maintenance (Process/Expertise)",
+        "description": "A video showcasing SEES teams performing various facility maintenance tasks in a professional, safe, and efficient manner.",
+        "prompt_elements": [
+          "Opening: A clean, well-organized industrial facility. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Scene 1: SEES technicians performing mechanical overhauls (e.g., disassembling/reassembling a pump), electrical inspections (checking panels), and applying protective coatings. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Scene 2: Shots of specialized access techniques like scaffolding or rope access for high-rise maintenance. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Scene 3: Digital monitoring systems showing maintenance schedules and completed tasks. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Voiceover: 'Precision, safety, and expertise. SEES delivers proactive facility maintenance that keeps your industrial operations running smoothly and efficiently.'",
+          "Short interviews (5-10 seconds each) with SEES technicians highlighting their skill, dedication, and commitment to safety. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Closing: SEES logo, website URL, and a CTA: 'Ensure Operational Excellence: [Website URL]'.",
+          "Music: Professional, steady, and reassuring."
+        ],
+        "duration_target": "60-90 seconds"
+      }
+    ]
+  }
+]

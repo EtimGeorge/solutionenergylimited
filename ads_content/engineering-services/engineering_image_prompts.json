@@ -1,0 +1,99 @@
+[
+  {
+    "concept": "End-to-End Project Success",
+    "description": "Visuals showcasing SEES's comprehensive engineering capabilities from concept to completion.",
+    "prompts": [
+      {
+        "name": "Project Lifecycle Composite",
+        "prompt": "A dynamic composite image seamlessly blending different stages of a large-scale industrial engineering project: a detailed blueprint or 3D model, a bustling construction site with heavy machinery and workers (wearing safety gear). All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times. And a pristine, operational industrial facility (e.g., a power plant or manufacturing unit). Style: professional, integrated, progressive. Colors: Corporate blues and greens, with realistic industrial tones, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Bright, clear. Focus: Completeness, efficiency, successful execution.",
+        "platform_notes": "For FB/IG: Ideal for a carousel ad, with each stage as a separate slide, or a quick video montage showing the progression."
+      },
+      {
+        "name": "Collaborative Project Management",
+        "prompt": "A diverse team of SEES engineers (Nigerian, male and female) in a modern, high-tech project office. They are gathered around a large interactive digital display or table, actively collaborating, pointing at complex engineering diagrams, project timelines, and performance metrics. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Conveys expertise and teamwork. Style: collaborative, intelligent, professional. Colors: Clean, modern office aesthetics with subtle SEES branding colors (#0056b3, #f59e0b, #10b981). Lighting: Well-lit, focused on the team and display. Focus: Expertise, teamwork, data-driven decisions.",
+        "platform_notes": "For FB/IG: Emphasize genuine interaction and focus. Could be a short video clip of the team in action, or a high-resolution still that highlights their engagement."
+      }
+    ]
+  },
+  {
+    "concept": "Overcoming Engineering Challenges",
+    "description": "Visuals illustrating common engineering challenges and SEES's effective solutions.",
+    "prompts": [
+      {
+        "name": "Problem-Solution Transformation",
+        "prompt": "A split image or composite. One side depicts a complex, tangled, or inefficient industrial pipeline system or structural framework, conveying a sense of challenge or disarray. The other side shows the same system, but now streamlined, organized, and optimized, conveying efficiency and solution. Subtle glow or clean lines on the 'solution' side. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: contrast, problem-solution, impactful. Colors: Muted, slightly chaotic on the 'problem' side; bright, clean, with SEES blue/green accents (#0056b3, #10b981) and accents of #f59e0b on the 'solution' side. Focus: Transformation, clarity, overcoming obstacles.",
+        "platform_notes": "For FB/IG: Excellent for a before-and-after visual. Could be a quick transition video or a carousel ad."
+      },
+      {
+        "name": "Advanced Tools & Expertise",
+        "prompt": "A close-up shot focusing on the hands of a Nigerian engineer (wearing appropriate PPE if applicable) expertly operating advanced engineering design software on a high-resolution monitor, or manipulating a 3D printer creating a complex industrial component. Blurred background shows a challenging industrial environment (e.g., a busy plant floor, a construction site). All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times. Style: technical, precise, innovative. Colors: Industrial tones with highlights from screen/printer, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Focused, highlighting the hands and technology. Focus: Skill, technology, precision.",
+        "platform_notes": "For FB/IG: Emphasize the detail and technology. Could be a short video showcasing the software in action or the 3D printing process."
+      }
+    ]
+  },
+  {
+    "concept": "Specialized Industry Expertise",
+    "description": "Visuals highlighting SEES's deep knowledge and capabilities within specific industrial sectors.",
+    "prompts": [
+      {
+        "name": "Oil & Gas / Industrial Power Scale",
+        "prompt": "A powerful, wide-angle shot of a large-scale industrial facility relevant to SEES's work (e.g., an offshore oil rig at sunset, a massive manufacturing plant with intricate machinery, or a modern power generation plant). The image should convey scale, complexity, and operational might. Integrate subtle SEES branding or a stylized engineering diagram overlay. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: grand, industrial, high-impact. Colors: Rich, deep industrial colors, with dramatic lighting, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Focus: Scale, industry leadership, complex operations.",
+        "platform_notes": "For FB/IG: Use high-resolution, visually stunning imagery. Could be a short drone video shot of the facility."
+      },
+      {
+        "name": "Precision & Safety in Action",
+        "prompt": "A professional (Nigerian, male or female) in appropriate safety gear, confidently overseeing operations within a complex industrial environment (e.g., a control room, near large machinery, or on a construction site). The focus should be on their attentive expression and the precision of the equipment or processes around them. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times. Conveys safety and expertise. Style: focused, safe, expert. Colors: Realistic industrial colors, with emphasis on safety yellow/orange if present, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Clear, functional. Focus: Safety, oversight, operational excellence.",
+        "platform_notes": "For FB/IG: Emphasize the human element and the importance of safety. Could be a short video clip of the professional in action."
+      }
+    ]
+  },
+  {
+    "video_concepts": [
+      {
+        "name": "SEES Engineering: Your Project's Journey (Overview)",
+        "description": "A visually engaging video showcasing the entire project lifecycle, from initial concept sketches/3D models to the final operational facility.",
+        "prompt_elements": [
+          "Opening shot: Dynamic animation of SEES logo with engineering elements (gears, blueprints). Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Scene 1: Quick cuts of engineers sketching, 3D modeling, and reviewing blueprints (representing FEED/Design). All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 2: Shots of fabrication processes (welding, cutting, assembly) in a workshop. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Scene 3: Construction site visuals (heavy machinery, structural erection, piping installation). All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Scene 4: Installation of equipment and systems in an industrial setting. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Scene 5: Commissioning activities (testing, control room operations, final checks). All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Scene 6: A pristine, fully operational industrial facility (e.g., power plant, refinery).",
+          "Voiceover: 'From vision to reality. SEES delivers integrated engineering solutions for Nigeria's most ambitious projects.'",
+          "On-screen text: 'FEED | Fabrication | Construction | Installation | Commissioning | Process Engineering.'",
+          "Closing: SEES logo, website URL, and a clear CTA: 'Build with Confidence: [Website URL]'.",
+          "Music: Professional, dynamic, industrial."
+        ],
+        "duration_target": "45-60 seconds"
+      },
+      {
+        "name": "Solving Nigeria's Engineering Puzzles (Problem/Solution)",
+        "description": "A video that highlights common engineering project pain points in Nigeria and positions SEES as the solution provider.",
+        "prompt_elements": [
+          "Opening: Animated graphics or quick cuts depicting common project challenges: tangled lines (complexity), clock ticking fast (delays), money flying away (cost overruns), broken parts (quality issues). Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Transition: SEES logo appears, then cuts to SEES engineers actively working: collaborating, using advanced software, overseeing construction, ensuring safety. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Visuals: Show successful project outcomes – streamlined processes, efficient operations, happy clients.",
+          "Voiceover: 'Don't let engineering challenges hold you back. SEES provides the expertise, technology, and reliability to ensure your project's success.'",
+          "On-screen text: 'Overcome Delays', 'Ensure Quality', 'Optimize Costs'.",
+          "Closing: SEES logo, website URL, and a CTA: 'Overcome Challenges: [Website URL]'.",
+          "Music: Starts tense, transitions to confident and resolved."
+        ],
+        "duration_target": "30-45 seconds"
+      },
+      {
+        "name": "Industry Spotlight: Oil & Gas / Manufacturing / Power (Sector-Specific)",
+        "description": "A short, impactful video focusing on SEES's specialized engineering capabilities within a chosen industrial sector.",
+        "prompt_elements": [
+          "Opening: High-quality, dynamic shots of the chosen industry (e.g., Oil & Gas: offshore rig, pipeline; Manufacturing: assembly line, robotics; Power: turbine, control room). Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Visuals: Intercut with SEES engineers working on relevant projects within that industry (e.g., pipeline construction, plant expansion, equipment installation). All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Voiceover: 'Specialized engineering for the demands of [Industry Name]. SEES delivers precision and performance where it matters most.'",
+          "Optional: A brief (5-10 second) testimonial snippet from a client in that specific industry, if available.",
+          "Closing: SEES logo, website URL, and a CTA: 'Explore Solutions for Your Industry: [Website URL]'.",
+          "Music: Industry-appropriate, powerful, and professional."
+        ],
+        "duration_target": "30-60 seconds"
+      }
+    ]
+  }
+]

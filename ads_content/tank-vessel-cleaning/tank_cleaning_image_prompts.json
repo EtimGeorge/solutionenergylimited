@@ -1,0 +1,98 @@
+[
+  {
+    "concept": "No-Man Entry Safety & Efficiency",
+    "description": "Visuals emphasizing the safety and efficiency benefits of automated tank cleaning.",
+    "prompts": [
+      {
+        "name": "Robotic Tank Cleaning in Action",
+        "prompt": "A dramatic, high-angle shot looking down into a large industrial storage tank. A robotic cleaning arm or a specialized high-pressure rotating nozzle is clearly visible inside, actively cleaning the tank walls. A Nigerian technician is safely operating the controls from outside the tank, looking focused and professional. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times. The scene emphasizes the 'no-man entry' aspect. Style: high-tech, safe, efficient. Colors: Industrial tones, with bright highlights from the cleaning action, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Clear, functional. Focus: Automation, safety, precision.",
+        "platform_notes": "For FB/IG: Ideal for a short video clip of the robot in action, or a visually striking still that highlights the technology and safety."
+      },
+      {
+        "name": "Manual vs. Automated Cleaning (Split Image)",
+        "prompt": "A split image or composite. One side shows a worker in full, cumbersome PPE struggling in a confined, dirty tank interior, conveying risk and difficulty. The other side shows a clean, empty tank with automated cleaning equipment visible, and a technician safely operating controls from outside, conveying efficiency and safety. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times. Style: contrast, problem-solution, clear. Colors: Muted/darker on the 'manual' side; brighter, cleaner on the 'automated' side, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Focus: Safety comparison, efficiency, modern solution.",
+        "platform_notes": "For FB/IG: Excellent for a before-and-after visual or a quick transition video. Ensure the safety and efficiency contrast is immediately clear."
+      }
+    ]
+  },
+  {
+    "concept": "Environmental Compliance & Product Recovery",
+    "description": "Visuals highlighting eco-friendly cleaning methods and the recovery of valuable products from waste.",
+    "prompts": [
+      {
+        "name": "Waste to Value Transformation",
+        "prompt": "A visual representation of sludge or contaminated waste from tanks being processed through a waste recovery system. One side shows the raw sludge, and the other side shows clear liquid or a recovered valuable product emerging from the system, emphasizing the transformation from 'waste to value'. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: transformative, clean, sustainable. Colors: Dark/muddy tones for waste, transitioning to clear/bright for recovered product, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Focus: Sustainability, resourcefulness, profitability.",
+        "platform_notes": "For FB/IG: Ideal for an animated video or a visually rich infographic. Emphasize the transformation and environmental benefit."
+      },
+      {
+        "name": "Clean Industrial Environment",
+        "prompt": "A clean, green industrial landscape with a modern tank farm in the background. The tanks appear well-maintained and clean. A subtle overlay of environmental certifications (e.g., ISO 14001) or a 'reduced emissions' graph. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. The overall impression is one of environmental responsibility and compliance. Style: clean, green, responsible. Colors: Natural greens and blues, with clean industrial structures, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Bright, clear. Focus: Environmental stewardship, compliance, clean operations.",
+        "platform_notes": "For FB/IG: Use a wide, aspirational shot. Could be a short video showing the clean environment and the subtle overlay of certifications."
+      }
+    ]
+  },
+  {
+    "concept": "Advanced Automated Cleaning Solutions",
+    "description": "Visuals showcasing the cutting-edge technology and precision of SEES's automated cleaning systems.",
+    "prompts": [
+      {
+        "name": "High-Pressure Jetting Close-up",
+        "prompt": "A dramatic close-up shot of a high-pressure water jet or a specialized rotating nozzle inside a tank, showing powerful and precise cleaning action. Water and debris are being efficiently removed. The focus is on the technology and its effectiveness. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: dynamic, powerful, precise. Colors: Industrial tones, with bright, clean water, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Focused, highlighting the cleaning action. Focus: Technology, effectiveness, thoroughness.",
+        "platform_notes": "For FB/IG: Excellent for a slow-motion video clip to emphasize the power and precision. A high-resolution still can also convey this."
+      },
+      {
+        "name": "Automated Cleaning Control Panel",
+        "prompt": "A sleek, modern control panel with a Nigerian technician (male or female) monitoring automated tank cleaning operations on a large screen. The screen displays real-time data, 3D models of the tank, and the progress of the cleaning process. The technician looks focused and in control, highlighting precision and technology. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times. Style: high-tech, controlled, precise. Colors: Modern interface colors, with subtle SEES branding (#0056b3, #f59e0b, #10b981). Lighting: Ambient, with screen glow. Focus: Control, technology, efficiency.",
+        "platform_notes": "For FB/IG: Could be a short video showing the technician interacting with the controls and the screen updating."
+      }
+    ]
+  },
+  {
+    "video_concepts": [
+      {
+        "name": "SEES Tank Cleaning: Safety, Automated, Efficient (Overview)",
+        "description": "A dynamic video showcasing SEES's comprehensive tank and vessel cleaning services, emphasizing safety, automation, and efficiency.",
+        "prompt_elements": [
+          "Opening shot: Dynamic animation of SEES logo with water jets and tank outlines. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Scene 1: Quick cuts of various tanks (petroleum, water, chemical) being cleaned, focusing on the exterior and then the automated equipment inside. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 2: Visuals of robotic cleaning arms, high-pressure water jets, and vacuum transfer systems in action. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 3: Technicians safely operating controls from outside the tank, emphasizing 'no-man entry'. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Scene 4: Clean, empty tanks ready for use, and visuals of recovered product or clean discharge. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Voiceover: 'Revolutionizing industrial tank cleaning. SEES delivers uncompromised safety, efficiency, and environmental compliance with advanced automated solutions.'",
+          "On-screen text: 'No-Man Entry', 'Automated Systems', 'Reduced Downtime', 'Product Recovery'.",
+          "Closing: SEES logo, website URL, and a clear CTA: 'Discover Safer Cleaning: [Website URL]'.",
+          "Music: Professional, dynamic, and clean."
+        ],
+        "duration_target": "45-60 seconds"
+      },
+      {
+        "name": "The No-Man Entry Advantage (Problem/Solution)",
+        "description": "A video illustrating the dangers of manual tank cleaning and how SEES's automated solutions provide a safer alternative.",
+        "prompt_elements": [
+          "Opening: Dramatic depiction of the dangers of manual tank cleaning: a worker in full PPE struggling in a confined, dirty tank interior, emphasizing risk, claustrophobia, and potential exposure. Use dark, muted tones. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Transition: SEES logo appears, then cuts to bright, clean visuals of SEES's automated solutions. Show technicians safely operating equipment from outside the tank, with clear views of the automated cleaning process inside. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Scene 1: Visuals of clean, empty tanks after automated cleaning, and happy, safe workers overseeing the process. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Voiceover: 'Why risk it? SEES eliminates human entry into hazardous tanks, ensuring superior cleaning results while prioritizing your team's safety. The future of tank cleaning is here.'",
+          "On-screen text: 'Eliminate Risk', 'Ensure Safety', 'Boost Efficiency'.",
+          "Closing: SEES logo, website URL, and a CTA: 'Protect Your Team: [Website URL]'.",
+          "Music: Starts tense, transitions to relief and confidence."
+        ],
+        "duration_target": "30-45 seconds"
+      },
+      {
+        "name": "Waste to Value: SEES Environmental Cleaning (Environmental/Recovery Focus)",
+        "description": "A video showcasing SEES's environmentally compliant tank cleaning solutions and their ability to recover valuable products from waste.",
+        "prompt_elements": [
+          "Opening: Visuals of sludge or contaminated waste being removed from tanks, emphasizing the environmental challenge. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Scene 1: Show SEES's waste recovery systems in action: filtration, separation, and processing of the waste. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 2: Visuals of valuable products (e.g., clean oil, reusable water) emerging from the recovery process. Show a clean industrial environment or a green landscape. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Voiceover: 'Beyond cleaning, we deliver value. SEES's environmentally compliant tank cleaning solutions not only reduce waste but also recover valuable products, turning sludge into savings.'",
+          "On-screen text: 'Environmental Compliance', 'Product Recovery', 'Reduced Waste'.",
+          "Closing: SEES logo, website URL, and a CTA: 'Explore Sustainable Solutions: [Website URL]'.",
+          "Music: Uplifting, clean, and responsible."
+        ],
+        "duration_target": "60-90 seconds"
+      }
+    ]
+  }
+]

@@ -337,103 +337,20 @@
         <h2>Get Started</h2>
         
         <div class="contact-grid">
-          <div class="contact-form-container">
-            <form id="contact-form" class="contact-form" action="https://formspree.io/f/meogpvoq" method="POST">
-              <!-- This will be filled in by JavaScript based on which CTA button was clicked -->
-              <input type="hidden" id="inquiry-source" name="inquiry-source" value="general">
-              
-              <!-- Form title changes based on CTA button -->
-              <div id="form-title" class="form-title">General Inquiry</div>
-              
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone">
-              </div>
-              
-              <div class="form-group">
-                <label for="company">Company Name</label>
-                <input type="text" id="company" name="company">
-              </div>
-              
-              <div class="form-group">
-                <label for="client-type">Client Type</label>
-                <select id="client-type" name="client-type" required>
-                  <option value="nigeria">Nigeria Client</option>
-                  <option value="international">International Client</option>
-                </select>
-              </div>
-              
-              <div class="form-group">
-                <label for="service">Service of Interest</label>
-                <select id="service" name="service" required>
-                  <option value="">Please Select</option>
-                  <option value="certification">ISO Certification</option>
-                  <option value="training">Training Services</option>
-                  <option value="audit">Audit Services</option>
-                  <option value="other">Other Services</option>
-                </select>
-              </div>
-              
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-              </div>
-              
-              <!-- FormSubmit honeypot to prevent spam -->
-              <input type="text" name="_honey" style="display:none">
-              
-              <!-- Disable captcha -->
-              <input type="hidden" name="_captcha" value="false">
-              
-              <!-- Redirect after submission -->
-              <input type="hidden" name="_next" value="https://your-site.com/thankyou.html">
-              
-              <button type="submit" class="btn btn-submit">Submit Inquiry</button>
-            </form>
-
-            <p><small>We typically respond within 1-2 business days. By submitting this form, you consent to us contacting you regarding your inquiry. Check your spam folder if you don't receive a confirmation from us.</small></p>
-
+          <!-- General Inquiry Form Placeholder -->
+          <div id="iso-form-container-general" class="contact-form-container iso-form-container"
+               data-form-title="General Inquiry"
+               data-form-origin="ISO Index - General Inquiry"
+               data-show-fields="fg-service-interest,fg-standard-interest">
+            <!-- The smart form will be loaded here by iso-smart-form.js -->
           </div>
           
-          <div class="contact-info">
-            <h3>Regional Offices</h3>
-            
-            <div class="regional-offices">
-              <div class="office">
-                <h4>Nigeria HQ</h4>
-                <p>Port Harcourt Office</p>
-                <p>No 6 Salem Avenue
-                  off Aker Road Rumolumeni,</p>
-                <p>Port Harcourt, Rivers State</p>
-                <p>Nigeria</p>
-                <p> Zip code: 500102</p>
-                <p>info@solutionenergylimited.com</p>
-                <p>+234 915 312 3973</p>
-              </div>
-              
-              <!-- <div class="office">
-                <h4>West Africa</h4>
-                <p>Accra Regional Office</p>
-                <p>westafrica@sees.ng</p>
-                <p>+233 123 456 789</p>
-              </div> -->
-              
-              <div class="social-links">
-                <a href="https://web.facebook.com/profile.php?id=100091983091138&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/solution_energylimited?fbclid=IwY2xjawJyfC1leHRuA2FlbQIxMAABHmXCRpjpiIkwHC3FrkGbV1m6Qy4DqUz42qWSVk2s8NT7XKA5PMpQgNrzT3dt_aem_O_qza7YoibEds5dltu8RMA" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
+          <!-- Regional Question Form Placeholder -->
+          <div id="iso-form-container-regional" class="contact-form-container iso-form-container"
+               data-form-title="Quick Regional Question"
+               data-form-origin="ISO Index - Regional Question"
+               data-show-fields="">
+            <!-- The smart form will be loaded here by iso-smart-form.js -->
           </div>
         </div>
       </div>
@@ -513,5 +430,6 @@
   </div>
 
   <script src="scripts.js"></script>
+  <script src="./js/iso-smart-form.js"></script>
 </body>
 </html>

@@ -159,6 +159,7 @@
       color: var(--text-light);
     }
   </style>
+  <script src="https://www.google.com/recaptcha/api.js?render=your_recaptcha_site_key_for_frontend"></script>
 </head>
 <body>
   <!-- Header -->
@@ -400,120 +401,12 @@
     <section id="contact" class="contact">
       <div class="container">
         <h2>Request Certification</h2>
-        
-        <div class="contact-grid">
-          <div class="contact-form-container">
-
-            <form id="contact-form" class="contact-form" action="https://formspree.io/f/meogpvoq" method="POST">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone">
-              </div>
-              
-              <div class="form-group">
-                <label for="company">Company Name</label>
-                <input type="text" id="company" name="company">
-              </div>
-              
-              <div class="form-group">
-                <label for="certification">Certification of Interest</label>
-                <select id="certification" name="certification" required>
-                  <option value="">Please Select</option>
-                  <option value="ISO 9001">ISO 9001 - Quality Management</option>
-                  <option value="ISO 14001">ISO 14001 - Environmental Management</option>
-                  <option value="ISO 45001">ISO 45001 - Occupational Health & Safety</option>
-                  <!-- <option value="ISO 27001">ISO 27001 - Information Security</option>
-                  <option value="ISO 22000">ISO 22000 - Food Safety</option>
-                  <option value="other">Other ISO Standard</option> -->
-                </select>
-              </div>
-              
-              <div class="form-group">
-                <label for="message">Additional Information</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-              </div>
-              
-              <!-- Add this hidden field for form identification -->
-              <input type="hidden" name="form_type" value="certification_inquiry">
-              <!-- Add this before the submit button -->
-              <input type="text" name="_gotcha" style="display:none">
-              
-              <!-- FormSubmit honeypot to prevent spam -->
-              <input type="text" name="_honey" style="display:none">
-              
-              <!-- Disable captcha -->
-              <input type="hidden" name="_captcha" value="false">
-              
-              <!-- Custom subject for certification inquiries -->
-              <input type="hidden" name="_subject" value="New ISO Certification Inquiry">
-              
-              <!-- Hidden field for tracking CTA source -->
-              <input type="hidden" id="inquiry-source" name="inquiry-source" value="general">
-              
-              <!-- Redirect after submission -->
-              <input type="hidden" name="_next" value="https://your-site.com/thankyou.html">
-              
-              <button type="submit" class="btn btn-submit">Submit Request</button>
-            </form>
-            <p><small>We typically respond within 1-2 business days. By submitting this form, you consent to us contacting you regarding your inquiry. Check your spam folder if you don't receive a confirmation from us.</small></p>
-
-          </div>
-          
-          <div class="contact-info">
-            <h3>Why Choose SEES?</h3>
-            
-            <div class="why-choose-content">
-              <div class="why-choose-item">
-                <div class="why-choose-icon">
-                  <i class="fas fa-check-circle"></i>
-                </div>
-                <div class="why-choose-content">
-                  <h4>Accredited Certification</h4>
-                  <p>Our certifications are internationally recognized and accepted globally.</p>
-                </div>
-              </div>
-              
-              <div class="why-choose-item">
-                <div class="why-choose-icon">
-                  <i class="fas fa-users"></i>
-                </div>
-                <div class="why-choose-content">
-                  <h4>Experienced Auditors</h4>
-                  <p>Our team has certified over 500+ organizations across various industries.</p>
-                </div>
-              </div>
-              
-              <div class="why-choose-item">
-                <div class="why-choose-icon">
-                  <i class="fas fa-globe-africa"></i>
-                </div>
-                <div class="why-choose-content">
-                  <h4>African Expertise</h4>
-                  <p>We understand the unique challenges of African businesses and regulatory environments.</p>
-                </div>
-              </div>
-              
-              <div class="why-choose-item">
-                <div class="why-choose-icon">
-                  <i class="fas fa-headset"></i>
-                </div>
-                <div class="why-choose-content">
-                  <h4>Ongoing Support</h4>
-                  <p>We provide continued guidance throughout the certification period and beyond.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div id="iso-form-container" class="contact-form-container iso-form-container"
+             data-form-title="Request Certification"
+             data-form-origin="ISO Certification Page"
+             data-service-interest="certification"
+             data-show-fields="fg-standard-interest,fg-employees">
+          <!-- The smart form will be loaded here -->
         </div>
       </div>
     </section>
@@ -592,5 +485,6 @@
   </div>
 
   <script src="scripts.js"></script>
+  <script src="./js/iso-smart-form.js"></script>
 </body>
 </html>

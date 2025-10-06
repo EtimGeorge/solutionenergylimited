@@ -1,0 +1,99 @@
+[
+  {
+    "concept": "Flare Gas Monetization & Compliance",
+    "description": "Visuals emphasizing the transformation of waste gas into valuable resources and environmental compliance.",
+    "prompts": [
+      {
+        "name": "Flare to Value Transformation",
+        "prompt": "A dramatic split image or composite. One side shows a large, burning gas flare stack against a dark sky, symbolizing waste and pollution. The other side shows a clean, modern gas processing facility or a modular power generation unit, with subtle blue/green energy glows, symbolizing value creation and environmental responsibility. A clear visual line or arrow connecting the two sides. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: impactful, transformative, clean. Colors: Fiery oranges/reds on one side, cool blues/greens on the other, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: High contrast. Focus: Problem-solution, sustainability, profitability.",
+        "platform_notes": "For FB/IG: Excellent for a before-and-after visual or a quick transition video. Emphasize the dramatic change."
+      },
+      {
+        "name": "Compliance & Profit Dashboard",
+        "prompt": "A professional (Nigerian, male or female) in a control room or office, pointing confidently at a large digital dashboard. The screen displays key performance indicators: a downward trend in CO2 emissions, an upward trend in revenue generated from gas monetization, and a green checkmark for regulatory compliance. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: analytical, professional, results-oriented. Colors: Corporate blues and greens, with data visualizations in clear, positive tones, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Bright, focused on the screen. Focus: Tangible results, compliance, profitability.",
+        "platform_notes": "For FB/IG: Close-up on the dashboard metrics. Could be a short video showing the graphs animating to demonstrate positive trends."
+      }
+    ]
+  },
+  {
+    "concept": "Industrial & Power Gas Solutions",
+    "description": "Visuals highlighting clean, cost-effective energy solutions for industrial and power generation sectors.",
+    "prompts": [
+      {
+        "name": "Modular Gas-to-Power Unit",
+        "prompt": "A sleek, modern, modular gas-to-power generation unit installed at an industrial facility. The unit should look compact and efficient, with clean lines and subtle energy glows (blue/green). Show it integrated into a factory or plant setting. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: modern, efficient, clean. Colors: Industrial grays, whites, with SEES blue/green accents (#0056b3, #10b981), and accents of #f59e0b. Lighting: Bright, functional. Focus: Compactness, efficiency, clean energy.",
+        "platform_notes": "For FB/IG: Emphasize the clean design and integration. Could be a short video showing the unit in operation."
+      },
+      {
+        "name": "Collaborative Industrial Gas Design",
+        "prompt": "A diverse team of SEES engineers (Nigerian) in a collaborative setting, gathered around a large screen or table displaying a complex 3D model or engineering diagram of an industrial gas solution (e.g., an LNG/CNG plant layout, a gas pipeline network). They are actively discussing and pointing, conveying expertise and innovation. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: collaborative, intelligent, professional. Colors: Clean, modern office aesthetics with subtle SEES branding colors (#0056b3, #f59e0b, #10b981). Lighting: Well-lit, focused on the team and display. Focus: Expertise, innovation, tailored solutions.",
+        "platform_notes": "For FB/IG: Focus on the team's interaction and the complexity of the design. Could be a short video of the team brainstorming or a 3D model rotating."
+      }
+    ]
+  },
+  {
+    "concept": "Dual-Fuel & Auto-CNG Solutions",
+    "description": "Visuals emphasizing cost savings and environmental benefits for vehicles and generators.",
+    "prompts": [
+      {
+        "name": "Auto-CNG Fueling Station",
+        "prompt": "A modern vehicle (e.g., a car, a bus, or a truck) being refueled at a clean, well-designed CNG fueling station in Nigeria. The focus should be on the CNG pump and the vehicle's CNG tank being filled, with clear visual cues of 'CNG' or 'Gas'. Emphasize the ease and cleanliness of the process. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: clean, modern, accessible. Colors: Bright, functional, with SEES blue/green accents (#0056b3, #10b981), and accents of #f59e0b. Lighting: Clear, natural. Focus: Convenience, clean fuel, accessibility.",
+        "platform_notes": "For FB/IG: A clear, aspirational shot. Could be a short video showing the quick fueling process."
+      },
+      {
+        "name": "Fuel Cost Comparison (Split Image)",
+        "prompt": "A split image or composite. One side shows a traditional petrol/diesel pump with a high price displayed, conveying expense. The other side shows a CNG pump with a significantly lower price, conveying savings. Alternatively, one side shows a vehicle emitting dark exhaust, and the other shows a clean-burning CNG vehicle. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: contrast, problem-solution, clear. Colors: Muted/darker on the 'expensive/polluting' side; brighter, cleaner on the 'saving/green' side, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Focus: Cost savings, environmental benefits, clear choice.",
+        "platform_notes": "For FB/IG: Excellent for a before-and-after visual or a quick transition video. Ensure the price difference or environmental impact is immediately clear."
+      }
+    ]
+  },
+  {
+    "video_concepts": [
+      {
+        "name": "Transforming Gas into Value: SEES Gas Solutions (Overview)",
+        "description": "A dynamic video showcasing SEES's comprehensive gas conversion and utilization solutions, from flare gas monetization to industrial applications.",
+        "prompt_elements": [
+          "Opening shot: Dynamic animation of SEES logo with gas flames transforming into clean energy symbols. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Scene 1: Visuals of a gas flare stack, then quick cuts showing modular units converting it into electricity, CNG, LNG, or petrochemicals. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 2: Industrial facilities (e.g., manufacturing plant, power station) using SEES gas solutions for cleaner, more efficient power. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 3: Vehicles (cars, buses, trucks) being refueled with CNG, driving smoothly and cleanly. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 4: Stylized visuals of blue hydrogen/ammonia production. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Voiceover: 'Unlock Nigeria's gas potential. SEES transforms waste into wealth, providing innovative gas conversion and dual-fuel solutions for a cleaner, more profitable future.'",
+          "On-screen text: 'Flare Gas Monetization', 'Industrial Power', 'Auto-CNG', 'Blue Hydrogen'.",
+          "Closing: SEES logo, website URL, and a clear CTA: 'Explore Our Gas Solutions: [Website URL]'.",
+          "Music: Upbeat, modern, and impactful."
+        ],
+        "duration_target": "45-60 seconds"
+      },
+      {
+        "name": "The Auto-CNG Advantage: Drive Green, Save Big (Problem/Solution)",
+        "description": "A video highlighting the financial and environmental benefits of Auto-CNG conversion for vehicles and generators.",
+        "prompt_elements": [
+          "Opening: Visuals of high petrol/diesel prices at a pump, or a vehicle owner looking frustrated at their fuel bill. Text overlay: 'High Fuel Costs?'. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Scene 1: A vehicle (car or commercial) being driven to a SEES conversion center. Quick shots of SEES technicians professionally installing a CNG kit. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Scene 2: The converted vehicle being refueled at a CNG station, showing a lower price. Text overlay: 'Save Up to 50% on Fuel!'.",
+          "Scene 3: The vehicle driving smoothly, emitting clean exhaust. Visuals of a green environment. Text overlay: 'Drive Green.'",
+          "Voiceover: 'Tired of high fuel costs? SEES Auto-CNG conversion offers significant savings and a greener ride. Make the smart switch today.'",
+          "Closing: SEES logo, website URL, and a CTA: 'Get a Quote for CNG Conversion: [Website URL]'.",
+          "Music: Starts with a problem tone, transitions to upbeat and positive."
+        ],
+        "duration_target": "30-45 seconds"
+      },
+      {
+        "name": "SEES Gas: Powering Nigeria's Industrial Future (Industrial Focus)",
+        "description": "A video showcasing how SEES's gas conversion technologies provide efficient and reliable energy for industrial operations.",
+        "prompt_elements": [
+          "Opening: Dynamic shots of various industrial facilities (e.g., manufacturing plant, power station, oil & gas facility). Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Scene 1: Visuals of modular gas-to-power units in operation, clean-burning industrial burners, or LNG/CNG storage tanks at a client site. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 2: SEES engineers overseeing the installation or operation of gas conversion equipment. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times.",
+          "Scene 3: Animated graphs showing reduced energy costs and increased operational efficiency for industrial clients. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Voiceover: 'SEES provides tailored gas solutions for Nigeria's industrial sector. Optimize your energy, reduce costs, and ensure reliable power with our advanced gas conversion technologies.'",
+          "Optional: A brief testimonial snippet from an industrial client highlighting energy savings or reliability.",
+          "Closing: SEES logo, website URL, and a CTA: 'Power Your Industry with Gas: [Website URL]'.",
+          "Music: Professional, strong, and industrial."
+        ],
+        "duration_target": "60-90 seconds"
+      }
+    ]
+  }
+]

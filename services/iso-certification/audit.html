@@ -192,6 +192,7 @@
       }
     }
   </style>
+  <script src="https://www.google.com/recaptcha/api.js?render=your_recaptcha_site_key_for_frontend"></script>
 </head>
 <body>
   <!-- Header -->
@@ -458,119 +459,12 @@
     <section id="contact" class="contact">
       <div class="container">
         <h2>Schedule an Audit</h2>
-        
-        <div class="contact-grid">
-          <div class="contact-form-container">
-            <form id="contact-form" class="contact-form" action="https://formspree.io/f/meogpvoq" method="POST">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone">
-              </div>
-              
-              <div class="form-group">
-                <label for="company">Company Name</label>
-                <input type="text" id="company" name="company">
-              </div>
-              
-              <div class="form-group">
-                <label for="audit-type">Audit Type</label>
-                <select id="audit-type" name="audit-type" required>
-                  <option value="">Please Select</option>
-                  <option value="internal">Internal Audit</option>
-                  <option value="stage1">Stage 1 Audit</option>
-                  <option value="stage2">Stage 2 Audit</option>
-                  <option value="surveillance">Surveillance Audit</option>
-                  <option value="recertification">Recertification Audit</option>
-                  <option value="integrated">Integrated Audit</option>
-                </select>
-              </div>
-              
-              <div class="form-group">
-                <label for="message">Additional Information</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-              </div>
-              
-              <!-- FormSubmit honeypot to prevent spam -->
-              <input type="text" name="_honey" style="display:none">
-              
-              <!-- Disable captcha -->
-              <input type="hidden" name="_captcha" value="false">
-              
-              <!-- Custom subject for audit inquiries -->
-              <input type="hidden" name="_subject" value="New Audit Service Inquiry">
-              
-              <!-- Hidden field for tracking CTA source -->
-              <input type="hidden" id="inquiry-source" name="inquiry-source" value="general">
-              
-              <!-- Redirect after submission -->
-              <input type="hidden" name="_next" value="https://your-site.com/thankyou.html">
-              
-              <button type="submit" class="btn btn-submit">Schedule Audit</button>
-            </form>
-
-            <p><small>We typically respond within 1-2 business days. By submitting this form, you consent to us contacting you regarding your inquiry. Check your spam folder if you don't receive a confirmation from us.</small></p>
-
-          </div>
-          
-          <div class="contact-info">
-            <h3>Our Audit Expertise</h3>
-            
-            <div class="why-choose-content">
-              <div class="why-choose-item">
-                <div class="why-choose-icon">
-                  <i class="fas fa-globe"></i>
-                </div>
-                <div class="why-choose-content">
-                  <h4>Global Standards</h4>
-                  <p>Our audits comply with international ISO guidelines and IAF requirements.</p>
-                </div>
-              </div>
-              
-              <div class="why-choose-item">
-                <div class="why-choose-icon">
-                  <i class="fas fa-user-tie"></i>
-                </div>
-                <div class="why-choose-content">
-                  <h4>Certified Auditors</h4>
-                  <p>All our auditors are IRCA-registered with specific industry expertise.</p>
-                </div>
-              </div>
-              
-              <div class="why-choose-item">
-                <div class="why-choose-icon">
-                  <i class="fas fa-clock"></i>
-                </div>
-                <div class="why-choose-content">
-                  <h4>Efficient Process</h4>
-                  <p>Our streamlined approach minimizes business disruption while maintaining audit integrity.</p>
-                </div>
-              </div>
-              
-              <div class="why-choose-item">
-                <div class="why-choose-icon">
-                  <i class="fas fa-comments"></i>
-                </div>
-                <div class="why-choose-content">
-                  <h4>Clear Communication</h4>
-                  <p>We provide straightforward, actionable feedback to improve your management system.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-              <a href="certification.html" class="btn btn-red">View Certification Services</a>
-            </div>
-          </div>
+        <div id="iso-form-container" class="contact-form-container iso-form-container"
+             data-form-title="Schedule an Audit"
+             data-form-origin="ISO Audit Page"
+             data-service-interest="audit"
+             data-show-fields="fg-standard-interest">
+          <!-- The smart form will be loaded here -->
         </div>
       </div>
     </section>
@@ -649,5 +543,6 @@
   </div>
 
   <script src="scripts.js"></script>
+  <script src="./js/iso-smart-form.js"></script>
 </body>
 </html>

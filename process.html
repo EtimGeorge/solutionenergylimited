@@ -12,16 +12,16 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Our Process | SEESL">
     <meta property="og:description" content="Learn about SEESL's systematic approach to project delivery and client satisfaction.">
-    <meta property="og:image" content="../images/SEES_new_logo.jpg"> <!-- Adjust path -->
+    <meta property="og:image" content="./images/SEES_new_logo.jpg"> <!-- Adjust path -->
     <meta property="og:url" content="https://www.solutionenergylimited.com/process.html"> <!-- Replace with actual URL -->
     <meta property="og:type" content="website">
     
     <!-- Favicon -->
-    <link rel="icon" href="../images/SEES_new_logo.jpg"> <!-- Adjust path as needed -->
+    <link rel="icon" href="./images/SEES_new_logo.jpg"> <!-- Adjust path as needed -->
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <style>
@@ -220,38 +220,44 @@
     <header class="header">
       <div class="container">
         <div class="header-content">
-          <a href="../index.html" class="logo">
-            <img src="../images/SEES_new_logo.jpg" alt="SEESL Logo">
+          <!-- Logo -->
+          <a href="./index.html" class="logo">
+            <img src="./images/SEES_new_logo.jpg" alt="SEESL Logo">
           </a>
+          
+          <!-- Desktop Navigation -->
           <nav class="desktop-nav">
             <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../about.html">About</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
               <li class="dropdown">
                 <button class="dropdown-button" aria-haspopup="true" aria-expanded="false" id="services-dropdown">
                   Services <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </button>
                 <div class="dropdown-content" role="menu" aria-labelledby="services-dropdown">
-                  <a href="../services/asset-management.html" role="menuitem" tabindex="-1">Asset Management</a>
-                  <a href="../services/procurement.html" role="menuitem" tabindex="-1">Procurement</a>
-                  <a href="../services/engineering.html" role="menuitem" tabindex="-1">Engineering</a>
-                  <a href="../services/gas-conversion.html" role="menuitem" tabindex="-1">Gas Conversion</a>
-                  <a href="../services/renewable-energy.html" role="menuitem" tabindex="-1">Renewable Energy</a>
-                  <a href="../services/civil-construction.html" role="menuitem" tabindex="-1">Civil Construction</a>
-                  <a href="../services/tank-cleaning.html" role="menuitem" tabindex="-1">Tank Cleaning</a>
-                  <a href="../services/iso-certification/" role="menuitem" tabindex="-1">ISO Certification</a>
+                  <a href="./services/asset-management.html" role="menuitem" tabindex="-1">Asset Management</a>
+                  <a href="./services/procurement.html" role="menuitem" tabindex="-1">Procurement</a>
+                  <a href="./services/engineering.html" role="menuitem" tabindex="-1">Engineering</a>
+                  <a href="./services/gas-conversion.html" role="menuitem" tabindex="-1">Gas Conversion</a>
+                  <a href="./services/renewable-energy.html" role="menuitem" tabindex="-1">Renewable Energy</a>
+                  <a href="./services/civil-construction.html" role="menuitem" tabindex="-1">Civil Construction</a>
+                  <a href="./services/tank-cleaning.html" role="menuitem" tabindex="-1">Tank Cleaning</a>
+                  <a href="./services/iso-certification/" role="menuitem" tabindex="-1">ISO Certification</a>
                 </div>
               </li>
-              <li><a href="../process.html" class="active">Process</a></li>
-              <li><a href="../contact.html">Contact</a></li>
+              <li><a href="./process.html" class="active">Process</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./contact.html">Contact</a></li>
             </ul>
           </nav>
+          
+          <!-- Social Icons & Theme Toggle - Desktop -->
           <div class="header-actions">
             <div class="contact-info">
-              <a href="tel:+2349153123973" >+234 (915) 312-3973</a>
-                <a href="tel:+2349018449467" aria-label="Contact Number">
-                +234 (901) 844-9467
-              </a> 
+              <ul>
+                <li><a href="tel:+2349153123973">+234 (915) 312-3973</a></li>
+                <li><a href="tel:+2349018449467" aria-label="Contact Number">+234 (901) 844-9467</a></li>
+              </ul>
             </div>
             <div class="social-icons">
               <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -259,37 +265,45 @@
               <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
               <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
             </div>
+            
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
               <i class="fas fa-sun"></i>
               <i class="fas fa-moon"></i>
             </button>
+            
+            <!-- Mobile Menu Toggle -->
             <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
               <i class="fas fa-bars"></i>
             </button>
           </div>
         </div>
       </div>
+      
+      <!-- Mobile Menu -->
       <div id="mobile-menu" class="mobile-menu">
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
           <li>
             <button id="services-dropdown-mobile" class="services-dropdown">
               Services <i class="fas fa-chevron-down"></i>
             </button>
             <div id="mobile-services" class="mobile-services">
-                <a href="../services/asset-management.html">Asset Management</a>
-                <a href="../services/procurement.html">Procurement</a>
-                <a href="../services/engineering.html">Engineering</a>
-                <a href="../services/gas-conversion.html">Gas Conversion</a>
-                <a href="../services/renewable-energy.html">Renewable Energy</a>
-                <a href="../services/civil-construction.html">Civil Construction</a>
-                <a href="../services/tank-cleaning.html">Tank Cleaning</a>
-                <a href="../services/iso-certification/">ISO Certification</a>
+              <a href="./services/asset-management.html">Asset Management</a>
+              <a href="./services/procurement.html">Procurement</a>
+              <a href="./services/engineering.html">Engineering</a>
+              <a href="./services/gas-conversion.html">Gas Conversion</a>
+              <a href="./services/renewable-energy.html">Renewable Energy</a>
+              <a href="./services/civil-construction.html">Civil Construction</a>
+              <a href="./services/tank-cleaning.html">Tank Cleaning</a>
+              <a href="./services/iso-certification/">ISO Certification</a>
             </div>
           </li>
-          <li><a href="../process.html" class="active">Process</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="./process.html" class="active">Process</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          
+          <!-- Social Media Icons - Mobile -->
           <li class="mobile-social">
             <div class="social-icons-mobile">
               <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -304,7 +318,7 @@
 
     <!-- Hero Section -->
     <section class="hero process-hero">
-        <div class="hero-overlay" style="background-image: url('../images/process-hero-bg.jpg');"></div> <!-- Replace with a suitable background image -->
+        <div class="hero-overlay" style="background-image: url('./images/process-hero-bg.jpg');"></div> <!-- Replace with a suitable background image -->
         <div class="container">
             <div class="hero-content">
                 <h1>Our Proven Process</h1>
@@ -395,7 +409,7 @@
                 </div>
                 <p>Throughout our process, we prioritize clear communication, transparency, and a collaborative partnership. Our goal is not just to complete projects, but to build lasting relationships by consistently exceeding expectations in quality, safety, and service delivery. We are dedicated to providing innovative and sustainable solutions that drive value for your business.</p>
                 <div class="hero-buttons mt-3">
-                    <a href="../contact.html" class="btn btn-secondary">Discuss Your Project</a>
+                    <a href="./contact.html" class="btn btn-secondary">Discuss Your Project</a>
                 </div>
             </div>
         </section>
@@ -412,11 +426,11 @@
           <div class="footer-links">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../about.html">About Us</a></li>
-              <li><a href="../index.html#services">Services</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./index.html#services">Services</a></li>
               <li><a href="process.html" class="active">Process</a></li>
-              <li><a href="../contact.html">Contact Us</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
               <li><a href="privacy-policy.html">Privacy Policy</a></li>
               <li><a href="terms-of-service.html">Terms of Service</a></li>
             </ul>
@@ -424,11 +438,11 @@
           <div class="footer-services">
             <h4>Our Services</h4>
             <ul>
-              <li><a href="../services/engineering.html">Engineering</a></li>
-              <li><a href="../services/procurement.html">Procurement</a></li>
-              <li><a href="../services/asset-management.html">Asset Management</a></li>
-              <li><a href="../services/renewable-energy.html">Renewable Energy</a></li>
-              <li><a href="../services/iso-certification/">ISO Certification</a></li>
+              <li><a href="./services/engineering.html">Engineering</a></li>
+              <li><a href="./services/procurement.html">Procurement</a></li>
+              <li><a href="./services/asset-management.html">Asset Management</a></li>
+              <li><a href="./services/renewable-energy.html">Renewable Energy</a></li>
+              <li><a href="./services/iso-certification/">ISO Certification</a></li>
             </ul>
           </div>
           <div class="footer-contact">

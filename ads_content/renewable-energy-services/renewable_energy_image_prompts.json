@@ -1,0 +1,96 @@
+[
+  {
+    "concept": "Energy Independence & Cost Savings",
+    "description": "Visuals highlighting financial and operational benefits of renewable energy for businesses.",
+    "prompts": [
+      {
+        "name": "Commercial Solar Rooftop",
+        "prompt": "A wide shot of a modern commercial building rooftop covered with sleek solar panels under a clear, sunny Nigerian sky. In the foreground, a subtle, glowing digital overlay shows a downward trend in energy costs or an upward trend in savings. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: professional, clean, futuristic. Colors: Bright blues, greens, and whites, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Natural, strong sunlight. Focus: Scale, efficiency, financial benefit.",
+        "platform_notes": "For FB/IG: Emphasize the visual impact of the solar installation. Could be a time-lapse of the sun moving across the panels."
+      },
+      {
+        "name": "Data-Driven Savings",
+        "prompt": "A Nigerian business professional (male or female, mid-career) in a modern office, looking confidently at a tablet or large monitor displaying a clear, easy-to-understand graph showing significant energy cost reductions over time, powered by renewable sources. Blurred background of a bustling, productive factory or office. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: analytical, professional, results-oriented. Colors: Corporate blues and greens, with data visualization in contrasting, positive colors, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Bright, focused on the screen. Focus: Tangible results, smart energy management.",
+        "platform_notes": "For FB/IG: Close-up on the graph or the professional's confident expression. Could be a short video of the graph animating to show savings."
+      }
+    ]
+  },
+  {
+    "concept": "Sustainable Development & Community Impact",
+    "description": "Visuals showcasing SEES's role in community empowerment and green energy innovation.",
+    "prompts": [
+      {
+        "name": "Mini-Grid Community Power",
+        "prompt": "A heartwarming scene in a rural Nigerian community at dusk. A central mini-grid (solar panels and small battery storage unit) is visibly powering streetlights, small shops, and homes, casting a warm glow. Children are playing, adults are gathered, and there's a sense of progress and well-being. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: authentic, warm, impactful. Colors: Golden hour lighting, with warm glows from the powered areas, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981) subtly. Focus: Community transformation, energy access, social impact.",
+        "platform_notes": "For FB/IG: Highly emotional and relatable. Ideal for a short video showing the transition from darkness to light, or community members using electricity."
+      },
+      {
+        "name": "Green Hydrogen Future",
+        "prompt": "A visually striking, slightly futuristic image of a green hydrogen production facility. Clean, stylized steam or gas is being emitted. The scene should convey innovation and environmental responsibility. Integrate subtle elements of Nigerian identity (e.g., a stylized map, national colors in the background lighting). All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: innovative, clean, aspirational. Colors: Predominantly greens, blues, and whites, with metallic accents, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Lighting: Bright, almost ethereal. Focus: Future technology, sustainability, national progress.",
+        "platform_notes": "For FB/IG: Focus on the clean, futuristic aesthetic. Could be a short animation of the process or a visually stunning still."
+      }
+    ]
+  },
+  {
+    "concept": "Comprehensive Renewable Solutions",
+    "description": "Highlighting the breadth of SEES's renewable energy services.",
+    "prompts": [
+      {
+        "name": "Renewable Energy Ecosystem Montage",
+        "prompt": "A dynamic collage or montage image showcasing various aspects of SEES's renewable energy services: a residential solar rooftop, a solar street light illuminating a path, a solar-powered irrigation system in an agricultural field, and a drone inspecting solar panels. Seamlessly blend these elements. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times. Style: comprehensive, dynamic, integrated. Colors: Vibrant, natural colors, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981) subtly. Lighting: Bright, energetic. Focus: Diversity of services, end-to-end solutions.",
+        "platform_notes": "For FB/IG: Excellent for a carousel ad or a quick video montage. Each element could be a separate slide/scene."
+      },
+      {
+        "name": "SEES Renewable Energy Team",
+        "prompt": "A diverse team of SEES engineers and technicians (Nigerian, male and female) in branded safety gear, standing confidently in front of a large-scale solar farm or a mini-grid installation. They are reviewing blueprints or a tablet, conveying expertise and collaboration. All SEES personnel in the image must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. Workers must be in their PPE at all times. Style: professional, trustworthy, expert. Colors: Corporate blues and greens, with natural outdoor lighting, incorporating SEES brand colors (#0056b3, #f59e0b, #10b981). Focus: Expertise, teamwork, reliability.",
+        "platform_notes": "For FB/IG: Emphasize the human element and professionalism. Could be a short video of the team in action, or a group photo with a strong, confident pose."
+      }
+    ]
+  },
+  {
+    "video_concepts": [
+      {
+        "name": "SEES Renewable Energy: Powering Nigeria's Future (Overview)",
+        "description": "A fast-paced, inspiring video showcasing the breadth of SEES's renewable energy projects and their impact.",
+        "prompt_elements": [
+          "Opening shot: Dynamic animation of SEES logo with a solar flare effect. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout.",
+          "Scene 1: Quick cuts of various SEES renewable installations: residential solar, commercial rooftop solar, solar street lights, mini-grids in rural areas. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 2: Visuals of green hydrogen/ammonia concepts (stylized, clean energy). All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scene 3: Happy Nigerian faces benefiting from clean energy (e.g., children studying under solar light, small businesses thriving).",
+          "Voiceover: 'Unlocking Nigeria's vast renewable potential. SEES delivers sustainable energy solutions for a brighter tomorrow.'",
+          "On-screen text: 'Reduce Costs', 'Reliable Power', 'Clean Energy', 'Community Impact'.",
+          "Closing: SEES logo, website URL, and a clear CTA: 'Power Your Future with SEES.'",
+          "Music: Upbeat, inspiring, modern."
+        ],
+        "duration_target": "30-45 seconds"
+      },
+      {
+        "name": "Solar for Business: A Success Story (Testimonial/Case Study)",
+        "description": "A compelling video featuring a satisfied commercial client and their experience with SEES solar solutions.",
+        "prompt_elements": [
+          "Opening: Shot of the client's business premises, then a focus on their SEES solar installation. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Interview with the Nigerian business owner/manager. They speak authentically about their previous energy challenges (e.g., high bills, outages) and how SEES's solar solution solved them.",
+          "Visuals: Intercut client interview with shots of their business operating smoothly, close-ups of the solar panels, and perhaps a graph animating to show cost savings. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Client quote on screen: 'SEES helped us save X% on energy and ensured 24/7 power!'",
+          "Closing: SEES logo, website URL, and a CTA: 'Get Your Free Energy Audit.'",
+          "Music: Professional, positive, background. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout."
+        ],
+        "duration_target": "60-90 seconds"
+      },
+      {
+        "name": "Mini-Grids: Lighting Up Rural Lives (Impact Story)",
+        "description": "A heartwarming narrative video showcasing the transformative impact of SEES mini-grids on rural Nigerian communities.",
+        "prompt_elements": [
+          "Opening: Scenes of a rural community before electrification (e.g., using kerosene lamps, limited evening activity).",
+          "Transition: SEES team installing mini-grid components. All SEES personnel must have the company's logo branded on their attire. Uniform colors should be sky blue, white, or gray. If workers are present in an industrial setting, they must be in their PPE at all times.",
+          "Scenes of the community after electrification: children studying at night, small businesses operating, community gatherings under lights, people charging phones.",
+          "Short, authentic interviews with community members (e.g., a student, a shop owner) expressing how the mini-grid has changed their lives.",
+          "Voiceover: 'Bringing light, opportunity, and progress to every corner of Nigeria. SEES mini-grids are transforming lives.'",
+          "Closing: SEES logo, website URL, and a CTA: 'Partner for Impact.'",
+          "Music: Uplifting, emotional, traditional Nigerian elements. Brand colors #0056b3, #f59e0b, #10b981 should be subtly incorporated throughout."
+        ],
+        "duration_target": "60-120 seconds"
+      }
+    ]
+  }
+]

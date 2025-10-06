@@ -1,0 +1,79 @@
+<!-- Master Form Component for ISO Sub-site -->
+<form class="contact-form" data-form-origin="ISO Form">
+  
+  <div class="form-group">
+    <label for="iso-name">Full Name</label>
+    <input type="text" id="iso-name" name="name" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="iso-email">Email Address</label>
+    <input type="email" id="iso-email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="iso-company">Company Name</label>
+    <input type="text" id="iso-company" name="company">
+  </div>
+
+  <div class="form-group">
+    <label for="iso-phone">Phone Number</label>
+    <input type="tel" id="iso-phone" name="phone">
+  </div>
+
+  <!-- This field will be shown/hidden and pre-selected by JS -->
+  <div class="form-group" id="fg-service-interest">
+    <label for="iso-service">Service of Interest</label>
+    <select id="iso-service" name="service_interest" required>
+      <option value="">Please Select</option>
+      <option value="certification">ISO Certification</option>
+      <option value="training">Training Services</option>
+      <option value="audit">Audit Services</option>
+    </select>
+  </div>
+
+  <!-- This field will be shown/hidden by JS -->
+  <div class="form-group" id="fg-standard-interest">
+    <label>Standard of Interest</label>
+    <div class="checkbox-group">
+      <label for="iso-9001"><input type="checkbox" id="iso-9001" name="standard" value="ISO 9001"> ISO 9001 (Quality)</label>
+      <label for="iso-14001"><input type="checkbox" id="iso-14001" name="standard" value="ISO 14001"> ISO 14001 (Environment)</label>
+      <label for="iso-45001"><input type="checkbox" id="iso-45001" name="standard" value="ISO 45001"> ISO 45001 (Health & Safety)</label>
+      <label for="iso-other-checkbox"><input type="checkbox" id="iso-other-checkbox" name="standard" value="Other"> Other</label>
+      <input type="text" id="iso-other-text" name="standard_other" placeholder="Please specify other standard" style="display: none; margin-top: 8px;">
+    </div>
+  </div>
+
+  <!-- This field will be shown/hidden by JS -->
+  <div class="form-group" id="fg-employees">
+    <label for="iso-employees">Number of Employees</label>
+    <select id="iso-employees" name="employees">
+        <option value="">Please Select</option>
+        <option value="1-50">1-50</option>
+        <option value="51-100">51-100</option>
+        <option value="101-250">101-250</option>
+        <option value="251-500">251-500</option>
+        <option value="500+">500+</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="how_did_you_hear">How did you hear about us?</label>
+    <select id="how_did_you_hear" name="how_did_you_hear">
+      <option value="">Please Select</option>
+      <option value="search_engine">Google/Search Engine</option>
+      <option value="linkedin">LinkedIn</option>
+      <option value="social_media">Facebook/Instagram</option>
+      <option value="referral">Referral</option>
+      <option value="news_article">News/Article</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="iso-message">Your Message</label>
+    <textarea id="iso-message" name="message" rows="4" required></textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-submit">Submit</button>
+</form>
