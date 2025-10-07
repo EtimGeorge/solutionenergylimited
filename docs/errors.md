@@ -10,6 +10,9 @@ added 170 packages, and audited 171 packages in 3s
 To address all issues, run:
   npm audit fix
 Run `npm audit` for details.
+==> Running 'npm audit fix'...
+changed 1 package, and audited 171 packages in 5s
+found 0 vulnerabilities
 ==> Uploading build...
 ==> Uploaded in 9.3s. Compression took 1.2s
 ==> Build successful 🎉
