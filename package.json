@@ -1,9 +1,0 @@
-{
-  "name": "solutionenergylimited-frontend",
-  "version": "1.0.0",
-  "description": "Frontend for Solution Energy Limited website.",
-  "type": "module",
-  "dependencies": {
-    "jsdom": "^24.1.0"
-  }
-}

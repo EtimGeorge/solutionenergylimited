@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISO Certification Services in Africa - SEES Global</title>
+
+  <link rel="icon" type="image/png" href="./assets/SEES_new_logo.jpg">
+
+  <meta name="description" content="Get internationally recognized ISO certification for your business. We offer ISO 9001, 14001, 45001, 27001 and more certifications with global accreditation.">
+
+  <meta name="keywords" content="ISO certification, ISO 9001 certification, ISO 14001 certification, ISO 45001 certification, Africa ISO certification">
+
+  <meta property="og:title" content="ISO Certification Services - SEES Global">
+
+  <meta property="og:description" content="Get internationally recognized ISO certification. Accredited certification body for ISO 9001, 14001, 45001 and more standards.">
+
+  <meta property="og:type" content="website">
+
+    <!-- remember to change to final web address -->
+  <meta property="og:url" content="https://www.sees.ng/certification">
+
+  <meta property="og:image" content="/generated-icon.png">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" href="./assets/SEES_new_logo.jpg">
+  <style>
+    /* Additional page-specific styles */
+    .certification-card {
+      background-color: var(--background);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .certification-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .certification-card .card-header {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+    
+    .certification-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .certification-card .benefits {
+      flex-grow: 1;
+      margin-bottom: 1.5rem;
+    }
+    
+    .certification-card .benefits h4 {
+      margin-bottom: 1rem;
+    }
+    
+    .certification-card .benefits li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .certification-card .benefits li i {
+      color: #10b981;
+      margin-top: 0.25rem;
+    }
+    
+    .certification-card .info {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+    
+    .certification-card .info p {
+      margin-bottom: 0.5rem;
+    }
+    
+    .certification-card .info span {
+      font-weight: 600;
+    }
+    
+    .process-step {
+      background-color: var(--background);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      position: relative;
+      transition: transform 0.3s;
+    }
+    
+    .process-step:hover {
+      transform: translateY(-8px);
+    }
+    
+    .step-number {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary);
+      color: white;
+      font-weight: bold;
+      border-top-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+    }
+    
+    .process-step h3 {
+      margin-top: 1.5rem;
+      color: var(--primary);
+    }
+    
+    .faq-item {
+      background-color: var(--background);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+    }
+    
+    .faq-item h3 {
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    
+    .why-choose-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .why-choose-icon {
+      color: #10b981;
+      font-size: 1.5rem;
+    }
+    
+    .why-choose-content h4 {
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    
+    .why-choose-content p {
+      color: var(--text-light);
+    }
+  </style>
+  <script src="https://www.google.com/recaptcha/api.js?render=your_recaptcha_site_key_for_frontend"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="./assets/SEES_new_logo.jpg" alt="SEES Logo">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <button class="dropdown-button">Services <i class="fas fa-chevron-down"></i></button>
+              <div class="dropdown-content">
+                <a href="certification.html" class="active">Certification</a>
+                <a href="training.html">Training</a>
+                <a href="audit.html">Audit</a>
+              </div>
+            </li>
+            <li><a href="process.html">Process</a></li>           
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Social Icons & Theme Toggle - Desktop -->
+        <div class="header-actions">
+          <div class="social-icons">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited?fbclid=IwY2xjawJyfC1leHRuA2FlbQIxMAABHmXCRpjpiIkwHC3FrkGbV1m6Qy4DqUz42qWSVk2s8NT7XKA5PMpQgNrzT3dt_aem_O_qza7YoibEds5dltu8RMA" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+          
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <button id="services-dropdown" class="services-dropdown">
+            Services <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="mobile-services" class="mobile-services">
+            <a href="certification.html">Certification</a>
+            <a href="training.html">Training</a>
+            <a href="audit.html">Audit</a>
+          </div>
+        </li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+        <!-- Social Media Icons - Mobile -->
+        <li class="mobile-social">
+          <div class="social-icons-mobile">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited?fbclid=IwY2xjawJyfC1leHRuA2FlbQIxMAABHmXCRpjpiIkwHC3FrkGbV1m6Qy4DqUz42qWSVk2s8NT7XKA5PMpQgNrzT3dt_aem_O_qza7YoibEds5dltu8RMA" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920');"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>ISO Certification Services</h1>
+          <p>Internationally Recognized Standards for Business Excellence</p>
+          
+          <div class="hero-buttons">
+            <a href="#certification-process" class="btn btn-red" id="process-cta">Certification Process</a>
+            <a href="#contact" class="btn btn-blue" id="certification-cta">Request Certification</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certification Types -->
+    <section class="section-light">
+      <div class="container">
+        <h2>Our Certification Solutions</h2>
+        
+        <div class="services-grid">
+          <!-- ISO 9001 -->
+          <div class="certification-card">
+            <div class="card-header">
+              <h3>ISO 9001</h3>
+              <p>Quality Management System</p>
+            </div>
+            <div class="benefits">
+              <h4>Key Benefits:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> <span>Enhance operational efficiency</span></li>
+                <li><i class="fas fa-check"></i> <span>Increase customer satisfaction</span></li>
+                <li><i class="fas fa-check"></i> <span>Improve decision-making processes</span></li>
+                <li><i class="fas fa-check"></i> <span>Demonstrate commitment to quality</span></li>
+              </ul>
+            </div>
+            <div class="info">
+              <p><span>Industries:</span> All industries</p>
+              <p><span>Typical Duration:</span> 3-6 months</p>
+            </div>
+            <a href="#iso-9001" class="btn btn-service">Learn More</a>
+          </div>
+          
+          <!-- ISO 14001 -->
+          <div class="certification-card">
+            <div class="card-header">
+              <h3>ISO 14001</h3>
+              <p>Environmental Management System</p>
+            </div>
+            <div class="benefits">
+              <h4>Key Benefits:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> <span>Reduce environmental impact</span></li>
+                <li><i class="fas fa-check"></i> <span>Achieve regulatory compliance</span></li>
+                <li><i class="fas fa-check"></i> <span>Improve resource efficiency</span></li>
+                <li><i class="fas fa-check"></i> <span>Enhance stakeholder confidence</span></li>
+              </ul>
+            </div>
+            <div class="info">
+              <p><span>Industries:</span> Manufacturing, Construction, Energy, Transport</p>
+              <p><span>Typical Duration:</span> 3-6 months</p>
+            </div>
+            <a href="#iso-14001" class="btn btn-service">Learn More</a>
+          </div>
+          
+          <!-- ISO 45001 -->
+          <div class="certification-card">
+            <div class="card-header">
+              <h3>ISO 45001</h3>
+              <p>Occupational Health & Safety Management</p>
+            </div>
+            <div class="benefits">
+              <h4>Key Benefits:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> <span>Reduce workplace incidents</span></li>
+                <li><i class="fas fa-check"></i> <span>Demonstrate legal compliance</span></li>
+                <li><i class="fas fa-check"></i> <span>Create safer working conditions</span></li>
+                <li><i class="fas fa-check"></i> <span>Reduce insurance premiums</span></li>
+              </ul>
+            </div>
+            <div class="info">
+              <p><span>Industries:</span> Construction, Manufacturing, Oil & Gas</p>
+              <p><span>Typical Duration:</span> 3-6 months</p>
+            </div>
+            <a href="#iso-45001" class="btn btn-service">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certification Process -->
+    <section id="certification-process" class="section-dark">
+      <div class="container">
+        <h2>Our Certification Process</h2>
+        
+        <div class="services-grid">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Gap Analysis</h3>
+            <p>We perform a thorough assessment of your current systems against ISO requirements to identify gaps.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Implementation</h3>
+            <p>We help you develop and implement management systems that meet all ISO standard requirements.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Audit</h3>
+            <p>Our accredited auditors conduct Stage 1 and Stage 2 audits to verify compliance with ISO standards.</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Certification</h3>
+            <p>Upon successful completion, we issue internationally recognized ISO certification valid for 3 years.</p>
+          </div>
+        </div>
+        
+        <div class="text-center mt-2">
+          <a href="#contact" class="btn btn-red">Request a Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-light">
+      <div class="container">
+        <h2>Common Questions</h2>
+        
+        <div style="max-width: 900px; margin: 0 auto;">
+          <div class="faq-item">
+            <h3>How long does certification take?</h3>
+            <p>The certification process typically takes 3-6 months, depending on the size and complexity of your organization and your readiness for certification.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>How much does ISO certification cost?</h3>
+            <p>Certification costs vary based on your organization's size, complexity, and the standard you're pursuing. Contact us for a customized quote.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Is my business too small for ISO certification?</h3>
+            <p>No. ISO standards are designed to be applicable to organizations of all sizes. We have successfully certified businesses with as few as 5 employees.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>How often do we need to renew certification?</h3>
+            <p>ISO certificates are valid for 3 years, with surveillance audits conducted annually to ensure ongoing compliance and continuous improvement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Request Certification</h2>
+        <div id="iso-form-container" class="contact-form-container iso-form-container"
+             data-form-title="Request Certification"
+             data-form-origin="ISO Certification Page"
+             data-service-interest="certification"
+             data-show-fields="fg-standard-interest,fg-employees">
+          <!-- The smart form will be loaded here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>About SEES</h4>
+          <p>SEES provides globally recognized ISO certification, training, and audit services to businesses across Africa and beyond.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/certification.html">Services</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-services">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="/certification.html">ISO Certification</a></li>
+            <li><a href="/training.html">Training Programs</a></li>
+            <li><a href="/audit.html">Audit Services</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@solutionenergylimited.com</li>
+            <li><i class="fas fa-phone"></i> +234 915 312 3973</li>
+            <li><i class="fas fa-map-marker-alt"></i> No 6 Salem Avenue <br> off Aker Road Rumolumeni <br> Port Harcourt, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons-footer">
+          <a href="https://web.facebook.com/profile.php?id=100091983091138&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <!-- <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+          <a href="https://www.instagram.com/solution_energylimited?fbclid=IwY2xjawJyfC1leHRuA2FlbQIxMAABHmXCRpjpiIkwHC3FrkGbV1m6Qy4DqUz42qWSVk2s8NT7XKA5PMpQgNrzT3dt_aem_O_qza7YoibEds5dltu8RMA" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <!-- <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a> -->
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> SEES. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div id="success-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h3>Request Submitted!</h3>
+      <p>Thank you for your interest in our certification services. One of our certification experts will contact you within 24 hours.</p>
+      <button class="btn btn-blue modal-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script src="../../js/config.js"></script>
+  <script src="js/iso-smart-form.js"></script>
+</body>
+</html>

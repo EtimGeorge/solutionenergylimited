@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Solution Energy and Engineering Services Ltd. | SEESL</title>
+  
+  <!-- Meta Tags -->
+  <meta name="description" content="Read the latest news, articles, and case studies from Solution Energy and Engineering Services Ltd (SEESL) on engineering, procurement, asset management, and more.">
+  <meta name="keywords" content="SEESL blog, engineering articles, energy industry news, case studies, asset management best practices">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Blog | Solution Energy and Engineering Services Ltd">
+  <meta property="og:description" content="Read the latest news, articles, and case studies from SEESL.">
+  <meta property="og:image" content="./images/SEES_new_logo.jpg">
+  <meta property="og:url" content="https://www.solutionenergylimited.com/blog.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="./images/SEES_new_logo.jpg">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="./images/SEES_new_logo.jpg" alt="SEESL Logo">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <button class="dropdown-button" aria-haspopup="true" aria-expanded="false" id="services-dropdown">
+                Services <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-content" role="menu" aria-labelledby="services-dropdown">
+                <a href="services/asset-management.html" role="menuitem" tabindex="-1">Asset Management</a>
+                <a href="services/procurement.html" role="menuitem" tabindex="-1">Procurement</a>
+                <a href="services/engineering.html" role="menuitem" tabindex="-1">Engineering</a>
+                <a href="services/gas-conversion.html" role="menuitem" tabindex="-1">Gas Conversion</a>
+                <a href="services/renewable-energy.html" role="menuitem" tabindex="-1">Renewable Energy</a>
+                <a href="services/civil-construction.html" role="menuitem" tabindex="-1">Civil Construction</a>
+                <a href="services/tank-cleaning.html" role="menuitem" tabindex="-1">Tank Cleaning</a>
+                <a href="services/iso-certification/" role="menuitem" tabindex="-1">ISO Certification</a>
+              </div>
+            </li>
+            <li><a href="process.html">Process</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Social Icons & Theme Toggle - Desktop -->
+        <div class="header-actions">
+          <div class="contact-info">
+            <ul>
+              <li><a href="tel:+2349153123973">+234 (915) 312-3973</a></li>
+              
+               <li><a href="tel:+2349018449467" aria-label="Contact Number">
+                +234 (901) 844-9467
+              </a></li> <!-- REPLACE WITH ACTUAL NEW NUMBER -->
+            </ul>
+          </div>
+          <div class="social-icons">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <button id="services-dropdown-mobile" class="services-dropdown">
+            Services <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="mobile-services" class="mobile-services">
+            <a href="services/asset-management.html">Asset Management</a>
+            <a href="services/procurement.html">Procurement</a>
+            <a href="services/engineering.html">Engineering</a>
+            <a href="services/gas-conversion.html">Gas Conversion</a>
+            <a href="services/renewable-energy.html">Renewable Energy</a>
+            <a href="services/civil-construction.html">Civil Construction</a>
+            <a href="services/tank-cleaning.html">Tank Cleaning</a>
+            <a href="services/iso-certification/">ISO Certification</a>
+          </div>
+        </li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+        <!-- Social Media Icons - Mobile -->
+        <li class="mobile-social">
+          <div class="social-icons-mobile">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay" style="background-image: url('./images/home-hero-image.jpg'); background-size: cover; background-position: center; "></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Blog & Case Studies</h1>
+          <p>Insights, news, and success stories from the forefront of the energy industry</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section section-light">
+      <div class="container">
+        <div class="blog-grid">
+          <!-- Blog Post 1 -->
+          <div class="blog-post-card card">
+            <img src="./images/post1.jpg" alt="Blog Post 1 Image" class="card-image">
+            <div class="card-content">
+              <span class="card-date">July 2, 2025</span>
+              <h3>The Future of Renewable Energy in Nigeria</h3>
+              <p>An in-depth look at the trends and opportunities in Nigeria's renewable energy sector, and how SEESL is contributing to a greener future.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div class="blog-post-card card">
+            <img src="./images/post2.jpg" alt="Blog Post 2 Image" class="card-image">
+            <div class="card-content">
+              <span class="card-date">June 25, 2025</span>
+              <h3>Case Study: Enhancing Efficiency with Asset Management</h3>
+              <p>Discover how our asset management solutions helped a major client reduce downtime and optimize their operations.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div class="blog-post-card card">
+            <img src="./images/post3.jpg" alt="Blog Post 3 Image" class="card-image">
+            <div class="card-content">
+              <span class="card-date">June 18, 2025</span>
+              <h3>The Importance of ISO 9001 Certification</h3>
+              <p>Learn why ISO 9001 certification is crucial for businesses today and how SEESL can guide you through the process.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>About SEESL</h4>
+          <p>Solution Energy and Engineering Services Ltd provides world-class engineering, procurement, installation, asset management, and ISO certification services to businesses across Africa and beyond.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-services">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services/engineering.html">Engineering</a></li>
+            <li><a href="services/procurement.html">Procurement</a></li>
+            <li><a href="services/asset-management.html">Asset Management</a></li>
+            <li><a href="services/renewable-energy.html">Renewable Energy</a></li>
+            <li><a href="services/iso-certification/">ISO Certification</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@solutionenergylimited.com</li>
+            <li><i class="fas fa-phone"></i> +234 915 312 3973</li>
+            <li><i class="fas fa-map-marker-alt"></i> No 6 Salem Avenue <br> off Aker Road Rumolumeni <br> Port Harcourt, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons-footer">
+          <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Solution Energy Limited. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button HTML -->
+<button id="backToTopBtn" aria-label="Scroll to top" title="Go to top">
+  ↑ <!-- Unicode upward arrow -->
+</button>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

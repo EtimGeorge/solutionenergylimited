@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact SEES Global - ISO Certification Services</title>
+
+  <link rel="icon" type="image/png" href="./assets/SEES_new_logo.jpg">
+
+  <meta name="description" content="Contact SEES Global for ISO certification, training, and audit services. Offices in Nigeria, Ghana, Kenya, and South Africa.">
+
+  <meta name="keywords" content="ISO certification contact, ISO training contact, Africa ISO services, SEES Global contact">
+
+  <meta property="og:title" content="Contact SEES Global - ISO Services">
+
+  <meta property="og:description" content="Get in touch with SEES Global for ISO certification, training, and audit services across Africa.">
+
+  <meta property="og:type" content="website">
+
+  <!-- remember to change to final web address -->
+  <meta property="og:url" content="https://www.sees.ng/contact">
+
+  <meta property="og:image" content="/generated-icon.png">
+
+  <meta name="description" content="Get in touch with SEES Global ISO Certification. Contact our team for inquiries about certification, training, and audit services.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/contact.css">
+  <link rel="stylesheet" href="styles.css"> <!-- This might be specific to ISO pages, keep if necessary -->
+
+  <link rel="icon" type="image/png" href="./assets/SEES_new_logo.jpg">
+  <style>
+    .contact-hero {
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+    
+    .contact-info-card {
+      background-color: var(--background);
+      
+      border-radius: 0.5rem;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .section-intro{
+      max-width: 800px; 
+      margin: 0 auto;
+    }
+    
+    .contact-info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-info-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .contact-info-icon {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-right: 1rem;
+      min-width: 2rem;
+      text-align: center;
+    }
+    
+    .contact-info-content h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    
+    .contact-info-content p {
+      margin: 0;
+      color: var(--text-light);
+    }
+    
+    .contact-tabs {
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+    }
+    
+    .contact-tab {
+      padding: 1rem 2rem;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    
+    .contact-tab.active {
+      border-bottom-color: var(--primary);
+      color: var(--primary);
+    }
+    
+    .contact-tab:hover:not(.active) {
+      border-bottom-color: var(--border-color);
+    }
+    
+    .contact-tab-content {
+      display: none;
+    }
+    
+    .contact-tab-content.active {
+      display: block;
+    }
+    
+    .map-container {
+      height: 400px;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    
+    .office-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .office-card {
+      background-color: var(--background);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    .office-card h3 {
+      color: var(--primary);
+      margin-top: 0;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .office-details {
+      margin-bottom: 1.5rem;
+    }
+    
+    .office-details p {
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .office-details i {
+      margin-right: 0.75rem;
+      color: var(--primary);
+      min-width: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-tabs {
+        flex-direction: column;
+        border-bottom: none;
+      }
+      
+      .contact-tab {
+        padding: 1rem;
+        border-bottom: 3px solid var(--border-color);
+      }
+      
+      .contact-tab.active {
+        border-bottom: 2px solid var(--primary);
+        border-left: 3px solid var(--primary);
+      }
+    }
+    
+    /* Updated styles for the forms */
+    .contact-tab-content .contact-form {
+      padding: var(--spacing-lg, 2rem); /* From .contact-form-container */
+      background-color: var(--background-alt, #f5f8fa); /* From .contact-form-container */
+      border-radius: var(--border-radius-md, 0.5rem); /* From .contact-form-container */
+      box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1)); /* From .contact-form-container */
+      margin-top: 1.5rem; /* Add some space above the form */
+      /* If .contact-form-container has a specific max-width or margin, add here */
+      /* e.g., max-width: 600px; margin-left: auto; margin-right: auto; */
+    }
+
+    [data-theme="dark"] .contact-tab-content .contact-form {
+        background-color: var(--background, #121212); /* Dark theme adjustment from .contact-form-container */
+    }
+    /* End of updated styles */
+    
+    @media (max-width: 768px) {
+      .contact-tabs {
+        flex-direction: column;
+        border-bottom: none;
+      }
+      
+      .contact-tab {
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+      
+      .contact-tab.active {
+        border-bottom: 1px solid var(--primary);
+        border-left: 3px solid var(--primary);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="./assets/SEES_new_logo.jpg" alt="SEES Logo">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li class="dropdown">
+              <button class="dropdown-button">Services <i class="fas fa-chevron-down"></i></button>
+              <div class="dropdown-content">
+                <a href="certification.html">Certification</a>
+                <a href="training.html">Training</a>
+                <a href="audit.html">Audit</a>
+              </div>
+            </li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="global.html">Global</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Social Icons & Theme Toggle - Desktop -->
+        <div class="header-actions">
+          <div class="social-icons">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited?fbclid=IwY2xjawJyfC1leHRuA2FlbQIxMAABHmXCRpjpiIkwHC3FrkGbV1m6Qy4DqUz42qWSVk2s8NT7XKA5PMpQgNrzT3dt_aem_O_qza7YoibEds5dltu8RMA" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+          
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <button id="services-dropdown" class="services-dropdown">
+            Services <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="mobile-services" class="mobile-services">
+            <a href="certification.html">Certification</a>
+            <a href="training.html">Training</a>
+            <a href="audit.html">Audit</a>
+          </div>
+        </li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="global.html">Global</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+        <!-- Social Media Icons - Mobile -->
+        <li class="mobile-social">
+          <div class="social-icons-mobile">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited?fbclid=IwY2xjawJyfC1leHRuA2FlbQIxMAABHmXCRpjpiIkwHC3FrkGbV1m6Qy4DqUz42qWSVk2s8NT7XKA5PMpQgNrzT3dt_aem_O_qza7YoibEds5dltu8RMA" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero contact-hero">
+      <div class="hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920');"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Contact SEES</h1>
+          <p>We're Here to Support Your Certification Journey</p>
+          
+          <div class="hero-buttons">
+            <a href="#general-inquiry" class="btn btn-red" id="contact-general-cta">General Inquiry</a>
+            <a href="#request-quote" class="btn btn-blue" id="contact-quote-cta">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section-light">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p class="section-intro">We provide ISO certification, training, and audit services across Africa and beyond. Reach out to our team for expert guidance on your ISO journey.</p>
+        
+        <div class="contact-info-card">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Call Us</h4>
+              <p>Main Office: +234 800 732 9000</p>
+              <p>Customer Support: +234 800 733 9001</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Email Us</h4>
+              <p>General Inquiries: info@sees.ng</p>
+              <p>Sales: sales@sees.ng</p>
+              <p>Support: support@sees.ng</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Business Hours</h4>
+              <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+              <p>Saturday: 9:00 AM - 1:00 PM</p>
+              <p>Sunday: Closed</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Headquarters</h4>
+              <p>No 8B Salem Avenue off Aker Road  Rumolumeni,</p>
+                <p>Port Harcourt, Rivers State</p>
+                <p>Nigeria</p>
+                <p> Zip code: 500102</p>
+                <p>info@solutionenergylimited.com</p>
+                <p>+234 915 312 3973</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254688.3996197651!2d6.911448542817946!3d4.816565367648483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cea39f2c48e3%3A0x25d93119ac25b615!2sPort%20Harcourt%2C%20Rivers!5e0!3m2!1sen!2sng!4v1600000000000!5m2!1sen!2sng" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section-dark">
+      <div class="container">
+        <h2>How Can We Help You?</h2>
+        <div id="iso-form-container" class="contact-form-container iso-form-container"
+             data-form-title="General Inquiry"
+             data-form-origin="ISO Contact Page"
+             data-show-fields="fg-service-interest,fg-standard-interest,fg-employees">
+          <!-- The smart form will be loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Offices -->
+    <section class="section-light">
+      <div class="container">
+        <h2>Our Offices</h2>
+        <p class="section-intro">SEES Global operates in multiple locations to serve clients across Africa and beyond.</p>
+        
+        <div class="office-grid">
+          <!-- Nigeria HQ -->
+          <div class="office-card">
+            <h3>Nigeria (Headquarters)</h3>
+            <div class="office-details">
+              <p><i class="fas fa-map-marker-alt"></i>No 6 Salem Avenue off Aker Road Rumolumeni
+              <br>Port Harcourt, Rivers State
+              <br>Nigeria
+              <br>Zip code: 500102
+              </p>
+              <p><i class="fas fa-phone"></i> +234 915 312 3973</p>
+              <p><i class="fas fa-envelope"></i> info@solutionenergylimited.com</p>
+              <p><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 5:00 PM</p>
+            </div>
+            <a href="https://maps.google.com/maps?q=No+8B+Salem+Avenue+off+Aker+Road+Rumolumeni,+Port+Harcourt,+Rivers+State,+Nigeria" target="_blank" class="btn btn-primary">Get Directions</a>
+          </div>
+          
+          <!-- Ghana Office -->
+          <!-- <div class="office-card">
+            <h3>Ghana</h3>
+            <div class="office-details">
+              <p><i class="fas fa-map-marker-alt"></i> 15 Standard Avenue, Accra, Ghana</p>
+              <p><i class="fas fa-phone"></i> +233 302 123 456</p>
+              <p><i class="fas fa-envelope"></i> ghana@sees.ng</p>
+              <p><i class="fas fa-clock"></i> Monday - Friday: 8:30 AM - 5:30 PM</p>
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-primary">Get Directions</a>
+          </div> -->
+          
+          <!-- Kenya Office -->
+          <!-- <div class="office-card">
+            <h3>Kenya</h3>
+            <div class="office-details">
+              <p><i class="fas fa-map-marker-alt"></i> 23 Certification Road, Nairobi, Kenya</p>
+              <p><i class="fas fa-phone"></i> +254 20 987 6543</p>
+              <p><i class="fas fa-envelope"></i> kenya@sees.ng</p>
+              <p><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 5:00 PM</p>
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-primary">Get Directions</a>
+          </div> -->
+          
+          <!-- South Africa Office -->
+          <!-- <div class="office-card">
+            <h3>South Africa</h3>
+            <div class="office-details">
+              <p><i class="fas fa-map-marker-alt"></i> 42 Quality Street, Johannesburg, South Africa</p>
+              <p><i class="fas fa-phone"></i> +27 11 456 7890</p>
+              <p><i class="fas fa-envelope"></i> southafrica@sees.ng</p>
+              <p><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 4:30 PM</p>
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-primary">Get Directions</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>About SEES</h4>
+          <p>SEES provides globally recognized ISO certification, training, and audit services to businesses across Africa and beyond.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-services">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="certification.html">ISO Certification</a></li>
+            <li><a href="training.html">Training Programs</a></li>
+            <li><a href="audit.html">Audit Services</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@sees.ng</li>
+            <li><i class="fas fa-phone"></i> +234 800 732 9000</li>
+            <li><i class="fas fa-map-marker-alt"></i> Port Harcourt, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons-footer">
+          <a href="https://web.facebook.com/profile.php?id=100091983091138&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <!-- <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+          <a href="https://www.instagram.com/solution_energylimited?fbclid=IwY2xjawJyfC1leHRuA2FlbQIxMAABHmXCRpjpiIkwHC3FrkGbV1m6Qy4DqUz42qWSVk2s8NT7XKA5PMpQgNrzT3dt_aem_O_qza7YoibEds5dltu8RMA" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <!-- <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a> -->
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> SEES Global. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div id="success-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h3>Message Submitted!</h3>
+      <p>Thank you for contacting SEES Global. We have received your message and will respond to your inquiry within 24 hours.</p>
+      <button class="btn btn-blue modal-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script src="../../js/config.js"></script>
+  <script src="./js/iso-smart-form.js"></script>
+  <script>
+    // Contact Tab Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.contact-tab');
+      const tabContents = document.querySelectorAll('.contact-tab-content');
+      
+      // Get URL hash and activate corresponding tab
+      const activateTabFromHash = () => {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+          const targetTab = document.querySelector(`.contact-tab[data-tab="${hash}"]`);
+          if (targetTab) {
+            tabs.forEach(tab => tab.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            targetTab.classList.add('active');
+            document.getElementById(hash).classList.add('active');
+          }
+        }
+      }
+      
+      // Initialize tabs from URL hash
+      activateTabFromHash();
+      
+      // Handle tab clicks
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const tabId = tab.getAttribute('data-tab');
+          
+          tabs.forEach(t => t.classList.remove('active'));
+          tabContents.forEach(c => c.classList.remove('active'));
+          
+          tab.classList.add('active');
+          document.getElementById(tabId).classList.add('active');
+          
+          // Update URL hash without scrolling
+          history.pushState(null, null, `#${tabId}`);
+        });
+      });
+      
+      // Handle contact CTA buttons
+      const contactGeneralCta = document.getElementById('contact-general-cta');
+      const contactQuoteCta = document.getElementById('contact-quote-cta');
+      
+      if (contactGeneralCta) {
+        contactGeneralCta.addEventListener('click', function(e) {
+          // Don't prevent default as we want it to jump to the section
+          
+          // Update inquiry source
+          const inquirySource = document.getElementById('inquiry-source');
+          if (inquirySource) {
+            inquirySource.value = 'hero_general_cta';
+          }
+          
+          // Activate general inquiry tab
+          tabs.forEach(tab => tab.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+          
+          document.querySelector('.contact-tab[data-tab="general-inquiry"]').classList.add('active');
+          document.getElementById('general-inquiry').classList.add('active');
+        });
+      }
+      
+      if (contactQuoteCta) {
+        contactQuoteCta.addEventListener('click', function(e) {
+          // Don't prevent default as we want it to jump to the section
+          
+          // Update inquiry source
+          const quoteSource = document.getElementById('quote-source');
+          if (quoteSource) {
+            quoteSource.value = 'hero_quote_cta';
+          }
+          
+          // Activate quote request tab
+          tabs.forEach(tab => tab.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+          
+          document.querySelector('.contact-tab[data-tab="request-quote"]').classList.add('active');
+          document.getElementById('request-quote').classList.add('active');
+        });
+      }
+      
+      // Handle hash changes (for browser back button)
+      window.addEventListener('hashchange', activateTabFromHash);
+    });
+  </script>
+</body>
+</html>

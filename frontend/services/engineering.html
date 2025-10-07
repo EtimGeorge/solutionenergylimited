@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Services | Solution Energy and Engineering Services Ltd. | SEESL</title>
+  
+  <!-- Meta Tags -->
+  <meta name="description" content="SEESL offers comprehensive engineering services including FEED, fabrication, construction, installation, and commissioning services for various industries in Nigeria and internationally.">
+  <meta name="keywords" content="engineering services, FEED, fabrication, construction, installation, commissioning, SEESL engineering, Nigeria">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Engineering Services | Solution Energy and Engineering Services Ltd">
+  <meta property="og:description" content="Comprehensive engineering services including FEED, fabrication, construction, installation, and commissioning for various industries.">
+  <meta property="og:image" content="../images/SEES_new_logo.jpg">
+  <meta property="og:url" content="https://www.solutionenergylimited.com/services/engineering.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="../images/SEES_new_logo.jpg">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       Engineering Services Page - Inline Stylesheet
+       ==========================================================================
+       Table of Contents:
+       --------------------------------------------------------------------------
+       1. PAGE-SPECIFIC STYLES
+          1.1. Stylized Paragraph
+          1.2. Page Hero Enhancements
+               - .page-hero (general)
+               - .hero-overlay (general, if specific to page-hero)
+               - .hero-content p (slide-in animation)
+               - .typing-effect (for hero paragraph)
+       2. SECTION-SPECIFIC STYLES
+          2.1. Projects Section (.projects, .proj-track, .project-card)
+          2.2. Gallery within Project Cards (.gallery, .image-thumbnails)
+       3. ANIMATIONS
+          3.1. @keyframes slideInFromLeft
+          3.2. @keyframes typing
+          3.3. @keyframes blink-caret
+          3.4. @keyframes glow
+       --------------------------------------------------------------------------
+    */
+    
+    /* -----------------------------------------------------------------------------
+       1. PAGE-SPECIFIC STYLES
+       -------------------------------------------------------------------------- */
+    
+    /* 1.1. Stylized Paragraph */
+    .stylized-paragraph {
+        font-size: 1.1em; 
+        line-height: 1.6; 
+        color: var(--text); /* Fixed color, consider var(--text) if consistent */
+        margin-bottom: 1.5em; 
+        transition: color 0.3s ease, transform 0.3s ease; 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adjusted shadow for better visibility */
+    }
+    
+    .stylized-paragraph:hover {
+        color: var(--primary-hover); /* Fixed color, consider var(--primary) or var(--secondary) */
+        cursor: pointer; 
+        transform: translateY(-2px); 
+    }
+    
+    /* 1.2. Page Hero Enhancements */
+    /* Note: .page-hero class is used here. If this is different from the global .hero,
+       these styles are specific. If it's meant to be the same as global .hero,
+       some of these might be redundant or could be overrides. */
+    .page-hero { /* Assuming this is for the hero on this specific page */
+        position: relative; 
+        overflow: hidden; 
+        padding: 110px 0; /* Specific padding for this hero */
+        height: 24rem; /* Specific height */
+        /* justify-content: center; */ /* This was commented out */
+    }
+    
+    /* Assuming .hero-overlay and .hero-content within .page-hero 
+       are similar to global .hero but might have page-specific tweaks if needed.
+       If they are identical to global, these can be removed. */
+    .page-hero .hero-overlay { /* If specific to .page-hero */
+        position: absolute; 
+        top: 0; left: 0; right: 0; bottom: 0; 
+        z-index: 1; 
+        /* background-image, size, position are usually set inline via style attribute */
+    }
+    
+    .page-hero .hero-content { /* If specific to .page-hero */
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
+        height: 100%; 
+        position: relative; /* To ensure z-index works if .hero-overlay is also styled */
+        z-index: 2; /* Above overlay */
+    }
+    
+    .page-hero .hero-content p { /* Specific animation for paragraph in this hero */
+        animation: slideInFromLeft 0.8s ease-out forwards; 
+        animation-delay: 0.3s; 
+        color: var(--accent); /* Use accent variable */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), /* Simplified base shadow */ 
+        0 0 10px rgba(var(--accent-rgb, 255, 255, 0), 0.6); /* Glow using accent-rgb */
+    }
+    
+     /* Optional: Dark theme specific text shadow for hero paragraph if needed */
+    [data-theme="dark"] .page-hero .hero-content p {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), /* Darker base for contrast */
+                     0 0 12px rgba(var(--accent-rgb, 255, 235, 59), 0.7); /* Brighter glow */
+    }
+
+    .typing-effect { 
+        display: inline-block; 
+        overflow: hidden; 
+        white-space: nowrap; /* Changed from wrap to nowrap for typical typing effect */
+        border-right: 2px solid; /* Cursor color via animation */
+        animation: typing 4s steps(60, end) forwards, /* Ensure it finishes */
+                   blink-caret 0.75s step-end infinite, 
+                   glow 1.5s ease-in-out infinite alternate; 
+        font-weight: bold;
+        /* color is inherited from .page-hero .hero-content p (var(--accent)) */
+    }
+    
+    
+    /* -----------------------------------------------------------------------------
+       2. SECTION-SPECIFIC STYLES
+       -------------------------------------------------------------------------- */
+    
+    /* 2.1. Projects Section */
+    /* Note: If .projects and .project-card are meant to use global styles from styles.css,
+       these might be specific overrides or enhancements for this page. */
+    .projects { /* Wrapper for the projects showcase on this page */
+        padding: 2rem 0; 
+    }
+    
+    .projects .proj-track { /* Container for project cards */
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 1.5rem; 
+    }
+    
+    .projects .project-card { /* Individual project card on this page */
+        flex: 1 1 calc(33.333% - 1.5rem); /* Three columns with gap */
+        background: #fff; /* Fixed background, consider var(--background) */
+        border-radius: 8px; /* Consistent with other cards */
+        box-shadow: 0 2px 10px rgba(4, 79, 144, 0.479); /* Consistent shadow */
+        overflow: hidden; 
+        transition: transform 0.3s; 
+        display: flex; /* Added to help manage internal content like the gallery div */
+        flex-direction: column; /* Stack card content vertically */
+        height: 100%;
+        width: 80%;
+    }
+    
+    .projects .project-card:hover {
+        transform: translateY(-5px); 
+    }
+    /* Project card h3 styling can be inherited or specific: */
+.projects .project-card h3 {
+    font-family: 'Orbitron', sans-serif; /* Assuming you want Orbitron for card titles too */
+    color: var(--primary); /* Using a brand color */
+    font-size: var(--font-size-lg);
+    text-align: center;
+    padding: 1rem 1rem 0.5rem; /* Padding around the title */
+    margin-bottom: 0; /* Reset default h3 margin if text follows directly */
+}
+
+    
+    
+    /* 2.2. Gallery within Project Cards - MODIFIED FOR UNIFORM IMAGE DIMENSIONS */
+.project-card .gallery { 
+    display: flex; 
+    flex-direction: column; 
+    /* align-items: center; */ /* Removed align-items:center to allow image-thumbnails to take full width */
+    margin-top: 0; /* Adjusted from 1.5em, as card title now has padding */
+    padding: 0 1rem 1rem; /* Consistent padding around gallery content */
+    flex-grow: 1; /* Allow gallery to take remaining space in card */
+}
+
+.project-card .gallery .image-thumbnails { 
+    display: grid; 
+    /* Fixed number of columns for consistency, adjust as needed */
+    /* grid-template-columns: repeat(2, 1fr); Example: Always 2 columns of thumbnails */
+    /* Or, if you want auto-fill with a min size: */
+    grid-template-columns: repeat(auto-fit, minmax(170px, 2fr));
+    gap: 0.5rem; /* Reduced gap between thumbnails for a tighter look */ 
+    width: 100%; 
+    margin-bottom: 1rem; 
+}
+
+.project-card .gallery .image-thumbnails .thumbnail-item { /* New wrapper for each thumbnail */
+    width: 100%;
+    /* aspect-ratio: 4 / 3; */ /* << KEY: Choose your desired aspect ratio (e.g., 4/3, 16/9, 1/1 for square) */
+    height: 120px; /* << ALTERNATIVE KEY: Or set a fixed height for the thumbnail container */
+    overflow: hidden; /* Important to clip the image */
+    border-radius: 6px; /* Slightly smaller radius for internal items */
+    background-color: #f0f0f0; /* Placeholder bg color for images */
+}
+
+.project-card .gallery .image-thumbnails img { /* The image itself */
+    width: 100%; 
+    height: 100%; /* Make image fill the .thumbnail-item wrapper */
+    object-fit: cover; /* << KEY: Ensures image covers the area, cropping if necessary */
+    object-position: center; /* Centers the image within its frame */
+    border-radius: 0; /* Remove radius from img if .thumbnail-item has it */
+    transition: transform 0.3s ease-in-out; /* Smoother zoom */
+}
+
+.project-card .gallery .image-thumbnails img:hover {
+    transform: scale(1.1); /* Keep existing hover zoom */
+}
+
+.project-card .gallery p { /* Paragraph below the image thumbnails */
+    font-size: var(--font-size-sm);
+    text-align: center;
+    line-height: 1.5;
+    color: var(--text-light); /* Use themed text color */
+    margin-top: 0.5rem; /* Space above the paragraph */
+}
+
+/* 2.3. Engineering Approach Section - NEW MODERN STYLES */
+.approach-section { /* The main section wrapper */
+    /* Uses .section-dark from global styles for background */
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+.approach-section .section-title h2 {
+    /* Inherits global .section-title h2 styles */
+    /* You can add specific overrides if needed, e.g., color */
+    /* color: var(--secondary); */ 
+}
+.approach-section .section-title p { /* Optional subtitle */
+    /* Inherits global .section-title p styles */
+    /* font-size: var(--font-size-lg); */
+    /* color: var(--text-light); */
+}
+
+.approach-layout {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: var(--spacing-lg);
+    align-items: center; /* Align items vertically if image and text have different heights */
+}
+
+@media (min-width: 992px) { /* Layout for larger screens */
+    .approach-layout {
+        grid-template-columns: 2fr 3fr; /* Image takes less space, principles take more */
+        gap: var(--spacing-xl);
+    }
+    .approach-image-container {
+        order: 1; /* Image on the left */
+    }
+    .approach-principles {
+        order: 2; /* Principles on the right */
+    }
+}
+
+
+.approach-image-container {
+    text-align: center; /* Center image if it's smaller than container */
+    position: relative; /* For potential pseudo-elements or overlays */
+}
+
+.approach-main-image {
+    width: 100%;
+    max-width: 500px; /* Control max image size */
+    border-radius: var(--border-radius-lg); /* Softer, modern radius */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    object-fit: cover;
+    /* Optional: Add a subtle border or effect */
+    /* border: 3px solid var(--primary-hover); */
+}
+
+.approach-principles {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md); /* Space between principle cards */
+}
+
+.approach-principle-card {
+    background-color: var(--background); /* Use theme background */
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    display: flex;
+    align-items: flex-start; /* Align icon and text block to the top */
+    gap: var(--spacing-md);
+    border-left: 5px solid transparent; /* Transparent border for hover transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.approach-principle-card:hover {
+    transform: translateX(10px) scale(1.01); /* Slight move and scale */
+    box-shadow: var(--shadow-lg);
+    border-left-color: var(--secondary); /* Highlight with brand secondary color */
+}
+
+[data-theme="dark"] .approach-principle-card {
+    background-color: var(--background-alt); /* Darker card background */
+    border-left-color: transparent;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .approach-principle-card:hover {
+    border-left-color: var(--primary); /* Use primary for hover in dark mode */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.principle-icon {
+    font-size: 2rem; /* Size of the icon */
+    color: var(--primary);
+    min-width: 40px; /* Ensure icon area has a fixed width */
+    text-align: center;
+    margin-top: 0.1em; /* Fine-tune vertical alignment with text */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.approach-principle-card:hover .principle-icon {
+    transform: rotate(-15deg) scale(1.1); /* Tilt and scale icon on card hover */
+    color: var(--secondary);
+}
+
+[data-theme="dark"] .principle-icon {
+    color: var(--secondary);
+}
+[data-theme="dark"] .approach-principle-card:hover .principle-icon {
+    color: var(--primary);
+}
+
+
+.principle-text h3 {
+    font-family: 'Orbitron', sans-serif; /* Ensure Orbitron is used if not global for h3 */
+    color: var(--text); /* Use themed text color */
+    font-size: var(--font-size-lg); /* Appropriate size for card titles */
+    margin-bottom: var(--spacing-xs);
+    transition: color 0.3s ease;
+}
+
+.approach-principle-card:hover .principle-text h3 {
+    color: var(--primary); /* Emphasize title on hover */
+}
+
+[data-theme="dark"] .principle-text h3 {
+    color: var(--text);
+}
+[data-theme="dark"] .approach-principle-card:hover .principle-text h3 {
+    color: var(--secondary);
+}
+
+.principle-text p {
+    font-family: 'Titillium Web', sans-serif; /* Ensure Titillium is used if not global for p */
+    font-size: var(--font-size-sm); /* Smaller text for descriptions */
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 0; /* Remove default paragraph margin if it's the last element */
+}
+
+[data-theme="dark"] .principle-text p {
+    color: var(--text-light);
+}
+
+
+/*-----------------------------------------------------------------------------
+       3. ANIMATIONS
+       -------------------------------------------------------------------------- */
+    
+    /* 3.1. @keyframes slideInFromLeft */
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-100%); 
+            opacity: 0; 
+        }
+        100% {
+            transform: translateX(0); 
+            opacity: 1; 
+        }
+    }
+    
+    /* 3.2. @keyframes typing (for .typing-effect) */
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% } /* Assuming text content determines final width */
+    }
+    
+    /* 3.3. @keyframes blink-caret (for .typing-effect cursor) */
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50%      { border-color: var(--accent); } /* Cursor color */
+        /* Consider theming cursor color: border-color: var(--text); or similar */
+    }
+    
+    /* 3.4. @keyframes glow (for .typing-effect text) */
+    @keyframes glow {
+        0%   { text-shadow: 0 0 5px rgba(var(--accent-rgb, 255,255,0), 0.5), 0 0 10px rgba(var(--accent-rgb, 255,255,0), 0.3); }
+        100% { text-shadow: 0 0 15px rgba(var(--accent-rgb, 255,255,0), 0.7), 0 0 20px rgba(var(--accent-rgb, 255,255,0), 0.5); }
+    }
+        /* These are fixed blue glows, consider using theme variables if applicable */
+    
+    
+    </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+          <img src="../images/SEES_new_logo.jpg" alt="SEESL Logo">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li class="dropdown">
+              <button class="dropdown-button" aria-haspopup="true" aria-expanded="false" id="services-dropdown">
+                Services <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-content" role="menu" aria-labelledby="services-dropdown">
+                <a href="asset-management.html" role="menuitem" tabindex="-1">Asset Management</a>
+                <a href="procurement.html" role="menuitem" tabindex="-1">Procurement</a>
+                <a href="engineering.html" role="menuitem" tabindex="-1" class="active">Engineering</a>
+                <a href="gas-conversion.html" role="menuitem" tabindex="-1">Gas Conversion</a>
+                <a href="renewable-energy.html" role="menuitem" tabindex="-1">Renewable Energy</a>
+                <a href="civil-construction.html" role="menuitem" tabindex="-1">Civil Construction</a>
+                <a href="tank-cleaning.html" role="menuitem" tabindex="-1">Tank Cleaning</a>
+                <a href="iso-certification/" role="menuitem" tabindex="-1">ISO Certification</a>
+              </div>
+            </li>
+            <li><a href="../process.html">Process</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Social Icons & Theme Toggle - Desktop -->
+        <div class="header-actions">
+          <div class="contact-info">
+            <ul>
+              <li><a href="tel:+2349153123973">+234 (915) 312-3973</a></li>
+              
+               <li><a href="tel:+2349018449467" aria-label="Contact Number">
+                +234 (901) 844-9467
+              </a></li> 
+            </ul>
+          </div>
+          <div class="social-icons">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li>
+          <button id="services-dropdown-mobile" class="services-dropdown">
+            Services <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="mobile-services" class="mobile-services">
+            <a href="asset-management.html">Asset Management</a>
+            <a href="procurement.html">Procurement</a>
+            <a href="engineering.html" class="active">Engineering</a>
+            <a href="gas-conversion.html">Gas Conversion</a>
+            <a href="renewable-energy.html">Renewable Energy</a>
+            <a href="civil-construction.html">Civil Construction</a>
+            <a href="tank-cleaning.html">Tank Cleaning</a>
+            <a href="iso-certification/">ISO Certification</a>
+          </div>
+        </li>
+        <li><a href="../process.html">Process</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        
+        <!-- Social Media Icons - Mobile -->
+        <li class="mobile-social">
+          <div class="social-icons-mobile">
+            <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Hero Section -->
+    <section class="page-hero homepage-hero">
+      <div class="hero-overlay" style="background-image: url('../images/engineering-services/engineering-service_banner.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Engineering Services</h1>
+          <p class="typing-effect"></p>
+          
+          <div class="hero-buttons">
+            <a href="../index.html#services" class="btn btn-secondary">Explore Services</a>
+            <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Overview Section -->
+    <section class="service-overview section-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Engineering Excellence</h2>
+          <p>Comprehensive engineering solutions for complex industrial challenges</p>
+        </div>
+        
+        <div class="service-content">
+          <div class="service-text">
+            <p class="stylized-paragraph">At SEESL, we provide comprehensive engineering services to support your project from concept to completion. Our team of experienced engineers combines technical expertise with industry knowledge to deliver solutions that meet your specific requirements.</p>
+            
+            <p class="stylized-paragraph">Our engineering services encompass Front End Engineering Design (FEED), detailed engineering, fabrication, construction, installation, and commissioning. We work across various industries, including oil and gas, manufacturing, power generation, and more, ensuring that each project is executed to the highest standards of quality and safety.</p>
+            
+            <p class="stylized-paragraph">We pride ourselves on our ability to tackle complex engineering challenges, developing innovative solutions that optimize performance, enhance efficiency, and ensure long-term reliability. Whether you need support for a new development or improvements to existing facilities, our team has the expertise to deliver results.</p>
+          </div>
+          
+          <div class="service-image">
+            <img src="../images/engineering-services/engg.jpg" alt="Engineering Services">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Services -->
+    <section class="service-details section-dark">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Engineering Services</h2>
+        </div>
+        
+        <div class="services-grid">
+          <!-- FEED -->
+          <div class="service-card card">
+            <div class="card-icon">
+              <i class="fas fa-drafting-compass"></i>
+            </div>
+            <h3>Front End Engineering Design (FEED)</h3>
+            <p>Our FEED services lay the foundation for successful project execution. We develop detailed designs and specifications that define the technical requirements, cost estimates, and implementation strategies for your project.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> Conceptual design and feasibility studies</li>
+              <li><i class="fas fa-check"></i> Process flow diagrams and P&IDs</li>
+              <li><i class="fas fa-check"></i> Equipment specifications and data sheets</li>
+              <li><i class="fas fa-check"></i> Preliminary cost estimates and schedules</li>
+            </ul>
+          </div>
+          
+          <!-- Fabrication -->
+          <div class="service-card card">
+            <div class="card-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <h3>Fabrication Services</h3>
+            <p>We offer high-quality fabrication services for various components and structures. Our skilled technicians and state-of-the-art facilities ensure precision manufacturing to meet your specifications.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> Structural steel fabrication</li>
+              <li><i class="fas fa-check"></i> Pressure vessel and tank fabrication</li>
+              <li><i class="fas fa-check"></i> Piping and spool fabrication</li>
+              <li><i class="fas fa-check"></i> Custom equipment fabrication</li>
+            </ul>
+          </div>
+          
+          <!-- Construction -->
+          <div class="service-card card">
+            <div class="card-icon">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <h3>Construction Services</h3>
+            <p>Our construction services cover a wide range of industrial and civil projects. We manage all aspects of the construction process, ensuring timely delivery and adherence to quality and safety standards.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> Industrial plant construction</li>
+              <li><i class="fas fa-check"></i> Equipment and system installation</li>
+              <li><i class="fas fa-check"></i> Piping and mechanical works</li>
+              <li><i class="fas fa-check"></i> Electrical and instrumentation installation</li>
+            </ul>
+          </div>
+          
+          <!-- Installation -->
+          <div class="service-card card">
+            <div class="card-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Installation Services</h3>
+            <p>We provide expert installation services for a variety of equipment and systems. Our team ensures proper installation according to design specifications and manufacturer guidelines.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> Equipment installation and alignment</li>
+              <li><i class="fas fa-check"></i> Piping system installation</li>
+              <li><i class="fas fa-check"></i> Electrical and control system installation</li>
+              <li><i class="fas fa-check"></i> HVAC and utility system installation</li>
+            </ul>
+          </div>
+          
+          <!-- Commissioning -->
+          <div class="service-card card">
+            <div class="card-icon">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <h3>Commissioning Services</h3>
+            <p>Our commissioning services ensure that installed equipment and systems function as designed. We conduct thorough testing and verification to confirm operational readiness before handover.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> Pre-commissioning checks and preparation</li>
+              <li><i class="fas fa-check"></i> Functional testing and system integration</li>
+              <li><i class="fas fa-check"></i> Performance testing and optimization</li>
+              <li><i class="fas fa-check"></i> Operator training and handover documentation</li>
+            </ul>
+          </div>
+          
+          <!-- Process Engineering -->
+          <div class="service-card card">
+            <div class="card-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3>Process Engineering</h3>
+            <p>Our process engineering services focus on optimizing industrial processes to improve efficiency, reduce costs, and enhance product quality. We apply our technical expertise to solve complex process challenges.</p>
+            <ul>
+              <li><i class="fas fa-check"></i> Process design and optimization</li>
+              <li><i class="fas fa-check"></i> Heat and material balance calculations</li>
+              <li><i class="fas fa-check"></i> Process simulation and modeling</li>
+              <li><i class="fas fa-check"></i> Process troubleshooting and improvement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Project Showcase -->
+        <section class="projects section-light">
+          <div class="container">
+            <div class="section-title">
+              <h2>Our Projects</h2>
+              <p>See our work in action across various sectors and industries</p>
+            </div>
+            <div class="proj-track">
+              <!-- Project Card 1 -->
+              <div class="project-card float-3d">
+                <h3>Industrial Plant Expansion</h3>
+                <div class="gallery">
+                  <div class="image-thumbnails">
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/plant-expantion.jpg" alt="Engineering Project 1" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/pipeline-repair.jpg" alt="Engineering Project 2" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/refinary-work.jpg" alt="Placeholder Image 2" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/engg.jpg" alt="Placeholder Image 3" class="thumbnail">
+                    </div>
+                  </div>
+                  <p class="section-light">Complete FEED, fabrication, and installation services for a major manufacturing plant expansion in Rivers State.</p>
+                </div>
+              </div>
+              
+              <!-- Project Card 2 -->
+              <div class="project-card float-3d">
+                <h3>Process Facility Upgrade</h3>
+                <div class="gallery">
+                  <div class="image-thumbnails">
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/process facility upgrade-1.png" alt="Engineering Project 2" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/process facility upgrade-2.jpg" alt="Engineering Project 2" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/Process Facility Upgrade-3.png" alt="Placeholder Image 2" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/process facility upgrade-4.webp" alt="Placeholder Image 3" class="thumbnail">
+                    </div>
+                  </div>
+                  <p class="section-light">Engineering and installation services for upgrading a process facility to improve efficiency and capacity.</p>
+                </div>
+              </div>
+              
+              <!-- Project Card 3 -->
+              <div class="project-card float-3d">
+                <h3>Power Generation Equipment Installation</h3>
+                <div class="gallery">
+                  <div class="image-thumbnails">
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/Power Generation Equipment Installation-1.jpg" alt="Engineering Project 3" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/Power Generation Equipment Installation-2.jpg" alt="Engineering Project 2" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/Power Generation Equipment Installation-3.jpg" alt="Placeholder Image 2" class="thumbnail">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="../images/engineering-services/Power Generation Equipment Installation-4.webp" alt="Placeholder Image 3" class="thumbnail">
+                    </div>
+                  </div>
+                  <p class="section-light">Installation and commissioning of power generation equipment for an industrial client.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Engineering Approach -->
+        <section class="approach-section section-dark">
+          <div class="container">
+            <div class="section-title">
+              <h2>Our Engineering Approach</h2>
+              <!-- Optional: Add a brief subtitle here if desired -->
+              <!-- <p>Precision, Collaboration, and Innovation at Every Step.</p> -->
+            </div>
+            
+            <div class="approach-layout">
+                <div class="approach-image-container">
+                    <img src="../images/engineering-services/Engineer.-Technician.-High-voltage-electrical-maintenance.-Power-grid.jpg" alt="Engineering Approach Visualization" class="approach-main-image">
+                </div>
+    
+                <div class="approach-principles">
+                    <!-- Principle 1 -->
+                    <div class="approach-principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-users-cog"></i> <!-- Icon for collaboration/systems -->
+                        </div>
+                        <div class="principle-text">
+                            <h3>Collaborative Engagement</h3>
+                            <p>We work closely with our clients to understand their specific requirements and objectives. Through open communication and collaboration, we ensure that our solutions are tailored to meet your needs.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Principle 2 -->
+                    <div class="approach-principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-microchip"></i> <!-- Icon for technology/excellence -->
+                        </div>
+                        <div class="principle-text">
+                            <h3>Technical Excellence</h3>
+                            <p>Our team brings extensive technical expertise and industry experience to every project. We stay updated with the latest engineering practices and technologies to deliver innovative and effective solutions.</p>
+                        </div>
+                    </div>
+    
+                    <!-- Principle 3 -->
+                    <div class="approach-principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-shield-alt"></i> <!-- Icon for quality/safety -->
+                        </div>
+                        <div class="principle-text">
+                            <h3>Quality Assurance</h3>
+                            <p>Quality is at the core of our engineering services. We implement robust quality control processes throughout the project lifecycle to ensure that all deliverables meet the highest standards.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Principle 4 -->
+                    <div class="approach-principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-hard-hat"></i> <!-- Icon for safety -->
+                        </div>
+                        <div class="principle-text">
+                            <h3>Safety Focus</h3>
+                            <p>Safety is our top priority in all engineering activities. We integrate safety considerations into our designs and implementation strategies, adhering to international standards and best practices.</p>
+                        </div>
+                    </div>
+    
+                    <!-- Principle 5 -->
+                    <div class="approach-principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-chart-line"></i> <!-- Icon for efficiency/optimization -->
+                        </div>
+                        <div class="principle-text">
+                            <h3>Efficiency and Cost-Effectiveness</h3>
+                            <p>We strive to optimize resource utilization and costs without compromising on quality. Our engineering solutions focus on efficiency and long-term value, delivering the best return on investment for our clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+
+    <!-- CTA Section -->
+    <section class="cta section-light">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Need Engineering Services?</h2>
+          <p>Contact us today to discuss your project requirements and how our engineering team can help you achieve your goals.</p>
+          <a href="../contact.html" class="btn btn-secondary">Contact Our Engineering Team</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>About SEESL</h4>
+          <p>Solution Energy and Engineering Services Ltd provides world-class engineering, procurement, installation, asset management, and ISO certification services to businesses across Africa and beyond.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../process.html">Process</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-services">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="engineering.html">Engineering</a></li>
+            <li><a href="procurement.html">Procurement</a></li>
+            <li><a href="asset-management.html">Asset Management</a></li>
+            <li><a href="renewable-energy.html">Renewable Energy</a></li>
+            <li><a href="iso-certification/">ISO Certification</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@solutionenergylimited.com</li>
+            <li><i class="fas fa-phone"></i> +234 915 312 3973</li>
+            <li><i class="fas fa-map-marker-alt"></i> No 6 Salem Avenue <br> off Aker Road Rumolumeni <br> Port Harcourt, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons-footer">
+          <a href="https://web.facebook.com/profile.php?id=100091983091138" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/solution-energy-and-engineering-services-ltd/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/solution_energylimited" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/message/6BQ37R6VWG2VA1" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Solution Energy Limited. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="../privacy-policy.html">Privacy Policy</a>
+          <a href="../terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button HTML -->
+<button id="backToTopBtn" aria-label="Scroll to top" title="Go to top">
+  ↑ <!-- Unicode upward arrow -->
+</button>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const text = "FEED, Fabrication, Construction, Installation & Commissioning Services"; // The text to type out
+        const typingEffect = document.querySelector('.typing-effect');
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typingEffect.textContent += text.charAt(index); // Add the next character
+                index++;
+                setTimeout(type, 100); // Adjust typing speed here (100ms per character)
+            }
+        }
+
+        type(); // Start the typing effect
+    });
+  </script>
+</body>
+</html>
