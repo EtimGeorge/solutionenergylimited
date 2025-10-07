@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Fetch and inject the master form component
-        const componentPath = container.dataset.componentPath || '../_form-component.html';
+        const componentPath = container.dataset.componentPath || './_form-component.html';
 
         fetch(componentPath) // Use the dynamically determined path
             .then(response => {

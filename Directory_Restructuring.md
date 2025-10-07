@@ -177,7 +177,7 @@ C:\Users\user\Desktop\solutionenergylimited\
 
 - [ ] 2.1. Configure Render for backend deployment.
 - [ ] 2.2. Configure Namecheap for static frontend hosting.
-- [ ] 2.3. Update frontend `API_BASE_URL` to Render backend URL.
+- [x] 2.3. Update frontend `API_BASE_URL` to Render backend URL.
 - [ ] 2.4. Configure environment variables on Render.
 - [ ] 2.5. Test frontend-backend communication.
 
