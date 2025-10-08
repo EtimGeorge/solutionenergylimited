@@ -30,7 +30,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize Back to Top Button
     initBackToTop();
+
+    // Initialize Scroll Reveal
+    initScrollReveal();
 });
+
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll('[data-scroll-reveal]');
+
+    const observerOptions = {
+        root: null, // Use the viewport as the root
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the item is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target); // Stop observing once it's in view
+            }
+        });
+    }, observerOptions);
+
+    revealElements.forEach(element => {
+        observer.observe(element);
+    });
+}
 
 function initLightbox() {
     const lightbox = document.getElementById('lightbox');

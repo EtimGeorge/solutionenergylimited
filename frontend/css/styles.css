@@ -1511,9 +1511,66 @@ textarea:focus {
   animation: cardFadeInUp 0.6s 0.2s ease-out forwards;
 }
 
-/* =====================================================================
-   6. RESPONSIVE DESIGN (@media queries)
-   ===================================================================== */
+/* 5.2. @keyframes cardFadeInUp (for JS .in-view class) */
+@keyframes cardFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.featured-tech .tech-card.in-view {
+  animation: cardFadeInUp 0.6s 0.2s ease-out forwards;
+}
+
+/* 5.3. Scroll Reveal Animations */
+[data-scroll-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-scroll-reveal].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add some delay variations for staggered effects */
+[data-scroll-reveal][data-scroll-reveal-delay="100"] {
+  transition-delay: 0.1s;
+}
+[data-scroll-reveal][data-scroll-reveal-delay="200"] {
+  transition-delay: 0.2s;
+}
+[data-scroll-reveal][data-scroll-reveal-delay="300"] {
+  transition-delay: 0.3s;
+}
+[data-scroll-reveal][data-scroll-reveal-delay="400"] {
+  transition-delay: 0.4s;
+}
+[data-scroll-reveal][data-scroll-reveal-delay="500"] {
+  transition-delay: 0.5s;
+}
+[data-scroll-reveal][data-scroll-reveal-delay="600"] {
+  transition-delay: 0.6s;
+}
+[data-scroll-reveal][data-scroll-reveal-delay="700"] {
+  transition-delay: 0.7s;
+}
+[data-scroll-reveal][data-scroll-reveal-delay="800"] {
+  transition-delay: 0.8s;
+}
+[data-scroll-reveal][data-scroll-reveal-delay="900"] {
+  transition-delay: 0.9s;
+}
+[data-scroll-reveal][data-scroll-reveal-delay="1000"] {
+  transition-delay: 1s;
+}
+
+/* 6. RESPONSIVE DESIGN (@media queries) */
 
 /* 6.1. Medium Screens (min-width: 768px) */
 @media (min-width: 768px) {
