@@ -1,130 +1,15 @@
-Solution Energy Local Dev reCAPTCHA
-SITE KEY: 6LcYieErAAAAAA8kxDf3bk5djZ5tbp2TO7T2nCVF
-SECRETE KEY: 6LcYieErAAAAAHOMUdInp6hBPQBatYiikjR3Vr3K
-
-FOR PRODUCTION
-Solution Energy Website reCAPTCHA
-SITE KEY: 6LcXkeErAAAAAI6JHRuUckmYrIGcLg992-oZGkju
-SECRETE KEY: 6LcXkeErAAAAAJfHTxm3f2U0xxyrZftcEvIhULVy
-
-
-
-
-
-Verifying the user's response
-
-bookmark_border
-Spark icon
-AI-generated Key Takeaways
-This page explains how to verify a user's response to a reCAPTCHA challenge from your application's backend.
-
-For web users, you can get the user’s response token in one of three ways:
-
-g-recaptcha-response POST parameter when the user submits the form on your site
-grecaptcha.getResponse(opt_widget_id) after the user completes the reCAPTCHA challenge
-As a string argument to your callback function if data-callback is specified in either the g-recaptcha tag attribute or the callback parameter in the grecaptcha.render method
-For Android library users, you can call the SafetyNetApi.RecaptchaTokenResult.getTokenResult() method to get response token if the status returns successful.
-
-Token Restrictions
-Each reCAPTCHA user response token is valid for two minutes, and can only be verified once to prevent replay attacks. If you need a new token, you can re-run the reCAPTCHA verification.
-
-After you get the response token, you need to verify it within two minutes with reCAPTCHA using the following API to ensure the token is valid.
-
-API Request
-URL: https://www.google.com/recaptcha/api/siteverify
-
-METHOD: POST
-
-POST Parameter	Description
-secret	Required. The shared key between your site and reCAPTCHA.
-response	Required. The user response token provided by the reCAPTCHA client-side integration on your site.
-remoteip	Optional. The user's IP address.
-API Response
-The response is a JSON object:
-
-
-{
-  "success": true|false,
-  "challenge_ts": timestamp,  // timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ)
-  "hostname": string,         // the hostname of the site where the reCAPTCHA was solved
-  "error-codes": [...]        // optional
-}
-For reCAPTCHA Android:
-
-
-{
-  "success": true|false,
-  "challenge_ts": timestamp,  // timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ)
-  "apk_package_name": string, // the package name of the app where the reCAPTCHA was solved
-  "error-codes": [...]        // optional
-}
-Error code reference
-Error code	Description
-missing-input-secret	The secret parameter is missing.
-invalid-input-secret	The secret parameter is invalid or malformed.
-missing-input-response	The response parameter is missing.
-invalid-input-response	The response parameter is invalid or malformed.
-bad-request	The request is invalid or malformed.
-timeout-or-duplicate	The response is no longer valid: either is too old or has been used previously.
-Was this helpful?
-
-
-
-
-
-Verifying the user's response
-
-bookmark_border
-Spark icon
-AI-generated Key Takeaways
-This page explains how to verify a user's response to a reCAPTCHA challenge from your application's backend.
-
-For web users, you can get the user’s response token in one of three ways:
-
-g-recaptcha-response POST parameter when the user submits the form on your site
-grecaptcha.getResponse(opt_widget_id) after the user completes the reCAPTCHA challenge
-As a string argument to your callback function if data-callback is specified in either the g-recaptcha tag attribute or the callback parameter in the grecaptcha.render method
-For Android library users, you can call the SafetyNetApi.RecaptchaTokenResult.getTokenResult() method to get response token if the status returns successful.
-
-Token Restrictions
-Each reCAPTCHA user response token is valid for two minutes, and can only be verified once to prevent replay attacks. If you need a new token, you can re-run the reCAPTCHA verification.
-
-After you get the response token, you need to verify it within two minutes with reCAPTCHA using the following API to ensure the token is valid.
-
-API Request
-URL: https://www.google.com/recaptcha/api/siteverify
-
-METHOD: POST
-
-POST Parameter	Description
-secret	Required. The shared key between your site and reCAPTCHA.
-response	Required. The user response token provided by the reCAPTCHA client-side integration on your site.
-remoteip	Optional. The user's IP address.
-API Response
-The response is a JSON object:
-
-
-{
-  "success": true|false,
-  "challenge_ts": timestamp,  // timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ)
-  "hostname": string,         // the hostname of the site where the reCAPTCHA was solved
-  "error-codes": [...]        // optional
-}
-For reCAPTCHA Android:
-
-
-{
-  "success": true|false,
-  "challenge_ts": timestamp,  // timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ)
-  "apk_package_name": string, // the package name of the app where the reCAPTCHA was solved
-  "error-codes": [...]        // optional
-}
-Error code reference
-Error code	Description
-missing-input-secret	The secret parameter is missing.
-invalid-input-secret	The secret parameter is invalid or malformed.
-missing-input-response	The response parameter is missing.
-invalid-input-response	The response parameter is invalid or malformed.
-bad-request	The request is invalid or malformed.
-timeout-or-duplicate	The response is no longer valid: either is too old or has been used previously.
-Was this helpful?
+PS C:\Users\user\Desktop\solutionenergylimited> cd backend
+PS C:\Users\user\Desktop\solutionenergylimited\backend> node server.js
+info: Backend server listening on port 3000 {"service":"seesl-backend","timestamp":"2025-10-08 00:50:19"}
+warn: CORS: Origin http://127.0.0.1:5500 not allowed. {"service":"seesl-backend","timestamp":"2025-10-08 00:52:35"}
+Error: Not allowed by CORS
+    at origin (C:\Users\user\Desktop\solutionenergylimited\backend\server.js:66:22)
+    at C:\Users\user\Desktop\solutionenergylimited\backend\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (C:\Users\user\Desktop\solutionenergylimited\backend\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (C:\Users\user\Desktop\solutionenergylimited\backend\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (C:\Users\user\Desktop\solutionenergylimited\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\user\Desktop\solutionenergylimited\backend\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\user\Desktop\solutionenergylimited\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\user\Desktop\solutionenergylimited\backend\node_modules\express\lib\router\index.js:346:12) 
+    at next (C:\Users\user\Desktop\solutionenergylimited\backend\node_modules\express\lib\router\index.js:280:10)
+    at urlencodedParser (C:\Users\user\Desktop\solutionenergylimited\backend\node_modules\body-parser\lib\types\urlencoded.js:94:7)  

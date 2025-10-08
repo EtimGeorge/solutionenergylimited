@@ -708,9 +708,9 @@
         <h2 class="section-title">Get Your Free Quote</h2>
         <div class="form-container">
             <div class="contact-form-container">
-                <form id="contact-form" class="contact-form" data-form-origin="<!-- CAMPAIGN-SPECIFIC ORIGIN -->">
+                <form id="contact-form" class="contact-form" data-form-origin="Campaign Landing Page">
                     <input type="text" name="_gotcha" style="display:none">
-                    <input type="hidden" name="form_type" value="campaign_form">
+                    <input type="hidden" name="form_type" value="campaign_landing_page">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" required>
@@ -763,9 +763,9 @@
 
     <!-- Scripts -->
     <script src="./js/config.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6Ld-fA8qAAAAAP_88n2yS2syO2gG1-wzY_Z-Y-Z-" async defer></script>
+
     <script src="./js/main.js"></script>
-    <script src="./js/contact.js"></script>
+    <script src="./js/forms.js"></script>
     <script>
         // Parallax effect for hero background
         window.addEventListener('scroll', () => {
@@ -833,16 +833,7 @@
         `;
         document.head.appendChild(style);
 
-        // Form submission handler (if contact.js doesn't exist)
-        if (typeof document.getElementById('contact-form').onsubmit === 'object') {
-            document.getElementById('contact-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                // Simulate form submission
-                setTimeout(() => {
-                    showSuccessModalWithConfetti();
-                }, 1000);
-            });
-        }
+
 
         // Close modal when clicking outside
         document.getElementById('success-modal').addEventListener('click', function(e) {

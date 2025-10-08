@@ -9,7 +9,6 @@
   <meta name="description" content="Contact Solution Energy and Engineering Services Ltd (SEESL) for engineering, procurement, installation, asset management, ISO certification, and other services. Get in touch with our team today.">
   <meta name="keywords" content="contact SEESL, engineering services contact, Solution Energy contact, engineering company Nigeria, contact form">
   
-  <script src="https://www.google.com/recaptcha/api.js?render=6Ld-fA8qAAAAAP_88n2yS2syO2gG1-wzY_Z-Y-Z-"></script>
   
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="Contact Solution Energy and Engineering Services Ltd">
@@ -24,6 +23,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./css/variables.css">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/success-modal.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
@@ -307,7 +307,7 @@
           <div class="contact-form-container">
             <form id="contact-form" class="contact-form" data-form-origin="Main Contact Page">
               <input type="text" name="_gotcha" style="display:none"> <!-- Formspree Honeypot -->
-              <input type="hidden" name="form_type" value="main_contact_form"> <!-- Form Identifier -->
+              <input type="hidden" name="form_type" value="main_contact_page"> <!-- Form Identifier -->
               
               <div class="form-group">
                 <label for="name">Full Name</label>
@@ -516,21 +516,26 @@
     </div>
   </footer>
 
-  <!-- Success Modal -->
-<div id="success-modal" class="modal"> <!-- Removed 'hidden' class -->
-  <div class="modal-content">
-    <span class="modal-close">×</span> <!-- Removed onclick, initModals handles this -->
-    <!-- index.html has more content here: icon, h3, p, button -->
-    <!-- contact.html has: h2, p -->
-    <!-- For consistency, let's use the more complete structure from index.html for contact.html's modal too -->
-    <div class="modal-icon" style="text-align: center; font-size: 3rem; color: var(--success); margin-bottom: 1rem;">
-        <i class="fas fa-check-circle"></i>
+  <!-- Standard Success Modal -->
+<div id="seesl-success-modal" class="seesl-modal" style="display: none;">
+    <div class="seesl-modal-content">
+        <div class="seesl-modal-header">
+            <h2>Success!</h2>
+            <span class="seesl-modal-close">&times;</span>
+        </div>
+        <div class="seesl-modal-body">
+            <div class="checkmark-container">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            <p>Your message has been sent successfully. Our team will be in touch with you shortly.</p>
+        </div>
+        <div class="seesl-modal-footer">
+            <button class="btn btn-primary seesl-modal-close">Close</button>
+        </div>
     </div>
-    <h3>Message Sent!</h3>
-    <p>Thank you for contacting SEESL. We'll get back to you shortly.</p>
-    <button class="btn btn-primary modal-btn modal-close" style="margin-top: 1rem;">Close</button> 
-    <!-- Added modal-close class so initModals picks it up -->
-  </div>
 </div>
 
 <!-- Back to Top Button HTML -->
@@ -541,6 +546,6 @@
   <!-- Scripts -->
   <script src="./js/config.js"></script>
   <script src="./js/main.js"></script>
-  <script src="./js/contact.js"></script>
+  <script src="./js/forms.js"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize mobile menu
     initMobileMenu();
+    initMobileServicesDropdown();
     
     // Initialize theme toggle
     initThemeToggle();
@@ -82,6 +83,23 @@ function initMobileMenu() {
         } else {
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
+        }
+    });
+}
+
+function initMobileServicesDropdown() {
+    const servicesDropdownButton = document.getElementById('services-dropdown-mobile');
+    const mobileServices = document.getElementById('mobile-services');
+
+    if (!servicesDropdownButton || !mobileServices) return;
+
+    servicesDropdownButton.addEventListener('click', function() {
+        mobileServices.classList.toggle('open');
+        const icon = this.querySelector('i');
+        if (mobileServices.classList.contains('open')) {
+            icon.style.transform = 'rotate(180deg)';
+        } else {
+            icon.style.transform = 'rotate(0deg)';
         }
     });
 }

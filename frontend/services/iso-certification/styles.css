@@ -379,8 +379,14 @@ section {
   transition: max-height 0.5s ease-in-out;
 }
 
+.mobile-menu.open::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
 .mobile-menu.open {
-  max-height: 500px;
+  -ms-overflow-style: none;  /* for Internet Explorer and Edge */
+  scrollbar-width: none;  /* for Firefox */
+  max-height: 80vh; /* Use viewport height for responsiveness */
+  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 .mobile-menu ul {
@@ -424,8 +430,15 @@ section {
   border-left: 2px solid var(--secondary);
 }
 
+.mobile-services.open::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
 .mobile-services.open {
+  -ms-overflow-style: none;  /* for Internet Explorer and Edge */
+  scrollbar-width: none;  /* for Firefox */
   display: block;
+  max-height: 40vh; /* Allow submenu to take up to 40% of viewport height */
+  overflow-y: auto; /* Allow vertical scrolling for the submenu */
 }
 
 .mobile-social {
@@ -879,6 +892,7 @@ section {
 /* 12. Contact Section */
 .contact {
   background-color: var(--background-alt);
+  
 }
 
 .contact-grid {

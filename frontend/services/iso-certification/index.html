@@ -37,9 +37,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../css/success-modal.css">
   
   
-  <script src="https://www.google.com/recaptcha/api.js?render=6LcYieErAAAAAA8kxDf3bk5djZ5tbp2TO7T2nCVF"></script>
 </head>
 <body>
   <!-- Header -->
@@ -55,9 +55,7 @@
         <nav class="desktop-nav">
           <ul>
             <li><a href="../../index.html">SEES Home</a></li>
-        <li>
-          <li><a href="index.html">ISO Home</a></li>
-        <li>
+            <li><a href="index.html">ISO Home</a></li>
             <li class="dropdown">
               <button class="dropdown-button">Services <i class="fas fa-chevron-down"></i></button>
               <div class="dropdown-content">
@@ -96,11 +94,10 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu">
       <ul>
-        <li><a href="./index.html">SEES Home</a></li>
+        <li><a href="../../index.html">SEES Home</a></li>
+        <li><a href="index.html">ISO Home</a></li>
         <li>
-          <li><a href="index.html">ISO Home</a></li>
-        <li>
-          <button id="services-dropdown" class="services-dropdown">
+          <button id="services-dropdown-mobile" class="services-dropdown">
             Services <i class="fas fa-chevron-down"></i>
           </button>
           <div id="mobile-services" class="mobile-services">
@@ -353,12 +350,12 @@
           </div>
           
           <!-- Regional Question Form Placeholder -->
-          <div id="iso-form-container-regional" class="contact-form-container iso-form-container"
+          <!-- <div id="iso-form-container-regional" class="contact-form-container iso-form-container"
                data-form-title="Quick Regional Question"
                data-form-origin="ISO Index - Regional Question"
-               data-show-fields="">
+               data-show-fields=""> -->
             <!-- The smart form will be loaded here by iso-smart-form.js -->
-          </div>
+          <!-- </div> -->
         </div>
       </div>
     </section>
@@ -423,18 +420,27 @@
     </div>
   </footer>
 
-  <!-- Success Modal -->
-  <div id="success-modal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <div class="modal-icon">
-        <i class="fas fa-check-circle"></i>
-      </div>
-      <h3>Message Sent!</h3>
-      <p>Thank you for contacting SEES. We'll get back to you shortly.</p>
-      <button class="btn btn-blue modal-btn">Close</button>
+  <!-- Standard Success Modal -->
+<div id="seesl-success-modal" class="seesl-modal" style="display: none;">
+    <div class="seesl-modal-content">
+        <div class="seesl-modal-header">
+            <h2>Success!</h2>
+            <span class="seesl-modal-close">&times;</span>
+        </div>
+        <div class="seesl-modal-body">
+            <div class="checkmark-container">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            <p>Your message has been sent successfully. Our team will be in touch with you shortly.</p>
+        </div>
+        <div class="seesl-modal-footer">
+            <button class="btn btn-primary seesl-modal-close">Close</button>
+        </div>
     </div>
-  </div>
+</div>
 
   <script src="../../js/main.js"></script>
   <script src="../../js/config.js"></script>

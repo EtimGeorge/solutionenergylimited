@@ -16,6 +16,8 @@
     "nodemailer": "^6.9.1",
     "pg": "^8.8.0",
     "resend": "^6.1.2",
-    "winston": "^3.17.0"
+    "winston": "^3.17.0",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.2.0"
   }
 }

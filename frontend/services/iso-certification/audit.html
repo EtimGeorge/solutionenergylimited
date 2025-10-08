@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../css/success-modal.css">
 
   <link rel="icon" type="image/png" href="./assets/SEES_new_logo.jpg">
   <style>
@@ -529,18 +530,27 @@
     </div>
   </footer>
 
-  <!-- Success Modal -->
-  <div id="success-modal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <div class="modal-icon">
-        <i class="fas fa-check-circle"></i>
-      </div>
-      <h3>Audit Request Submitted!</h3>
-      <p>Thank you for your interest in our audit services. One of our audit specialists will contact you within 24 hours to discuss your needs.</p>
-      <button class="btn btn-blue modal-btn">Close</button>
+  <!-- Standard Success Modal -->
+<div id="seesl-success-modal" class="seesl-modal" style="display: none;">
+    <div class="seesl-modal-content">
+        <div class="seesl-modal-header">
+            <h2>Success!</h2>
+            <span class="seesl-modal-close">&times;</span>
+        </div>
+        <div class="seesl-modal-body">
+            <div class="checkmark-container">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            <p>Your message has been sent successfully. Our team will be in touch with you shortly.</p>
+        </div>
+        <div class="seesl-modal-footer">
+            <button class="btn btn-primary seesl-modal-close">Close</button>
+        </div>
     </div>
-  </div>
+</div>
 
   <script src="scripts.js"></script>
   <script src="../../js/config.js"></script>

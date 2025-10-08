@@ -7,6 +7,8 @@ const fetch = require('node-fetch');
 const winston = require('winston');
 
 const cors = require('cors');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 
 // --- Winston Logger Setup ---
 const logger = winston.createLogger({
@@ -30,35 +32,46 @@ if (process.env.NODE_ENV !== 'production') {
 
 // --- App & Middleware Setup ---
 const app = express();
+app.use(helmet()); // Use Helmet!
 const port = process.env.PORT || 3000;
+
+// Apply rate limiting to all requests
+const apiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // Limit each IP to 100 requests per windowMs
+    message: 'Too many requests from this IP, please try again after 15 minutes',
+    handler: (req, res, next, options) => {
+        logger.warn(`Rate limit exceeded for IP: ${req.ip}`);
+        res.status(options.statusCode).send(options.message);
+    }
+});
+
+// Apply the rate limiting middleware to API calls only
+app.use(apiLimiter);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // CORS configuration
-const allowedOrigins = [
-    'https://solutionenergylimited.com', 
-    'https://www.solutionenergylimited.com',
-    'https://etimgeorge.github.io', // Keep for existing pages if they are still in use
-    'http://127.0.0.1:5500', // For local development
-    'http://localhost:5500' // For local development
-];
-app.use(cors({ 
+const corsOptions = {
     origin: function (origin, callback) {
-        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+        const allowedOrigins = process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : [];
+        logger.debug(`CORS: Request Origin: ${origin}`);
+        logger.debug(`CORS: Allowed Origins: ${allowedOrigins.join(', ')}`);
+        if (!origin || allowedOrigins.includes(origin)) {
+            logger.debug(`CORS: Origin ${origin} allowed.`);
             callback(null, true);
         } else {
+            logger.warn(`CORS: Origin ${origin} not allowed.`);
             callback(new Error('Not allowed by CORS'));
         }
     }
-}));
+};
+app.use(cors(corsOptions));
 
 // --- Database & Email Setup ---
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-        rejectUnauthorized: false
-    }
+    connectionString: process.env.DATABASE_URL
 });
 
 const { Resend } = require('resend');
@@ -89,7 +102,7 @@ app.post('/submit-form', async (req, res) => {
     const { 
         name, email, phone, company, message, service_interest, 
         standard, standard_other, region, how_did_you_hear, employees, 
-        recaptchaToken, formOrigin 
+        formOrigin 
     } = req.body;
 
     // 1. Server-Side Validation
@@ -100,20 +113,10 @@ app.post('/submit-form', async (req, res) => {
         return res.status(400).json({ success: false, message: 'Invalid email format.' });
     }
 
-    // 2. reCAPTCHA Verification
-    const ipAddress = req.ip || req.headers['x-forwarded-for'];
-    const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
-    const googleVerifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}&remoteip=${ipAddress}`;
+    // reCAPTCHA is completely bypassed for now
+    logger.warn('reCAPTCHA is completely bypassed on server.');
 
     try {
-        const googleResponse = await fetch(googleVerifyUrl, { method: 'POST' }).then(res => res.json());
-        if (!googleResponse.success || googleResponse.score < 0.5) {
-            logger.warn('reCAPTCHA verification failed or low score', { ...googleResponse, ip: ipAddress, origin: formOrigin });
-            return res.status(403).json({ success: false, message: 'Spam detection: reCAPTCHA verification failed.' });
-        }
-
-        logger.info('reCAPTCHA verification successful', { score: googleResponse.score, ip: ipAddress });
-
         // 3. Database Insertion
         const standardsArray = Array.isArray(standard) ? standard : (standard ? [standard] : []);
         if (standard_other) {
@@ -121,13 +124,13 @@ app.post('/submit-form', async (req, res) => {
         }
 
         const query = `
-            INSERT INTO form_submissions(name, email, phone, company, subject, message, service_interest, standards, region, how_did_you_hear, employees, recaptcha_score, ip_address, form_origin)
-            VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING id;
+            INSERT INTO form_submissions(name, email, phone, company, subject, message, service_interest, standards, region, how_did_you_hear, employees, form_origin)
+            VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING id;
         `;
         const values = [
             name, email, phone, company, `New Inquiry from ${formOrigin}`,
             message, service_interest, standardsArray, region, how_did_you_hear, 
-            employees, googleResponse.score, ipAddress, formOrigin
+            employees, formOrigin
         ];
 
         const result = await pool.query(query, values);
@@ -137,9 +140,7 @@ app.post('/submit-form', async (req, res) => {
         const emailHtml = generateEmailHtml(`New Website Inquiry: ${formOrigin}`, {
             name, email, phone, company, service_interest, 
             standards: standardsArray.join(', '),
-            region, how_did_you_hear, employees, message,
-            ip_address: ipAddress,
-            recaptcha_score: googleResponse.score
+            region, how_did_you_hear, employees, message
         });
 
         await resend.emails.send({
@@ -149,12 +150,12 @@ app.post('/submit-form', async (req, res) => {
             html: emailHtml
         });
 
-        logger.info('Email notification sent', { to: process.env.EMAIL_TO });
+        logger.info('Email notification sent', { to: process.env.RECIPIENT_EMAIL });
 
         res.status(200).json({ success: true, message: 'Message sent successfully!' });
 
     } catch (error) {
-        logger.error('Form submission error:', { message: error.message, stack: error.stack, ip: ipAddress });
+        logger.error('Form submission processing error:', { message: error.message, stack: error.stack });
         res.status(500).json({ success: false, message: 'Failed to process your request. Please try again later.' });
     }
 });
