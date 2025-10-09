@@ -97,6 +97,10 @@ const generateEmailHtml = (title, data) => {
 
 // --- API Endpoints ---
 
+// Blog Routes
+const blogRoutes = require('./routes/blog/blogRoutes');
+app.use('/api/blog', blogRoutes);
+
 // Main Form Submission Endpoint
 app.post('/submit-form', async (req, res) => {
     const { 

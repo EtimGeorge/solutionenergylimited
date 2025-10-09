@@ -1,4 +1,6 @@
-
 # Log files
 error.log
 combined.log
+
+# Environment variables
+.env

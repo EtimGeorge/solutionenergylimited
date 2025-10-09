@@ -682,6 +682,30 @@ section {
   background-color: var(--secondary-hover);
 }
 
+.load-more-button {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.8rem 2rem;
+  font-size: var(--font-size-lg);
+  background-color: var(--primary);
+  color: white;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+}
+
+.load-more-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.load-more-button:disabled {
+  background-color: var(--text-light);
+  cursor: not-allowed;
+  transform: none;
+}
+
 /* 2.4. Cards (Generic) */
 .card {
   background-color: var(--background);
@@ -1126,101 +1150,429 @@ textarea:focus {
   max-width: 600px;
 }
 
-.contact-form-container p,
-.contact-form-container small {
-  background: var(--footer);
-  margin: 0.5rem;
-  border-radius: var(--border-radius-sm);
-  padding: 5px;
-  text-align: center;
-  color: yellow;
+/* 3.9. Blog Post Content Styling */
+
+.blog-list-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--background-alt);
 }
 
-.contact-form-container p .response-time {
-  background: var(--footer);
-  color: wheat;
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form select,
-.contact-form textarea {
-  height: 40px;
-  box-sizing: border-box;
+.blog-card {
+    background-color: var(--background);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-form textarea {
-  height: 80px;
+.blog-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: var(--shadow-lg);
 }
 
-.contact-form-container .form-title {
-  font-size: var(--font-size-lg);
-  font-weight: 800;
+.blog-card-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-card-image-container img {
+    transform: scale(1.1);
+}
+
+.blog-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blog-card-content h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+}
+
+.blog-card-content p {
+    font-size: var(--font-size-base);
+    color: var(--text-light);
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    margin-top: auto;
+}
+
+.blog-card-footer .read-more {
+    color: var(--secondary);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.blog-card-footer .read-more::after {
+    content: '→';
+    margin-left: 0.25rem;
+    transition: margin-left 0.3s ease;
+}
+
+.blog-card:hover .read-more::after {
+    margin-left: 0.75rem;
+}
+
+/* 3.10. Blog Post Content Styling */
+.blog-post-section .container {
+  max-width: 800px; /* Optimal width for reading */
+  margin: 0 auto; /* Center the content */
+  padding: var(--spacing-lg) var(--container-padding);
+  background-color: var(--background);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+#blog-post-content {
+  font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* More readable font */
+  line-height: 1.8; /* Improved readability */
+  font-size: 1.1rem; /* Slightly larger base font size */
+  color: var(--text);
+  letter-spacing: 0.01em; /* Subtle letter spacing for readability */
+}
+
+#blog-post-content h1, #blog-post-content h2, #blog-post-content h3, #blog-post-content h4, #blog-post-content h5, #blog-post-content h6 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary); /* Use primary color for headings */
+}
+
+#blog-post-content h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--secondary); /* Differentiate h2 with secondary color */
+}
+
+#blog-post-content h3 {
+  font-size: var(--font-size-xl);
+}
+
+#blog-post-content p {
   margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--primary);
+}
+
+#blog-post-content ul, #blog-post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+#blog-post-content ul {
+  list-style: disc;
+}
+
+#blog-post-content ol {
+  list-style: decimal;
+}
+
+#blog-post-content li {
+  margin-bottom: 0.5rem;
+}
+
+#blog-post-content a {
   color: var(--primary);
-}
-
-.contact-form-container .form-group label {
-  color: var(--accent);
-}
-.contact-info-container {
-  background-color: var(--primary-hover);
-  background-position: center;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.228);
-  max-width: 900px;
-  margin: 0 auto;
-  border: 2px solid var(--primary);
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.contact-info-card {
-  padding: 20px;
-  border-radius: 8px;
-  background-color: var(--error);
-}
-
-.social-icons-contact {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-md);
-}
-
-.social-icons-contact a {
-  font-size: 1.5em;
-  color: var(--primary);
+  text-decoration: none; /* Remove default underline */
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.social-icons-contact a:hover {
+#blog-post-content a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--secondary);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+#blog-post-content a:hover {
   color: var(--secondary);
 }
 
-.map-container {
-  overflow: hidden;
-  width: 100%;
+#blog-post-content a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#blog-post-content img {
   max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto; /* Center images and add vertical spacing */
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
 }
 
-.map-placeholder {
+#blog-post-content blockquote {
+  border-left: 5px solid var(--secondary);
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0;
+  font-style: italic;
+  font-size: 1.2rem; /* Slightly larger font for quotes */
+  color: var(--text-light);
+  background-color: var(--background-alt);
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
   position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
 }
 
-.map-placeholder iframe {
+#blog-post-content blockquote::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10d"; /* Unicode for fa-quote-left icon */
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -10px;
+  left: -15px;
+  font-size: 3.5rem; /* Larger quote icon */
+  color: var(--secondary);
+  opacity: 0.15;
+}
+
+#blog-post-content pre {
+  background-color: var(--background-alt);
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+#blog-post-content code {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* Social Share Buttons */
+.social-share-buttons {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.social-share-buttons h4 {
   width: 100%;
-  height: 100%;
-  border: 0;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--border-radius-md);
+  color: white;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.share-button:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.share-button.facebook {
+  background-color: #3b5998;
+}
+.share-button.twitter {
+  background-color: #00acee;
+}
+.share-button.linkedin {
+  background-color: #0077b5;
+}
+.share-button.whatsapp {
+  background-color: #25d366;
+}
+
+/* Like Section */
+.like-section {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.like-section .btn {
+  font-size: var(--font-size-lg);
+  padding: 0.8rem 2rem;
+}
+
+/* Comments Section */
+.comments-section {
+  padding: var(--spacing-lg);
+  background-color: var(--background-alt);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-top: 3rem;
+}
+
+.comments-section h3 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  text-align: left; /* Override global h3 text-align */
+}
+
+#comments-list {
+  margin-bottom: 2rem;
+}
+
+.comment {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-md);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.comment-author {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.comment-content {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.comment-form {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.comment-form h4 {
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+}
+
+.comment-form .form-group label {
+  color: var(--text);
+}
+
+.comment-form input[type="text"], .comment-form textarea {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.comment-form input[type="text"]:focus, .comment-form textarea:focus {
+  border-color: var(--secondary);
+}
+
+.comment-form .btn-primary {
+  background-color: var(--primary);
+  transition: background-color 0.3s ease;
+}
+
+.comment-form .btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Dark theme adjustments for blog post content */
+[data-theme="dark"] .blog-post-section .container {
+  background-color: var(--background-alt);
+  box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.2);
+}
+
+[data-theme="dark"] #blog-post-content {
+  color: var(--text);
+}
+
+[data-theme="dark"] #blog-post-content h1, [data-theme="dark"] #blog-post-content h2, [data-theme="dark"] #blog-post-content h3, [data-theme="dark"] #blog-post-content h4, [data-theme="dark"] #blog-post-content h5, [data-theme="dark"] #blog-post-content h6 {
+  color: var(--secondary);
+}
+
+[data-theme="dark"] #blog-post-content a {
+  color: var(--secondary);
+}
+
+[data-theme="dark"] #blog-post-content blockquote {
+  border-left-color: var(--primary);
+  color: var(--text-light);
+}
+
+[data-theme="dark"] #blog-post-content pre {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+[data-theme="dark"] #blog-post-content code {
+  color: #f8f8f2;
+}
+
+[data-theme="dark"] .social-share-buttons h4,
+[data-theme="dark"] .like-section .btn,
+[data-theme="dark"] .comments-section h3,
+[data-theme="dark"] .comment-form h4 {
+  color: var(--text);
+}
+
+[data-theme="dark"] .comments-section {
+  background-color: var(--background);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .comment {
+  background-color: var(--background-alt);
+  border-color: #444;
+}
+
+[data-theme="dark"] .comment-author,
+[data-theme="dark"] .comment-content {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .comment-form input[type="text"], [data-theme="dark"] .comment-form textarea {
+  background-color: var(--background-alt);
+  border-color: #444;
+  color: var(--text);
+}
+
+[data-theme="dark"] .comment-form input[type="text"]:focus, [data-theme="dark"] .comment-form textarea:focus {
+  border-color: var(--primary);
 }
 
 /* =====================================================================
