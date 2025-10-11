@@ -1,76 +1,25 @@
+# ISO Certification Sub-site
 
+This directory contains the pages and assets for the ISO Certification micro-site within the main SEESL frontend.
 
+## Overview
 
-          
-Let's search for all HTML forms to identify where we need to add form identifiers.
-        
-            
-toolName: search_by_regex
-            
-status: success
-          
-          
-Let's examine the form structures to add unique identifiers and hidden input fields for form identification.
-        
-            
-toolName: view_files
-            
-status: success
-          
-            
-filePath: c:\Users\user\Desktop\solutionenrgylimited\services\iso-certification\contact.html
-c:\Users\user\Desktop\solutionenrgylimited\services\iso-certification\certification.html
-          
-I'll help you add form identifiers to all your forms that use the Formspree endpoint. Here are the necessary changes for each form:
+This section functions as a semi-independent part of the website, with its own set of pages, styles, and scripts. It is dedicated to ISO-related services like Certification, Training, and Auditing.
 
-1. For the general inquiry form in contact.html:
-```html:c:\Users\user\Desktop\solutionenrgylimited\services\iso-certification\contact.html
-<form id="contact-form" class="contact-form" action="https://formspree.io/f/meogpvoq" method="POST">
-    // ... existing code ...
-    <!-- Add this hidden field for form identification -->
-    <input type="hidden" name="form_type" value="general_inquiry">
-    // ... existing code ...
-</form>
-```
+## Key Peculiarities
 
-2. For the quote request form in contact.html:
-```html:c:\Users\user\Desktop\solutionenrgylimited\services\iso-certification\contact.html
-<form id="quote-form" class="contact-form" action="https://formspree.io/f/meogpvoq" method="POST">
-    // ... existing code ...
-    <!-- Add this hidden field for form identification -->
-    <input type="hidden" name="form_type" value="quote_request">
-    // ... existing code ...
-</form>
-```
+### Smart Form Component
 
-3. For the support form in contact.html:
-```html:c:\Users\user\Desktop\solutionenrgylimited\services\iso-certification\contact.html
-<form id="support-form" class="contact-form" action="https://formspree.io/f/meogpvoq" method="POST">
-    // ... existing code ...
-    <!-- Add this hidden field for form identification -->
-    <input type="hidden" name="form_type" value="customer_support">
-    // ... existing code ...
-</form>
-```
+A key feature of this sub-site is the use of a reusable "smart form" component.
 
-4. For the certification page form:
-```html:c:\Users\user\Desktop\solutionenrgylimited\services\iso-certification\certification.html
-<form id="contact-form" class="contact-form" action="https://formspree.io/f/meogpvoq" method="POST">
-    // ... existing code ...
-    <!-- Add this hidden field for form identification -->
-    <input type="hidden" name="form_type" value="certification_inquiry">
-    // ... existing code ...
-</form>
-```
+- **Master Component**: The master form markup is located in `_form-component.html`.
+- **Dynamic Loading**: The script at `js/iso-smart-form.js` is responsible for fetching this master component and injecting it into different pages (e.g., `audit.html`, `contact.html`).
+- **Customization**: The form is customized based on `data-*` attributes set on the container div (`<div id="iso-form-container" ...>`) in each host page. This allows the same form component to be used for different purposes (e.g., "Schedule an Audit" vs. "General Inquiry") by dynamically showing/hiding fields and changing the form title.
 
-5. For other forms using the same endpoint:
-- Process page form: Add `<input type="hidden" name="form_type" value="process_inquiry">`
-- Training page form: Add `<input type="hidden" name="form_type" value="training_inquiry">`
-- Audit page form: Add `<input type="hidden" name="form_type" value="audit_inquiry">`
-- Main contact page form: Add `<input type="hidden" name="form_type" value="main_contact">`
-- ISO certification index page form: Add `<input type="hidden" name="form_type" value="iso_index_inquiry">`
+### Structure
 
-Add these hidden input fields just before the submit button in each form. This will help you identify which form was submitted when you receive the email notifications from Formspree. The `form_type` field will be included in the form submission data, making it easy to distinguish between different forms.
-
-Note: The form in `images\SEES-home-hero-image.html` uses a different service (nicepagesrv.com) so it doesn't need this modification.
-        
+- **HTML Pages**: `index.html` (ISO Home), `certification.html`, `training.html`, `audit.html`, `process.html`, and `contact.html`.
+- **Styling**: Specific styles for this section are in `styles.css`.
+- **JavaScript**:
+    - `scripts.js`: Contains general interactivity for this sub-site (e.g., carousels).
+    - `js/iso-smart-form.js`: Contains the logic for the dynamic form loading and submission.

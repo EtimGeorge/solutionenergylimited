@@ -24,6 +24,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Confetti animation function for campaign modal
+function showSuccessModalWithConfetti() {
+    const modal = document.getElementById('success-modal');
+    if (!modal) return;
+
+    modal.style.display = 'flex';
+    const confettiContainer = modal.querySelector('.confetti-container');
+    if (!confettiContainer) return;
+
+    // Clear any existing confetti
+    confettiContainer.innerHTML = '';
+
+    // Create confetti
+    for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.style.position = 'absolute';
+        confetti.style.width = Math.random() * 8 + 'px';
+        confetti.style.height = confetti.style.width;
+        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        confetti.style.top = Math.random() * 100 + '%';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.animation = `fall ${Math.random() * 2 + 3}s linear`;
+        confettiContainer.appendChild(confetti);
+    }
+
+    // Inject keyframes if not already present
+    if (!document.getElementById('confetti-keyframes')) {
+        const style = document.createElement('style');
+        style.id = 'confetti-keyframes';
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
+
 async function handleFormSubmission(event) {
     event.preventDefault();
     const form = event.target;
@@ -65,9 +106,7 @@ async function handleFormSubmission(event) {
             form.reset();
             // Use the appropriate modal based on the page
             if (form.closest('body').querySelector('#success-modal.modal')) { // This is the campaign-landing modal
-                if (typeof showSuccessModalWithConfetti === 'function') {
-                    showSuccessModalWithConfetti();
-                }
+                showSuccessModalWithConfetti();
             } else { // This is for all other forms
                 const successModal = document.getElementById('seesl-success-modal');
                 if(successModal) {

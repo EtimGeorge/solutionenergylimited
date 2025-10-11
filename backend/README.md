@@ -1,12 +1,15 @@
 # SEESL Website Backend
 
-This directory contains a simple Node.js server built with Express.js to handle form submissions from the main SEESL website.
+This directory contains the Node.js and Express.js server that powers the SEESL website's dynamic features, including form submissions and the blog.
 
-## 1. Purpose
+## 1. Features
 
-The primary purpose of this backend is to provide a reliable and scalable solution for capturing and storing contact form inquiries. It replaces the previous dependency on the third-party service Formspree, giving SEESL full ownership and control over its user data.
-
-Initially, all submissions are stored in a `submissions.json` file within this directory.
+-   **Form Handling**: Securely processes submissions from various forms on the frontend.
+-   **Blog API**: A complete RESTful API for creating, reading, updating, and deleting blog posts, comments, and likes.
+-   **Database Integration**: Uses PostgreSQL for persistent data storage.
+-   **Email Notifications**: Sends email notifications for form submissions using the Resend API.
+-   **Security**: Includes basic security measures using `helmet`, `cors`, and `express-rate-limit`.
+-   **Logging**: Utilizes `winston` to log application events and errors to files.
 
 ## 2. Setup and Installation
 
@@ -18,87 +21,64 @@ To run this server, you need to have Node.js and npm installed on your machine.
     ```
 
 2.  **Install dependencies:**
-    This command reads the `package.json` file and installs the necessary libraries (Express, body-parser, cors).
+    This command reads the `package.json` file and installs the necessary libraries.
     ```bash
     npm install
     ```
 
+3.  **Set up Environment Variables:**
+    Create a `.env` file in the `backend/` directory by copying the example file:
+    ```bash
+    cp .env.example .env
+    ```
+    Then, open the `.env` file and fill in the required values for your database, email service, and API keys. See the "Environment Variables" section below for details.
+
 ## 3. Running the Server
 
-To start the server, run the following command from within the `backend` directory:
+To start the server for development, run the following command from within the `backend` directory:
 
 ```bash
 npm start
 ```
 
-The server will start and listen on `http://localhost:3000`.
+The server will start and listen on the port defined in your `.env` file, which defaults to `http://localhost:3000`.
 
-## 4. API Endpoint
+## 4. API Endpoints
 
-The server exposes a single API endpoint to handle form submissions.
+The server exposes the following API endpoints.
 
-*   **Endpoint:** `POST /submit`
-*   **Description:** Receives form data submitted from the website's contact form.
-*   **Request Body:** Expects a JSON object containing the form fields (e.g., `name`, `email`, `service`, `message`).
-*   **Success Response:**
-    *   **Status Code:** `200 OK`
-    *   **Body:** `Submission successful!`
-*   **Error Response:**
-    *   **Status Code:** `500 Internal Server Error`
-    *   **Body:** A message indicating the nature of the error (e.g., "Error saving submission.").
+### Form Endpoints
+-   `POST /submit-form`: Receives and processes data from contact forms.
+-   `POST /subscribe-newsletter`: Adds an email to the newsletter subscriber list.
+
+### Blog Endpoints (`/api/blog`)
+-   `GET /posts`: Retrieves a paginated list of all published blog posts.
+-   `GET /posts/:slug`: Retrieves a single blog post by its slug.
+-   `POST /posts`: Creates a new blog post. **(Admin only)**
+-   `PUT /posts/:id`: Updates an existing blog post. **(Admin only)**
+-   `DELETE /posts/:id`: Deletes a blog post. **(Admin only)**
+-   `GET /posts/:postId/comments`: Retrieves all comments for a specific post.
+-   `POST /posts/:postId/comments`: Adds a new comment to a post.
+-   `POST /posts/:postId/likes`: Likes a post.
+-   `DELETE /posts/:postId/likes`: Unlikes a post.
+
+**Note**: Admin-only routes require a valid `x-api-key` header matching the `BLOG_ADMIN_API_KEY` environment variable.
 
 ## 5. Data Storage
 
-All form submissions are stored in a file named `submissions.json` in this directory. Each submission is saved as a JSON object with the following structure:
+The application uses a **PostgreSQL** database for all data storage, including form submissions, newsletter subscribers, and all blog-related content. The connection is configured via the `DATABASE_URL` environment variable.
 
-```json
-{
-  "id": 1678886400000,
-  "timestamp": "2025-03-15T12:00:00.000Z",
-  "data": {
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "service": "engineering",
-    "message": "This is a test submission."
-  }
-}
-```
+## 6. Environment Variables
 
-## 6. Email Notification Configuration
+The following variables must be set in your `.env` file. Refer to `.env.example` for a template.
 
-The backend is configured to send email notifications for every form submission using Nodemailer. To enable this functionality, you need to set up the following environment variables in a `.env` file in the `backend/` directory.
-
-**Important:** Do NOT commit your `.env` file to version control. Use `.env.example` as a template.
-
-### Required Environment Variables:
-
-*   **`SMTP_HOST`**: The hostname of your SMTP server (e.g., `smtp.gmail.com`, `smtp.mailgun.org`).
-*   **`SMTP_PORT`**: The port for your SMTP server (e.g., `587` for TLS, `465` for SSL).
-*   **`SMTP_SECURE`**: Set to `true` if your SMTP server uses SSL (typically port 465), otherwise set to `false`.
-*   **`SMTP_USER`**: The email address used to authenticate with the SMTP server (this will be the "from" address for the emails).
-*   **`SMTP_PASS`**: The password or app-specific password for the `SMTP_USER`.
-*   **`EMAIL_FROM_NAME`**: The name that will appear as the sender in the email (e.g., `"SEESL Website Forms"`).
-*   **`EMAIL_FROM_ADDRESS`**: The email address that will appear as the sender (should generally match `SMTP_USER`).
-*   **`EMAIL_TO`**: **The dedicated email address where you want to receive all form submissions.**
-
-### Example `.env` file:
-
-```
-SMTP_HOST=smtp.example.com
-SMTP_PORT=587
-SMTP_SECURE=false
-SMTP_USER=your_sending_email@example.com
-SMTP_PASS=your_email_password_or_app_password
-EMAIL_FROM_NAME="SEESL Website Forms"
-EMAIL_FROM_ADDRESS=your_sending_email@example.com
-EMAIL_TO=your_receiving_email@example.com
-RECAPTCHA_SECRET_KEY=your_recaptcha_secret_key
-```
-
-### After Configuration:
+-   **`PORT`**: The port for the server to run on (e.g., `3000`).
+-   **`DATABASE_URL`**: The full connection string for your PostgreSQL database.
+    -   Format: `postgresql://USER:PASSWORD@HOST:PORT/DATABASE_NAME`
+-   **`BLOG_ADMIN_API_KEY`**: A strong, secret key for securing the blog admin API endpoints.
+-   **`CORS_ORIGIN`**: A comma-separated list of frontend URLs that are permitted to access the API (e.g., `http://127.0.0.1:5500,https://your-live-site.com`).
+-   **`RESEND_API_KEY`**: Your API key from the Resend email service.
+-   **`RESEND_FROM_EMAIL`**: The "from" email address configured in your Resend account.
+-   **`RECIPIENT_EMAIL`**: The email address where form submission notifications will be sent.
 
 After setting up your `.env` file, you must restart the backend server for the changes to take effect.
-
-```bash
-npm restart
-```
