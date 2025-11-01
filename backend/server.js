@@ -138,7 +138,17 @@ app.post('/submit-form', async (req, res) => {
         ];
 
         const result = await pool.query(query, values);
-        logger.info('Submission saved to database', { submissionId: result.rows[0].id });
+        const newLeadId = result.rows[0].id;
+        logger.info('Submission saved to database', { submissionId: newLeadId });
+
+        // Notify the 'new_lead_channel' for the Python agent
+        try {
+          await pool.query(`NOTIFY new_lead_channel, '${newLeadId}'`);
+          logger.info(`[OK] Notification sent for lead ID: ${newLeadId}`);
+        } catch (err) {
+          logger.error('[FAIL] Error sending NOTIFY signal:', { message: err.message, stack: err.stack });
+          // This is a non-critical error, so we don't fail the main request.
+        }
 
         // 4. Email Notification
         const emailHtml = generateEmailHtml(`New Website Inquiry: ${formOrigin}`, {
@@ -187,6 +197,97 @@ app.post('/subscribe-newsletter', async (req, res) => {
     } catch (error) {
         logger.error('Newsletter subscription error:', { message: error.message, stack: error.stack });
         res.status(500).json({ success: false, message: 'Subscription failed. Please try again.' });
+    }
+});
+
+
+// --- Agent API Endpoints ---
+const authAgent = require('./middleware/authAgent');
+
+app.patch('/api/v1/leads/:id/status', authAgent, async (req, res) => {
+    const { id } = req.params;
+    const { status, qualification_notes, gemini_score } = req.body;
+
+    if (!['qualified', 'unqualified', 'new'].includes(status)) {
+        return res.status(400).json({ error: 'Invalid status value.' });
+    }
+
+    try {
+        const result = await pool.query(
+            'UPDATE form_submissions SET status = $1, qualification_notes = $2, gemini_score = $3 WHERE id = $4 RETURNING id',
+            [status, qualification_notes, gemini_score, id]
+        );
+
+        if (result.rowCount === 0) {
+            logger.warn('Attempted to update non-existent lead', { leadId: id });
+            return res.status(404).json({ error: 'Lead not found.' });
+        }
+
+        logger.info('Lead status updated by agent', { leadId: id, newStatus: status });
+        res.status(200).json({ message: `Lead ${id} status updated successfully.` });
+
+    } catch (error) {
+        logger.error('Error updating lead status:', { leadId: id, message: error.message, stack: error.stack });
+        res.status(500).json({ error: 'Internal server error.' });
+    }
+});
+
+app.post('/api/v1/leads/from-chat', authAgent, async (req, res) => {
+    const { email, summary } = req.body;
+
+    if (!email || !summary) {
+        return res.status(400).json({ error: 'Email and summary are required.' });
+    }
+
+    try {
+        // Insert the chat-generated lead into the same submissions table
+        const result = await pool.query(
+            'INSERT INTO form_submissions (name, email, message, source) VALUES ($1, $2, $3, $4) RETURNING id',
+            ['Lead from Chatbot', email, summary, 'chatbot']
+        );
+
+        const newLeadId = result.rows[0].id;
+        logger.info('Chat lead created', { leadId: newLeadId });
+
+        // Trigger the notification for the lead qualification agent
+        await pool.query(`NOTIFY new_lead_channel, '${newLeadId}'`);
+        logger.info(`[OK] Notification sent for chat lead ID: ${newLeadId}`);
+
+        res.status(201).json({ message: `Lead created successfully with ID: ${newLeadId}` });
+    } catch (err) {
+        logger.error('Error creating lead from chat:', { message: err.message, stack: err.stack });
+        res.status(500).json({ error: 'Internal server error.' });
+    }
+});
+
+app.post('/api/v1/chat', async (req, res) => {
+    const { user_query } = req.body;
+    logger.info('Proxying chat query', { query: user_query });
+
+    const pythonAgentUrl = 'http://localhost:8001/chat';
+
+    try {
+        const agentResponse = await fetch(pythonAgentUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ user_query })
+        });
+
+        if (!agentResponse.ok) {
+            const errorBody = await agentResponse.text();
+            logger.error('Python agent returned an error', { statusCode: agentResponse.status, body: errorBody });
+            throw new Error(`The AI agent failed to process the request. Status: ${agentResponse.status}`);
+        }
+
+        const data = await agentResponse.json();
+        res.status(200).json(data);
+
+    } catch (error) {
+        logger.error('Chat proxy error:', { message: error.message, stack: error.stack });
+        res.status(500).json({ answer: 'Sorry, I was unable to connect to the AI assistant. Please try again later.', source: 'Internal Error' });
     }
 });
 

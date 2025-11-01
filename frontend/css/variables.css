@@ -62,6 +62,21 @@
     /* Container */
     --container-max-width: 1200px;
     --container-padding: 1rem;
+
+    /* --- Chat Widget Light Mode Colors --- */
+    --chat-bg: #ffffff;
+    --chat-header-bg: #0056b3;
+    --chat-header-text: #ffffff;
+    --chat-messages-bg: #f4f7f9;
+    --chat-user-bubble-bg: #dcf8c6;
+    --chat-user-bubble-text: #111111;
+    --chat-bot-bubble-bg: #ffffff;
+    --chat-bot-bubble-text: #111111;
+    --chat-input-bg: #ffffff;
+    --chat-input-text: #111111;
+    --chat-input-border: #dddddd;
+    --chat-fab-bg: var(--primary);
+    --chat-fab-text: #ffffff;
   }
   
   /* Dark Theme */
@@ -81,4 +96,20 @@
     --header: #1e293b;
     --footer: #1e293b;
     --uniform: #3bcaf6;
+
+    /* --- Chat Widget Dark Mode Colors --- */
+    --chat-bg: #2c2c2c;
+    --chat-header-bg: #1a1a1a;
+    --chat-header-text: #13f789;
+    --chat-messages-bg: #252525;
+    --chat-user-bubble-bg: #1e88e5;
+    --chat-user-bubble-text: #ffffff;
+    --chat-bot-bubble-bg: #3a3a3a;
+    --chat-bot-bubble-text: #f0f0f0;
+    --chat-input-bg: #3a3a3a;
+    --chat-input-text: #f0f0f0;
+    --chat-input-border: #555555;
+    --chat-fab-bg: var(--primary);
+    --chat-fab-text: #ffffff;
+    --widget-border: #0b13ee;
   }

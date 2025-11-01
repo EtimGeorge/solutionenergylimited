@@ -1,0 +1,10 @@
+google-generativeai
+psycopg2-binary
+resend
+pydantic
+fastapi
+uvicorn[standard]
+beautifulsoup4
+faiss-cpu
+python-dotenv
+requests
