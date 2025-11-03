@@ -36,3 +36,41 @@ Our certified engineers ensure the seamless transition from construction to oper
 
 ## Quality and Compliance
 All engineering services are executed within a framework compliant with our **ISO 9001** Quality Management System, adhering to international codes and standards (e.g., ASME, API, AWS). Our commitment to safety is underpinned by our **ISO 45001** certification.
+
+## Our Projects
+
+See our work in action across various sectors and industries
+
+### Industrial Plant Expansion
+
+Complete FEED, fabrication, and installation services for a major manufacturing plant expansion in Rivers State.
+
+### Process Facility Upgrade
+
+Engineering and installation services for upgrading a process facility to improve efficiency and capacity.
+
+### Power Generation Equipment Installation
+
+Installation and commissioning of power generation equipment for an industrial client.
+
+## Our Engineering Approach
+
+### Collaborative Engagement
+
+We work closely with our clients to understand their specific requirements and objectives. Through open communication and collaboration, we ensure that our solutions are tailored to meet your needs.
+
+### Technical Excellence
+
+Our team brings extensive technical expertise and industry experience to every project. We stay updated with the latest engineering practices and technologies to deliver innovative and effective solutions.
+
+### Quality Assurance
+
+Quality is at the core of our engineering services. We implement robust quality control processes throughout the project lifecycle to ensure that all deliverables meet the highest standards.
+
+### Safety Focus
+
+Safety is our top priority in all engineering activities. We integrate safety considerations into our designs and implementation strategies, adhering to international standards and best practices.
+
+### Efficiency and Cost-Effectiveness
+
+We strive to optimize resource utilization and costs without compromising on quality. Our engineering solutions focus on efficiency and long-term value, delivering the best return on investment for our clients.

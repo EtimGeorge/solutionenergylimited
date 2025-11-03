@@ -10,6 +10,8 @@ import PyPDF2 # For PDF processing
 from docx import Document # For Word document processing
 import pandas as pd # For CSV processing
 import xml.etree.ElementTree as ET # For XML processing
+import json
+
 
 # Load environment variables from .env file in the backend directory
 load_dotenv(dotenv_path='C:/Users/user/Desktop/solutionenergylimited/backend/.env')
@@ -19,11 +21,11 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # Directories for different content types
 HTML_CONTENT_DIR = 'C:/Users/user/Desktop/solutionenergylimited/frontend'
-MARKDOWN_CONTENT_DIR = 'C:/Users/user/Desktop/solutionenergylimited/knowledge-base-documents'
+MARKDOWN_CONTENT_DIR = 'C:/Users/user/Desktop/solutionenergylimited/second-kb'
 PDF_CONTENT_DIR = 'C:/Users/user/Desktop/solutionenergylimited/docs/pdfs' # Example
 DOCX_CONTENT_DIR = 'C:/Users/user/Desktop/solutionenergylimited/docs/docx' # Example
 CSV_CONTENT_DIR = 'C:/Users/user/Desktop/solutionenergylimited/docs/csv' # Example
-JSON_CONTENT_DIR = 'C:/Users/user/Desktop/solutionenergylimited/docs/json' # Example
+JSON_CONTENT_DIR = 'C:/Users/user/Desktop/solutionenergylimited/third-kb' # Example
 XML_CONTENT_DIR = 'C:/Users/user/Desktop/solutionenergylimited/docs/xml' # Example
 
 # Patterns for files to scrape for the knowledge base

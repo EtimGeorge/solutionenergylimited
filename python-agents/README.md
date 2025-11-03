@@ -49,7 +49,7 @@ This directory contains the source code for two integrated AI agents that suppor
 
 ### Step 1: Build the Knowledge Base
 
-This is a one-time step that needs to be re-run only when the content of the main website changes. This script scrapes the website files, generates embeddings, and creates the `faiss_index.bin` file used by the Customer Service Agent.
+This is a one-time step that needs to be re-run only when the knowledge base content changes. This script processes files from the `second-kb` and `third-kb` directories, generates embeddings, and creates the `faiss_index.bin` file used by the Customer Service Agent.
 
 ```sh
 python cs_agent/build_kb.py

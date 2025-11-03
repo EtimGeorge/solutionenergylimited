@@ -27,3 +27,53 @@ Specialized cleaning of high-pressure vessels, separators, and process equipment
 As part of our commitment to ISO 14001, we ensure responsible handling of all recovered waste.
 *   **Sludge Dewatering:** Processing recovered sludge to separate hydrocarbons, water, and solids.
 *   **Certified Disposal:** Transportation and disposal of final waste streams in compliance with all environmental regulations.
+
+## Our Advanced Cleaning Technologies
+
+### Automated Cleaning Systems
+
+Remote-controlled cleaning equipment that minimizes human entry into confined spaces, enhancing safety while delivering thorough cleaning results.
+
+### Vacuum Transfer Systems
+
+Powerful vacuum systems that efficiently remove sludge, sediment, and residues from tanks and vessels without manual intervention.
+
+### High-Pressure Water Jetting
+
+Specialized high-pressure water systems that effectively clean tank walls and remove stubborn deposits without chemical use.
+
+### Waste Recovery Systems
+
+Advanced filtration and separation technologies that recover valuable products from waste and minimize environmental impact.
+
+## Benefits of Our Tank Cleaning Services
+
+### Enhanced Safety
+
+Minimizes or eliminates the need for human entry into confined spaces, significantly reducing safety risks.
+
+### Environmental Compliance
+
+Our methods ensure proper handling and disposal of waste materials in compliance with environmental regulations.
+
+### Reduced Downtime
+
+Automated systems work faster than traditional methods, minimizing operational disruptions.
+
+### Cost Efficiency
+
+Recovery of valuable product from sludge and waste can offset cleaning costs and provide additional revenue streams.
+
+## Our Tank Cleaning Projects
+
+### Petroleum Storage Tank Cleaning
+
+Successfully completed automated cleaning of a 10,000-barrel crude oil storage tank with minimal downtime and zero safety incidents.
+
+### Water Storage Tank Cleaning
+
+Performed no-entry cleaning of municipal water storage tanks, maintaining water quality standards throughout the process.
+
+### Pressure Vessel Cleaning
+
+Utilized specialized equipment to clean industrial pressure vessels, restoring optimal operational efficiency.

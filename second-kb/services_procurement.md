@@ -36,3 +36,43 @@ Our process is designed for maximum efficiency and compliance:
 *   **Technical Expertise:** We ensure the procured items are technically fit-for-purpose and compatible with existing systems.
 *   **Global Network:** Access to a verified network of local and international OEMs and suppliers.
 *   **Cost Efficiency:** Strategic consolidation and negotiation leverage to ensure competitive pricing and value.
+
+## Our Procurement Portfolio
+
+#### PSVs And PRVs
+
+SEESL offers Valves of different Sizes including Pressure Safety Valves (PSVs) and Pressure Relief Valves (PRVs).
+
+#### Pumps And Compressors
+
+SEESL offers durable high-performance Pumps, Compressors, and heavy-duty equipment for various industrial applications.
+
+#### Casing And Tubes
+
+We supply welded & seamless OCTG – casing & tubing of all sizes, drill pipes, seamless pipes, and SAW welded pipes.
+
+#### Instrumentation And Electrical Materials
+
+SEESL offers a comprehensive range of Instrumentation and electrical materials and parts for diverse project needs.
+
+#### Sealants, Binders, Solvents
+
+We procure Specialty Chemicals including high-quality sealants, binders, and solvents for all industrial purposes.
+
+#### OEM Spares
+
+SEESL equally offers genuine OEM Spares, Consumables, and Utility materials to ensure optimal equipment performance.
+
+## Procurement Success Highlights
+
+#### Project Alpha: Critical Spares
+
+Sourced and delivered critical spare parts for a major refinery, significantly reducing operational downtime.
+
+#### Pipeline Project: Material Supply
+
+Managed end-to-end procurement of materials for a large-scale pipeline, ensuring on-time project completion.
+
+#### Client Omega: Cost Optimization
+
+Achieved substantial cost savings on annual procurement spend through strategic sourcing for a key client.

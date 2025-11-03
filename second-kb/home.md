@@ -79,24 +79,42 @@ To consistently exceed expectations of our clients by providing timely, excellen
 At SEES, we have first-hand knowledge of the significant pressures of a plant operations environment. With decades of experience both operating our own plants and optimizing client facilities, we understand what a successful turnaround entails. That's why we start client projects with clearly defined goals and deliverables — and tailor our approach, design and output to meet client objectives.
 
 ## Our Projects
-See our work in action across various sectors and industries:
+See our work in action across various sectors and industries
 
-*   **Plant Maintenance:** Ongoing Plant Maintenance at a client's facility
-*   **Tank Cleaning:** Automated Tank Cleaning Services
-*   **Engineering Services:** Engineering and installation services for industrial clients
-*   **ISO Service:** Our ISO Service team conducts comprehensive training and audits.
+### Plant Maintenance
+Ongoing Plant Maintenance at a client's facility
+
+### Tank Cleaning
+Automated Tank Cleaning Services
+
+### Engineering Services
+Engineering and installation services for industrial clients
+
+### ISO Service
+Our ISO Service team conducts comprehensive training and audits.
 
 ## Featured Technologies
 SEESL Feature Services in Auto CNG, Auto Tank Cleaning and Drone Technology!
 
 Our specialty focuses on development, Robotic cleaning of High-Rise buildings, Automated Painting of high-rise buildings, Automated Cleaning and Waste Management of Petroleum Products Storage Tanks (Onshore/Offshore), Automated Cleaning Pressure Vessels, Automated Cleaning of Water Storage Tanks, Automated Cleaning of other Liquid product Storage Containers (Pharmaceuticals/FMCGs/Breweries), PMS and Auto-CNG for light duty vehicles including Tricycles, AGO and Auto-CNG for heavy duty vehicles, Installation of CNG Module for Modular power generators, Installation of LNG Module for Industrial Power generators, and many more...
 
-*   **Drone Technology:** Advanced drone solutions for inspections and monitoring
-*   **Automated Painting:** Robotic painting solutions for high-rise buildings
-*   **Auto CNG Solutions:** Clean energy solutions for vehicles and equipment
-*   **Automated Tank Cleaning:** Advanced systems for safe and efficient tank cleaning
-*   **CNG Module for Modular power generation:** Efficient and reliable CNG module solutions for modular power generation, ensuring a stable energy supply
-*   **LNG Module for Industrial Power generation:** Efficient and reliable LNG module solutions for industrial power generation, ensuring a stable energy supply
+#### Drone Technology
+Advanced drone solutions for inspections and monitoring
+
+#### Automated Painting
+Robotic painting solutions for high-rise buildings
+
+#### Auto CNG Solutions
+Clean energy solutions for vehicles and equipment
+
+#### Automated Tank Cleaning
+Advanced systems for safe and efficient tank cleaning
+
+#### CNG Module for Modular power generation
+Efficient and reliable CNG module solutions for modular power generation, ensuring a stable energy supply
+
+#### LNG Module for Industrial Power generation
+Efficient and reliable LNG module solutions for industrial power generation, ensuring a stable energy supply
 
 ## Our Partners & OEMs
 We collaborate with distinguished & known OEMs to offer our clients, durable spares and equipment suitable for their operations
