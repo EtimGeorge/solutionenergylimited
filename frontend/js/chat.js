@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const messageContent = document.createElement('div');
         messageContent.classList.add('message-content');
-        messageContent.textContent = text;
+        // Use marked.parse for bot messages to render Markdown
+        messageContent.innerHTML = (type === 'bot') ? marked.parse(text) : text;
         messageElement.appendChild(messageContent);
 
         chatMessages.appendChild(messageElement);

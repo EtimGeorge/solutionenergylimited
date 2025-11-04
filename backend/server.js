@@ -264,7 +264,7 @@ app.post('/api/v1/chat', async (req, res) => {
     const { user_query } = req.body;
     logger.info('Proxying chat query', { query: user_query });
 
-    const pythonAgentUrl = 'http://localhost:8001/chat';
+    const pythonAgentUrl = process.env.PYTHON_AGENT_URL || 'http://localhost:8001/chat';
 
     try {
         const agentResponse = await fetch(pythonAgentUrl, {

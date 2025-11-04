@@ -13,8 +13,14 @@ import xml.etree.ElementTree as ET # For XML processing
 import json
 
 
-# Load environment variables from .env file in the backend directory
-load_dotenv(dotenv_path='C:/Users/user/Desktop/solutionenergylimited/backend/.env')
+# Load environment variables dynamically
+dotenv_path = os.getenv('DOTENV_PATH')
+if dotenv_path:
+    load_dotenv(dotenv_path=dotenv_path)
+else:
+    # Construct path for local development
+    backend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'backend'))
+    load_dotenv(dotenv_path=os.path.join(backend_dir, '.env'))
 
 # --- Configuration ---
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")

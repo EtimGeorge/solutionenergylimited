@@ -10,17 +10,11 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 
 from models import Lead, QualificationResult
-
+# Placeholder for the emailer function we will create in the next step
 from emailer import send_qualified_lead_email
 
-# Load environment variables dynamically
-dotenv_path = os.getenv('DOTENV_PATH')
-if dotenv_path:
-    load_dotenv(dotenv_path=dotenv_path)
-else:
-    # Construct path for local development
-    backend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'backend'))
-    load_dotenv(dotenv_path=os.path.join(backend_dir, '.env'))
+# Load environment variables from .env file in the backend directory
+load_dotenv(dotenv_path='C:/Users/user/Desktop/solutionenergylimited/backend/.env')
 
 # --- Configuration ---
 DB_CONN_STRING = os.getenv("DATABASE_URL")
